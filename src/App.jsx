@@ -1,7 +1,16 @@
-import React from "react";
-
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import Contact from "./components/contact/Contact";
 const App = () => {
-  return <div className="container">f</div>;
+  return (
+    <>
+      <Header />
+      <main className="flex-grow">
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
 };
 
 export default App;
