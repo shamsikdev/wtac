@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
 // icons
 import FacebookIcon from "../../assets/facebook-icon.svg";
 import TelegramIcon from "../../assets/telegram-icon.svg";
@@ -12,7 +13,9 @@ const Footer = () => {
           <li className="text-base text-white mr-8">О нас</li>
           <li className="text-base text-white mr-8">Партнеры</li>
           <li className="text-base text-white mr-8">Наша продукция</li>
-          <li className="text-base text-white mr-8">Сертификаты</li>
+          <li className="text-base text-white mr-8">
+            <Link to="/certificates">Сертификаты</Link>
+          </li>
           <li className="text-base text-white">Контакты</li>
         </ul>
         <div className="flex mb-7">

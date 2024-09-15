@@ -1074,6 +1074,8 @@ export default {
       colors: {
         customBlue: "#454A69",
         customLightBlue: "#2D4972",
+        customGray: "#676767",
+        customSkyBlue: "#0298CF14",
       },
     },
   },
