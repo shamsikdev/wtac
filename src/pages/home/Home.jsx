@@ -24,7 +24,7 @@ const Home = () => {
               Связаться с нами
             </Link>
           </div>
-          <div className="parent absolute right-[10%] -top-[15%] -z-50 ">
+          <div className="parent absolute right-[10%] -top-[15%] -z-50">
             <img
               src={IntroImg1}
               alt=""
