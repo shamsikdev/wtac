@@ -15,6 +15,8 @@ import SanegLogo from "../../assets/saneg-logo.svg";
 import ManWithHelmetImg from "../../assets/man-with-helmet-img.png";
 import KabeltechLogo from "../../assets/kabeltech-logo.svg";
 import NgmkLogo from "../../assets/ngmk-logo.svg";
+import UtyLogo from "../../assets/uty-logo.svg"
+import CeLogo from '../../assets/cengiz-energy-logo.svg'
 const Home = () => {
   return (
     <>
@@ -279,7 +281,31 @@ const Home = () => {
           <h2 className="text-customBlue text-[40px] w-full mb-24 leading-[50px] font-black">
             Клиенты, которыми мы дорожим
           </h2>
-          <ul>
+          <ul className="grid grid-cols-3 gap-y-7">
+            <li className="p-2 shadow-md rounded-xl w-full max-w-80">
+              <img src={NgmkLogo} alt="" className="object-cover mb-2" />
+              <span className="text-base text-[#3A475E] font-semibold">
+                Навоинский горнометаллургический комбинат
+              </span>
+            </li>
+            <li className="p-2 shadow-md rounded-xl w-full max-w-80">
+              <img src={UtyLogo} alt="" className="object-cover mb-2" />
+              <span className="text-base text-[#3A475E] font-semibold">
+                Навоинский горнометаллургический комбинат
+              </span>
+            </li>
+            <li className="p-2 shadow-md rounded-xl w-full max-w-80">
+              <img src={CeLogo} alt="" className="object-cover mb-2" />
+              <span className="text-base text-[#3A475E] font-semibold">
+                Навоинский горнометаллургический комбинат
+              </span>
+            </li>
+            <li className="p-2 shadow-md rounded-xl w-full max-w-80">
+              <img src={NgmkLogo} alt="" className="object-cover mb-2" />
+              <span className="text-base text-[#3A475E] font-semibold">
+                Навоинский горнометаллургический комбинат
+              </span>
+            </li>
             <li className="p-2 shadow-md rounded-xl w-full max-w-80">
               <img src={NgmkLogo} alt="" className="object-cover mb-2" />
               <span className="text-base text-[#3A475E] font-semibold">
@@ -287,6 +313,11 @@ const Home = () => {
               </span>
             </li>
           </ul>
+        </div>
+      </section>
+      <section>
+        <div className="w-full max-w-[1100px] mx-auto">
+          <h2>Отзывы, которым можно доверять</h2>
         </div>
       </section>
     </>
