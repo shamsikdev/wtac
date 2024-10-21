@@ -295,7 +295,7 @@ const Home = () => {
               </span>
             </li>
             <li className="p-2 shadow-md rounded-xl w-full max-w-80">
-              <img src={CeLogo} alt="" className="object-cover mb-2" />
+              <img src={CeLogo} alt="Логотип Навоинский горнометаллургический комбинат" className="object-cover mb-2" />
               <span className="text-base text-[#3A475E] font-semibold">
                 Навоинский горнометаллургический комбинат
               </span>
