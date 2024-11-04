@@ -6,7 +6,6 @@ const Contact = () => {
       <img src={Shadow} className="absolute left-[10%] z-[1]" alt="" />
       <div className="w-full max-w-[1100px] mx-auto flex justify-between items-center pb-52 pt-12">
         <div className="flex flex-col justify-center z-[2]">
-          {" "}
           <h2 className="text-customBlue text-[40px] leading-[47px]  font-semibold w-full max-w-4xl mb-5">
             Свяжитесь с нами <br /> и получите полную консультацию
           </h2>

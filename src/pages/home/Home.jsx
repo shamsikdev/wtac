@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import { ImQuotesLeft } from "react-icons/im";
 import IntroImg1 from "../../assets/intro-img1.png";
 import IntroImg2 from "../../assets/intro-img2.png";
 import IntroImg3 from "../../assets/intro-img3.png";
@@ -15,8 +16,13 @@ import SanegLogo from "../../assets/saneg-logo.svg";
 import ManWithHelmetImg from "../../assets/man-with-helmet-img.png";
 import KabeltechLogo from "../../assets/kabeltech-logo.svg";
 import NgmkLogo from "../../assets/ngmk-logo.svg";
-import UtyLogo from "../../assets/uty-logo.svg"
-import CeLogo from '../../assets/cengiz-energy-logo.svg'
+import UtyLogo from "../../assets/uty-logo.svg";
+import CeLogo from "../../assets/cengiz-energy-logo.svg";
+import SanyLogo from "../../assets/sany-logo.svg";
+import XcmgLogo from "../../assets/xcmg-logo.svg";
+import ShantuiLogo from "../../assets/shantui-logo.svg";
+import KirgizaltinLogo from "../../assets/kirgizaltin-logo.svg";
+import KtjLogo from "../../assets/ktj-logo.svg";
 const Home = () => {
   return (
     <>
@@ -281,7 +287,7 @@ const Home = () => {
           <h2 className="text-customBlue text-[40px] w-full mb-24 leading-[50px] font-black">
             Клиенты, которыми мы дорожим
           </h2>
-          <ul className="grid grid-cols-3 gap-y-7">
+          <ul className="flex justify-center  flex-wrap gap-7">
             <li className="p-2 shadow-md rounded-xl w-full max-w-80">
               <img src={NgmkLogo} alt="" className="object-cover mb-2" />
               <span className="text-base text-[#3A475E] font-semibold">
@@ -291,25 +297,56 @@ const Home = () => {
             <li className="p-2 shadow-md rounded-xl w-full max-w-80">
               <img src={UtyLogo} alt="" className="object-cover mb-2" />
               <span className="text-base text-[#3A475E] font-semibold">
-                Навоинский горнометаллургический комбинат
+                Узбекистон Темир Йуллари
               </span>
             </li>
             <li className="p-2 shadow-md rounded-xl w-full max-w-80">
-              <img src={CeLogo} alt="Логотип Навоинский горнометаллургический комбинат" className="object-cover mb-2" />
+              <img
+                src={CeLogo}
+                alt="Логотип Навоинский горнометаллургический комбинат"
+                className="object-cover mb-2"
+              />
               <span className="text-base text-[#3A475E] font-semibold">
-                Навоинский горнометаллургический комбинат
+                Cengiz Energy
+              </span>
+            </li>
+            <li className="p-3 shadow-md rounded-xl w-full max-w-80">
+              <div className="flex">
+                <img
+                  src={SanyLogo}
+                  alt="SANY logo"
+                  className="object-cover mr-4"
+                />
+                <img
+                  src={XcmgLogo}
+                  alt="XCMG logo"
+                  className="object-cover mr-4"
+                />
+                <img
+                  src={ShantuiLogo}
+                  alt="SHANTUI logo"
+                  className="object-cover"
+                />
+              </div>
+              <span className="text-base text-[#3A475E] font-semibold">
+                Sany, Shantui, XCMG
               </span>
             </li>
             <li className="p-2 shadow-md rounded-xl w-full max-w-80">
-              <img src={NgmkLogo} alt="" className="object-cover mb-2" />
+              <div className="flex">
+                <img
+                  src={KirgizaltinLogo}
+                  alt="КЫРГЫЗАЛТЫН logo"
+                  className="object-cover mr-4"
+                />
+                <img
+                  src={KtjLogo}
+                  alt="КЫРГЫЗ ТЕМИР ЖОЛУ logo"
+                  className="object-cover"
+                />
+              </div>
               <span className="text-base text-[#3A475E] font-semibold">
-                Навоинский горнометаллургический комбинат
-              </span>
-            </li>
-            <li className="p-2 shadow-md rounded-xl w-full max-w-80">
-              <img src={NgmkLogo} alt="" className="object-cover mb-2" />
-              <span className="text-base text-[#3A475E] font-semibold">
-                Навоинский горнометаллургический комбинат
+                «Кыргызалтын» и «Кыргыз ЖД»
               </span>
             </li>
           </ul>
@@ -317,7 +354,28 @@ const Home = () => {
       </section>
       <section>
         <div className="w-full max-w-[1100px] mx-auto">
-          <h2>Отзывы, которым можно доверять</h2>
+          <h2 className="text-customBlue text-[40px] w-full mb-6 leading-[50px] font-black">
+            Отзывы, которым можно доверять
+          </h2>
+          <p className="text-customGray text-2xl mb-12">
+            Сделайте правильный выбор, основанный на опыте наших клиентах
+          </p>
+          <ul className="flex">
+            <li>
+              <div className="flex mb-2">
+                <img src="" alt="" />
+                <h3>Попов Иван</h3>
+              </div>
+              <div className="flex">
+                <ImQuotesLeft className="text-customLightBlue" />
+                <p className="text-customBlue">
+                  Сотрудничаю с World Trade and Consult LLC уже полгода и могу с
+                  уверенностью сказать, что это надежный и профессиональный
+                  партнер.
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
     </>
