@@ -23,6 +23,12 @@ import XcmgLogo from "../../assets/xcmg-logo.svg";
 import ShantuiLogo from "../../assets/shantui-logo.svg";
 import KirgizaltinLogo from "../../assets/kirgizaltin-logo.svg";
 import KtjLogo from "../../assets/ktj-logo.svg";
+import IvanPopov from "../../assets/ivan-popov.svg";
+import EkatirinaSmirnova from "../../assets/ekatirina-smirnova.svg";
+import NikolayKapustin from "../../assets/nikolay-kapustin.svg";
+import NikolaevArseniy from "../../assets/nikolaev-arseniy.svg";
+import LarionovVladimir from "../../assets/larionov-vladimir.svg";
+import SokolovYaroslav from "../../assets/sokolov-yaroslav.svg";
 const Home = () => {
   return (
     <>
@@ -51,7 +57,7 @@ const Home = () => {
             <img
               src={IntroImg2}
               alt=""
-              className="w-72 h-72 rotate-45 left-20 relative  rounded-3xl object-cover div2"
+              className="w-72 h-72 rotate-45  left-20 relative rounded-3xl object-cover div2"
             />
             <img
               src={IntroImg3}
@@ -353,25 +359,140 @@ const Home = () => {
         </div>
       </section>
       <section>
-        <div className="w-full max-w-[1100px] mx-auto">
+        <div className="w-full max-w-[1100px] mx-auto py-24">
           <h2 className="text-customBlue text-[40px] w-full mb-6 leading-[50px] font-black">
             Отзывы, которым можно доверять
           </h2>
           <p className="text-customGray text-2xl mb-12">
             Сделайте правильный выбор, основанный на опыте наших клиентах
           </p>
-          <ul className="flex">
-            <li>
+          <ul className="flex flex-wrap gap-4">
+            <li className="rounded-xl shadow-md p-3">
               <div className="flex mb-2">
-                <img src="" alt="" />
-                <h3>Попов Иван</h3>
+                <div className="flex items-center mb-2">
+                  <img
+                    src={IvanPopov}
+                    alt="photo of man named Ivan Popov"
+                    className="mr-2"
+                  />
+                  <h3 className="text-base font-semibold text-customGray">
+                    Попов Иван
+                  </h3>
+                </div>
               </div>
               <div className="flex">
-                <ImQuotesLeft className="text-customLightBlue" />
-                <p className="text-customBlue">
+                <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
+                <p className="text-customBlue text-base font-semibold w-full max-w-72">
                   Сотрудничаю с World Trade and Consult LLC уже полгода и могу с
                   уверенностью сказать, что это надежный и профессиональный
                   партнер.
+                </p>
+              </div>
+            </li>
+            <li className="rounded-xl shadow-md p-3">
+              <div className="flex mb-2">
+                <div className="flex items-center mb-2">
+                  <img
+                    src={EkatirinaSmirnova}
+                    alt="photo of man named Ekatirina Smirnova"
+                    className="mr-2"
+                  />
+                  <h3 className="text-base font-semibold text-customGray">
+                    Смирнова Екатерина
+                  </h3>
+                </div>
+              </div>
+              <div className="flex">
+                <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
+                <p className="text-customBlue text-base font-semibold w-full max-w-72">
+                  В World Trade and Consult LLC я всегда могу найти все
+                  необходимые мне товары: смазочные масла, нефтепродукты,
+                  текстиль, пластмассу.
+                </p>
+              </div>
+            </li>
+            <li className="rounded-xl shadow-md p-3">
+              <div className="flex mb-2">
+                <div className="flex items-center mb-2">
+                  <img
+                    src={NikolayKapustin}
+                    alt="photo of man named Nikolay Kapustin"
+                    className="mr-2"
+                  />
+                  <h3 className="text-base font-semibold text-customGray">
+                    Капустин Николай
+                  </h3>
+                </div>
+              </div>
+              <div className="flex">
+                <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
+                <p className="text-customBlue text-base font-semibold w-full max-w-72">
+                  WTaC предлагает своим клиентам выгодные цены и гибкие условия
+                  оплаты, что делает сотрудничество с ними еще более
+                  привлекательным.
+                </p>
+              </div>
+            </li>
+            <li className="rounded-xl shadow-md p-3">
+              <div className="flex mb-2">
+                <div className="flex items-center mb-2">
+                  <img
+                    src={NikolaevArseniy}
+                    alt="photo of man named Ivan Popov"
+                    className="mr-2"
+                  />
+                  <h3 className="text-base font-semibold text-customGray">
+                    Николаев Арсений
+                  </h3>
+                </div>
+              </div>
+              <div className="flex">
+                <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
+                <p className="text-customBlue text-base font-semibold w-full max-w-72">
+                  Сотрудники World Trade and Consult LLC всегда готовы помочь с
+                  выбором товаров, ответить на любые вопросы и оформить заказ.
+                </p>
+              </div>
+            </li>
+            <li className="rounded-xl shadow-md p-3">
+              <div className="flex mb-2">
+                <div className="flex items-center mb-2">
+                  <img
+                    src={LarionovVladimir}
+                    alt="photo of man named Ivan Popov"
+                    className="mr-2"
+                  />
+                  <h3 className="text-base font-semibold text-customGray">
+                    Ларионов Владимир
+                  </h3>
+                </div>
+              </div>
+              <div className="flex">
+                <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
+                <p className="text-customBlue text-base font-semibold w-full max-w-72">
+                  World Trade and Consult LLC ценит своих клиентов и всегда
+                  старается найти индивидуальный подход к каждому.
+                </p>
+              </div>
+            </li>
+            <li className="rounded-xl shadow-md p-3np">
+              <div className="flex mb-2">
+                <div className="flex items-center mb-2">
+                  <img
+                    src={SokolovYaroslav}
+                    alt="photo of man named Ivan Popov"
+                    className="mr-2"
+                  />
+                  <h3 className="text-base font-semibold text-customGray">
+                    Соколов Ярослав
+                  </h3>
+                </div>
+              </div>
+              <div className="flex">
+                <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
+                <p className="text-customBlue text-base font-semibold w-full max-w-72">
+                  World Trade and Consult LLC обеспечивает быструю и безопасную
+                  доставку товаров в любую точку мира.
                 </p>
               </div>
             </li>
