@@ -32,7 +32,7 @@ import SokolovYaroslav from "../../assets/sokolov-yaroslav.svg";
 const Home = () => {
   return (
     <>
-      <section className="relative">
+      <section className="relative mt-20">
         <div className="w-full max-w-[1100px] mx-auto flex justify-between items-center py-44">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl text-customBlue font-extrabold mb-6">
@@ -48,26 +48,26 @@ const Home = () => {
               Связаться с нами
             </Link>
           </div>
-          <div className="parent absolute right-[10%] -top-[15%] -z-50">
+          <div className="parent absolute right-[10%] -top-[15%]">
             <img
               src={IntroImg1}
-              alt=""
-              className="w-72 h-72 rotate-45 top-20 relative  rounded-3xl  object-cover div1 -z-50"
+              alt="White bathrobe, slippers, towels, and a bath mat with footprints; a minimal spa set on a wooden floor."
+              className="w-72 h-72 rotate-45 duration-500 hover:scale-105 top-20 relative  rounded-3xl  object-cover div1"
             />
             <img
               src={IntroImg2}
-              alt=""
-              className="w-72 h-72 rotate-45  left-20 relative rounded-3xl object-cover div2"
+              alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+              className="w-72 h-72 rotate-45 duration-500 hover:scale-105 hover:z-40 left-20 relative rounded-3xl object-cover div2"
             />
             <img
               src={IntroImg3}
               alt=""
-              className="w-72 h-72 rotate-45 relative left-40 -top-20  rounded-3xl object-cover z-50 div3"
+              className="w-72 h-72 rotate-45 duration-500 hover:scale-105 hover:z-40 relative left-40 -top-20  rounded-3xl object-cover z-10 div3"
             />
             <img
               src={IntroImg4}
               alt=""
-              className="w-72 h-72 rotate-45  relative -top-20 rounded-3xl object-cover div4 z-10"
+              className="w-72 h-72 rotate-45 duration-500 hover:scale-105 hover:z-40 relative -top-20  object-cover div4 z-10 rounded-3xl"
             />
           </div>
         </div>
@@ -316,7 +316,7 @@ const Home = () => {
                 Cengiz Energy
               </span>
             </li>
-            <li className="p-3 shadow-md rounded-xl w-full max-w-80">
+            <li className="p-3 shadow-md rounded-xl w-full max-w-[330px]">
               <div className="flex">
                 <img
                   src={SanyLogo}
@@ -369,7 +369,7 @@ const Home = () => {
           <ul className="flex flex-wrap gap-4">
             <li className="rounded-xl shadow-md p-3">
               <div className="flex mb-2">
-                <div className="flex items-center mb-2">
+                <div className="flex items-center">
                   <img
                     src={IvanPopov}
                     alt="photo of man named Ivan Popov"
@@ -382,7 +382,7 @@ const Home = () => {
               </div>
               <div className="flex">
                 <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
-                <p className="text-customBlue text-base font-semibold w-full max-w-72">
+                <p className="text-customBlue text-base font-medium w-full max-w-72">
                   Сотрудничаю с World Trade and Consult LLC уже полгода и могу с
                   уверенностью сказать, что это надежный и профессиональный
                   партнер.
@@ -391,7 +391,7 @@ const Home = () => {
             </li>
             <li className="rounded-xl shadow-md p-3">
               <div className="flex mb-2">
-                <div className="flex items-center mb-2">
+                <div className="flex items-center">
                   <img
                     src={EkatirinaSmirnova}
                     alt="photo of man named Ekatirina Smirnova"
@@ -404,7 +404,7 @@ const Home = () => {
               </div>
               <div className="flex">
                 <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
-                <p className="text-customBlue text-base font-semibold w-full max-w-72">
+                <p className="text-customBlue text-base font-medium w-full max-w-72">
                   В World Trade and Consult LLC я всегда могу найти все
                   необходимые мне товары: смазочные масла, нефтепродукты,
                   текстиль, пластмассу.
@@ -413,7 +413,7 @@ const Home = () => {
             </li>
             <li className="rounded-xl shadow-md p-3">
               <div className="flex mb-2">
-                <div className="flex items-center mb-2">
+                <div className="flex items-center">
                   <img
                     src={NikolayKapustin}
                     alt="photo of man named Nikolay Kapustin"
@@ -426,7 +426,7 @@ const Home = () => {
               </div>
               <div className="flex">
                 <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
-                <p className="text-customBlue text-base font-semibold w-full max-w-72">
+                <p className="text-customBlue text-base font-medium w-full max-w-72">
                   WTaC предлагает своим клиентам выгодные цены и гибкие условия
                   оплаты, что делает сотрудничество с ними еще более
                   привлекательным.
@@ -435,7 +435,7 @@ const Home = () => {
             </li>
             <li className="rounded-xl shadow-md p-3">
               <div className="flex mb-2">
-                <div className="flex items-center mb-2">
+                <div className="flex items-center">
                   <img
                     src={NikolaevArseniy}
                     alt="photo of man named Ivan Popov"
@@ -448,7 +448,7 @@ const Home = () => {
               </div>
               <div className="flex">
                 <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
-                <p className="text-customBlue text-base font-semibold w-full max-w-72">
+                <p className="text-customBlue text-base font-medium w-full max-w-72">
                   Сотрудники World Trade and Consult LLC всегда готовы помочь с
                   выбором товаров, ответить на любые вопросы и оформить заказ.
                 </p>
@@ -456,7 +456,7 @@ const Home = () => {
             </li>
             <li className="rounded-xl shadow-md p-3">
               <div className="flex mb-2">
-                <div className="flex items-center mb-2">
+                <div className="flex items-center">
                   <img
                     src={LarionovVladimir}
                     alt="photo of man named Ivan Popov"
@@ -469,15 +469,15 @@ const Home = () => {
               </div>
               <div className="flex">
                 <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
-                <p className="text-customBlue text-base font-semibold w-full max-w-72">
+                <p className="text-customBlue text-base font-medium w-full max-w-72">
                   World Trade and Consult LLC ценит своих клиентов и всегда
                   старается найти индивидуальный подход к каждому.
                 </p>
               </div>
             </li>
-            <li className="rounded-xl shadow-md p-3np">
+            <li className="rounded-xl shadow-md p-3">
               <div className="flex mb-2">
-                <div className="flex items-center mb-2">
+                <div className="flex items-center">
                   <img
                     src={SokolovYaroslav}
                     alt="photo of man named Ivan Popov"
@@ -490,7 +490,7 @@ const Home = () => {
               </div>
               <div className="flex">
                 <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
-                <p className="text-customBlue text-base font-semibold w-full max-w-72">
+                <p className="text-customBlue text-base font-medium w-full max-w-72">
                   World Trade and Consult LLC обеспечивает быструю и безопасную
                   доставку товаров в любую точку мира.
                 </p>
