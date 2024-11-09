@@ -63,7 +63,7 @@ const Home = () => {
             <img
               src={IntroImg1}
               alt="White bathrobe, slippers, towels, and a bath mat with footprints; a minimal spa set on a wooden floor."
-              className="w-72 h-72 duration-500 rotate-45 hover:scale-105 top-20 relative  rounded-3xl  object-cover div1 -z-50"
+              className="w-72 h-72 duration-500 rotate-45 hover:scale-105 top-20 relative  rounded-3xl  object-cover div1"
             />
             <img
               src={IntroImg2}
