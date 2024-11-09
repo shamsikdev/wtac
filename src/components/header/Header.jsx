@@ -1,6 +1,6 @@
 import SiteLogo from "../../assets/wtac-logo.svg";
 import BasketIcon from "../../assets/basket-icon.svg";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 
@@ -11,6 +11,28 @@ const Header = () => {
     setIsDropdownOpen((prev) => !prev);
   };
 
+  // Функция для закрытия dropdown
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
+  // Обработчик клика вне dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Проверяем, если клик был за пределами dropdown
+      if (!event.target.closest(".dropdown")) {
+        closeDropdown();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    // Удаляем обработчик при размонтировании компонента
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className="bg-white shadow-lg fixed w-full z-50">
       <div className="w-full max-w-[1100px] mx-auto py-5 flex justify-between items-center">
@@ -19,7 +41,7 @@ const Header = () => {
             <img className="mr-9" src={SiteLogo} alt="WTAC LLC logo" />
           </a>
           <div
-            className="relative flex items-center cursor-pointer"
+            className="relative flex items-center cursor-pointer dropdown"
             onClick={toggleDropdown}
           >
             <span className="text-xl text-customBlue mr-2">Наши продукты</span>
@@ -30,7 +52,7 @@ const Header = () => {
             />
             {/* Dropdown меню */}
             {isDropdownOpen && (
-              <div className="absolute left-0 top-16 mt-2 w-96 bg-white shadow-lg rounded-lg z-10">
+              <div className="absolute left-0 top-16 mt-2 w-96 bg-white shadow-lg rounded-lg z-10 dropdown">
                 <ul className="py-2">
                   <li className="px-4 py-4 hover:bg-gray-100">
                     <Link

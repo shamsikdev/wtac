@@ -30,9 +30,17 @@ import NikolaevArseniy from "../../assets/nikolaev-arseniy.svg";
 import LarionovVladimir from "../../assets/larionov-vladimir.svg";
 import SokolovYaroslav from "../../assets/sokolov-yaroslav.svg";
 const Home = () => {
+  const handleScrollContact = (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 5751,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
-      <section className="relative mt-20">
+      <section className="relative mt-28">
         <div className="w-full max-w-[1100px] mx-auto flex justify-between items-center py-44">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl text-customBlue font-extrabold mb-6">
@@ -44,7 +52,10 @@ const Home = () => {
               продукцией, цветными металлами, кабельно-проводниковой продукцией,
               продуктами из пластмасса и упаковочными материалами.
             </p>
-            <Link className="bg-customLightBlue text-white text-xl py-4 px-7 rounded-md w-full max-w-56">
+            <Link
+              onClick={handleScrollContact}
+              className="bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full max-w-56"
+            >
               Связаться с нами
             </Link>
           </div>
@@ -52,7 +63,7 @@ const Home = () => {
             <img
               src={IntroImg1}
               alt="White bathrobe, slippers, towels, and a bath mat with footprints; a minimal spa set on a wooden floor."
-              className="w-72 h-72 rotate-45 duration-500 hover:scale-105 top-20 relative  rounded-3xl  object-cover div1"
+              className="w-72 h-72 duration-500 rotate-45 hover:scale-105 top-20 relative  rounded-3xl  object-cover div1 -z-50"
             />
             <img
               src={IntroImg2}
@@ -281,7 +292,10 @@ const Home = () => {
               Consult LLC вы можете быть уверены в надежности и качестве каждой
               сделки.
             </p>
-            <Link className="bg-customLightBlue text-white text-xl py-4 px-7 rounded-md w-full max-w-56">
+            <Link
+              onClick={handleScrollContact}
+              className="bg-customLightBlue text-white text-xl py-4 px-7 rounded-md w-full max-w-56"
+            >
               Связаться с нами
             </Link>
           </div>

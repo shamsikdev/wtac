@@ -5,6 +5,13 @@ import FacebookIcon from "../../assets/facebook-icon.svg";
 import TelegramIcon from "../../assets/telegram-icon.svg";
 import TwitterIcon from "../../assets/twitter-icon.svg";
 const Footer = () => {
+  const handleScrollContact = (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 5751,
+      behavior: "smooth",
+    });
+  };
   return (
     <footer className="bg-customLightBlue bg-no-repeat bg-[length:350px_300px] bg-left">
       <div className="w-full max-w-[1100px] mx-auto pt-32 pb-24 flex flex-col justify-center items-center">
@@ -16,7 +23,9 @@ const Footer = () => {
           <li className="text-base text-white mr-8">
             <Link to="/certificates">Сертификаты</Link>
           </li>
-          <li className="text-base text-white">Контакты</li>
+          <li className="text-base text-white">
+            <Link onClick={handleScrollContact}>Контакты</Link>
+          </li>
         </ul>
         <div className="flex mb-7">
           <img
