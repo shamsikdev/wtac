@@ -101,7 +101,7 @@ const Category = () => {
               <li className="bg-white w-80 h-64  p-5 rounded-3xl relative group ">
                 <div className="flex justify-between items-center">
                   <div className="bg-customSkyBlue p-5 rounded-full w-24 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
-                    <img src={EngineIcon2} alt="" className="w-12 h-12" />
+                    <img src={TransmissionIcon} alt="" className="w-12 h-12" />
                   </div>
                   <GoArrowRight className="text-5xl text-customLightBlue opacity-0 group-hover:opacity-100 transition-opacity duration-500 mr-5" />
                 </div>
