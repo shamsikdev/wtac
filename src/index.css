@@ -65,3 +65,6 @@ footer {
     -44.92px 0px 18.5px 0px rgba(133, 133, 133, 0.03),
     -70.02px 0px 19.82px 0px rgba(133, 133, 133, 0);
 }
+.active {
+  background-color: #f3f4f6;
+}

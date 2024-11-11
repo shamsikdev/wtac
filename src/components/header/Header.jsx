@@ -2,7 +2,7 @@ import SiteLogo from "../../assets/wtac-logo.svg";
 import BasketIcon from "../../assets/basket-icon.svg";
 import React, { useState, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -53,55 +53,40 @@ const Header = () => {
             {/* Dropdown меню */}
             {isDropdownOpen && (
               <div className="absolute left-0 top-16 mt-2 w-96 bg-white shadow-lg rounded-lg z-10 dropdown">
-                <ul className="py-2">
-                  <li className="px-4 py-4 hover:bg-gray-100">
-                    <Link
-                      className="text-xl text-customBlue"
-                      to="/products/lubricants"
-                    >
+                <ul className="py-2 flex flex-col">
+                  <NavLink
+                    to="/category"
+                    className="px-4 py-4 hover:bg-gray-100"
+                  >
+                    <span className="text-xl text-customBlue">
                       Смазочные материалы
-                    </Link>
-                  </li>
-                  <li className="px-4 py-4 hover:bg-gray-100">
-                    <Link
-                      className="text-xl text-customBlue"
-                      to="/products/oil-products"
-                    >
+                    </span>
+                  </NavLink>
+                  <NavLink to="/c" className="px-4 py-4 hover:bg-gray-100">
+                    <span className="text-xl text-customBlue">
                       Нефтепродукты
-                    </Link>
-                  </li>
-                  <li className="px-4 py-4 hover:bg-gray-100">
-                    <Link
-                      className="text-xl text-customBlue"
-                      to="/products/oil-products"
-                    >
+                    </span>
+                  </NavLink>
+                  <NavLink to="/c" className="px-4 py-4 hover:bg-gray-100">
+                    <span className="text-xl text-customBlue">
                       Текстильная продукция
-                    </Link>
-                  </li>
-                  <li className="px-4 py-4 hover:bg-gray-100">
-                    <Link
-                      className="text-xl text-customBlue"
-                      to="/products/oil-products"
-                    >
+                    </span>
+                  </NavLink>
+                  <NavLink to="/c" className="px-4 py-4 hover:bg-gray-100">
+                    <span className="text-xl text-customBlue">
                       Упаковочные материалы
-                    </Link>
-                  </li>
-                  <li className="px-4 py-4 hover:bg-gray-100">
-                    <Link
-                      className="text-xl text-customBlue"
-                      to="/products/oil-products"
-                    >
+                    </span>
+                  </NavLink>
+                  <NavLink to="/c" className="px-4 py-4 hover:bg-gray-100">
+                    <span className="text-xl text-customBlue">
                       Цветные металлы
-                    </Link>
-                  </li>
-                  <li className="px-4 py-4 hover:bg-gray-100">
-                    <Link
-                      className="text-xl text-customBlue"
-                      to="/products/oil-products"
-                    >
+                    </span>
+                  </NavLink>
+                  <NavLink to="/c" className="px-4 py-4 hover:bg-gray-100">
+                    <span className="text-xl text-customBlue">
                       Кабельно-проводниковая продукция
-                    </Link>
-                  </li>
+                    </span>
+                  </NavLink>
                 </ul>
               </div>
             )}

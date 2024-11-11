@@ -184,8 +184,11 @@ const Home = () => {
             требованиям современных технологий, Так же у нас большой ассортимент
             продукции и вы легко найдете все что вам необходимо
           </p>
-          <ul className="grid grid-cols-2 gap-x-0 gap-y-5">
-            <li className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/lubricants-img.png)] overflow-hidden">
+          <div className="grid grid-cols-2 gap-x-0 gap-y-5">
+            <Link
+              to="/category"
+              className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/lubricants-img.png)] overflow-hidden"
+            >
               {/* Затемняющий слой для фона */}
               <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
 
@@ -202,7 +205,7 @@ const Home = () => {
 
               {/* Поднимающийся фон на hover */}
               <div className="absolute inset-0 bg-[#2D4972D9] opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-full group-hover:translate-y-0 rounded-2xl"></div>
-            </li>
+            </Link>
 
             <li className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/crude-oil-img.png)] overflow-hidden">
               <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
@@ -269,7 +272,7 @@ const Home = () => {
               </Link>
               <div className="absolute inset-0 bg-[#2D4972D9] opacity- group-hover:opacity-100 transition-all duration-700 translate-y-full group-hover:translate-y-0 rounded-2xl"></div>
             </li>
-          </ul>
+          </div>
         </div>
       </section>
       <section className="bg-customSkyBlue">
@@ -294,7 +297,7 @@ const Home = () => {
             </p>
             <Link
               onClick={handleScrollContact}
-              className="bg-customLightBlue text-white text-xl py-4 px-7 rounded-md w-full max-w-56"
+              className="bg-customLightBlue text-white hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue duration-500 text-xl py-4 px-7 rounded-md w-full max-w-56"
             >
               Связаться с нами
             </Link>
