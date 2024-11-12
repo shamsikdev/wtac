@@ -55,7 +55,7 @@ const Header = () => {
               <div className="absolute left-0 top-16 mt-2 w-96 bg-white shadow-lg rounded-lg z-10 dropdown">
                 <ul className="py-2 flex flex-col">
                   <NavLink
-                    to="/category"
+                    to="/products"
                     className="px-4 py-4 hover:bg-gray-100"
                   >
                     <span className="text-xl text-customBlue">

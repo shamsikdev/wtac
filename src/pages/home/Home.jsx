@@ -186,7 +186,7 @@ const Home = () => {
           </p>
           <div className="grid grid-cols-2 gap-x-0 gap-y-5">
             <Link
-              to="/category"
+              to="/products"
               className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/lubricants-img.png)] overflow-hidden"
             >
               {/* Затемняющий слой для фона */}
@@ -197,7 +197,7 @@ const Home = () => {
               </span>
 
               <Link
-                to="/category"
+                to="/products"
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
@@ -213,7 +213,7 @@ const Home = () => {
                 Нефтепродукты
               </span>
               <Link
-                to="/category"
+                to="/products"
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
@@ -226,7 +226,7 @@ const Home = () => {
                 Текстильная продукция
               </span>
               <Link
-                to="/category"
+                to="/products"
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
@@ -239,7 +239,7 @@ const Home = () => {
                 Упаковочные материалы
               </span>
               <Link
-                to="/category"
+                to="/products"
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
@@ -252,7 +252,7 @@ const Home = () => {
                 Цветные металлы
               </span>
               <Link
-                to="/category"
+                to="/products"
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
@@ -265,7 +265,7 @@ const Home = () => {
                 Кабельно-проводниковая продукция
               </span>
               <Link
-                to="/category"
+                to="/products"
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
