@@ -1,9 +1,9 @@
 import "./Products.css";
 import { Link } from "react-router-dom";
-import IntroImg1 from "../../assets/intro-img1.png";
-import IntroImg2 from "../../assets/intro-img2.png";
-import IntroImg3 from "../../assets/intro-img3.png";
-import IntroImg4 from "../../assets/intro-img4.png";
+import IntroImg5 from "../../assets/intro-img5.png";
+import IntroImg6 from "../../assets/intro-img6.png";
+import IntroImg7 from "../../assets/intro-img7.png";
+import IntroImg8 from "../../assets/intro-img8.png";
 import EngineIcon from "../../assets/engine-icon.svg";
 import EngineIcon2 from "../../assets/engine-icon2.svg";
 import HydraulicIcon from "../../assets/hydraulic-icon.svg";
@@ -13,6 +13,7 @@ import TransformerIcon from "../../assets/transformer-icon.svg";
 import CoolOilIcon from "../../assets/cooloil-icon.svg";
 import TurbineIcon from "../../assets/turbine-icon.svg";
 import TransmissionIcon from "../../assets/transmission-icon.svg";
+import GazolineImg from "../../assets/gazoline-img.png";
 import { GoArrowRight } from "react-icons/go";
 const Products = () => {
   const oilItems = [
@@ -81,26 +82,34 @@ const Products = () => {
             </Link>
           </div>
           <div className="parent1 absolute right-[10%] top-[15%]">
-            <img
-              src={IntroImg1}
-              alt="White bathrobe, slippers, towels, and a bath mat with footprints; a minimal spa set on a wooden floor."
-              className="w-72 h-72 duration-500 rotate-45 hover:scale-105 top-36 right-28 relative  rounded-3xl  object-cover div5"
-            />
-            <img
-              src={IntroImg2}
-              alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
-              className="w-72 h-72 rotate-45 duration-500 hover:scale-105 top-28 right-28  relative rounded-3xl object-cover div6"
-            />
-            <img
-              src={IntroImg3}
-              alt=""
-              className="w-72 h-72 rotate-45 duration-500 hover:scale-105 top-28 left-8 hover:z-40 relative   rounded-3xl object-cover div7"
-            />
-            <img
-              src={IntroImg4}
-              alt=""
-              className="w-72 h-72 rotate-45 duration-500 hover:scale-105 top-36 left-8 hover:z-40 relative  object-cover div8 rounded-3xl"
-            />
+            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-36 right-28 div5 hover:scale-105 duration-500">
+              <img
+                src={IntroImg5}
+                alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+                className="w-full h-full object-cover -rotate-45 scale-150"
+              />
+            </div>
+            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-28 right-28 div6 hover:scale-105 duration-500">
+              <img
+                src={IntroImg6}
+                alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+                className="w-full h-full object-cover -rotate-45 scale-150"
+              />
+            </div>
+            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-28 left-8 div7 hover:scale-105 duration-500">
+              <img
+                src={IntroImg7}
+                alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+                className="w-full h-full object-cover -rotate-45 scale-150"
+              />
+            </div>
+            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-36 left-8 div8 hover:scale-105 duration-500">
+              <img
+                src={IntroImg8}
+                alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+                className="w-full h-full object-cover -rotate-45 scale-150 div6"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -300,7 +309,33 @@ const Products = () => {
                 </li>
               ))}
             </ul>
-            ;
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="w-full max-w-[1100px] mx-auto flex justify-between items-center pt-24 pb-28">
+          <div className="w-72 h-72 rotate-45 overflow-hidden rounded-3xl hover:scale-105 duration-500 gazoline-img">
+            <img
+              src={GazolineImg}
+              alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+              className="w-full h-full object-cover -rotate-45 scale-150"
+            />
+          </div>
+
+          <div className="flex flex-col justify-center items-center w-full max-w-[656px]">
+            <p className="text-xl text-customGray mb-5">
+              В производстве премиальных масел, которые мы поставляем,
+              используются присадки от ведущих мировых производителей, таких как
+              Lubrizol, Afton Chemical, Evonik и Infineum.
+            </p>
+            <p className="text-xl text-customGray">
+              Менеджмент качества ФНПЗ полностью соответствует стандартам
+              качества ISO 9001, 14001, 45001, 50001 в области производства
+              нефтепродуктов. Сертифицированная лаборатория обеспечивает
+              надежный контроль качества производства, гарантируя высокий
+              уровень производственных процессов и соответствие продукции
+              международным стандартам качества.
+            </p>
           </div>
         </div>
       </section>
