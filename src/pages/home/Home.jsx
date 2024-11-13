@@ -60,26 +60,37 @@ const Home = () => {
             </Link>
           </div>
           <div className="parent absolute right-[10%] -top-[15%]">
-            <img
-              src={IntroImg1}
-              alt="White bathrobe, slippers, towels, and a bath mat with footprints; a minimal spa set on a wooden floor."
-              className="w-72 h-72 duration-500 rotate-45 hover:scale-105 top-20 relative  rounded-3xl  object-cover div1"
-            />
-            <img
-              src={IntroImg2}
-              alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
-              className="w-72 h-72 rotate-45 duration-500 hover:scale-105 hover:z-40 left-20 relative rounded-3xl object-cover div2"
-            />
-            <img
-              src={IntroImg3}
-              alt=""
-              className="w-72 h-72 rotate-45 duration-500 hover:scale-105 hover:z-40 relative left-40 -top-20  rounded-3xl object-cover z-10 div3"
-            />
-            <img
-              src={IntroImg4}
-              alt=""
-              className="w-72 h-72 rotate-45 duration-500 hover:scale-105 hover:z-40 relative -top-20  object-cover div4 z-10 rounded-3xl"
-            />
+            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-20 div1 hover:scale-105 duration-500">
+              <img
+                src={IntroImg1}
+                alt="White bathrobe, slippers, towels, and a bath mat with footprints; a minimal spa set on a wooden floor."
+                className="w-full h-full object-cover -rotate-45 scale-150"
+              />
+            </div>
+
+            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl left-20 div2 hover:scale-105 duration-500">
+              <img
+                src={IntroImg2}
+                alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+                className="w-full h-full object-cover -rotate-45 scale-150"
+              />
+            </div>
+
+            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl left-40 -top-20 z-10 div3 hover:scale-105 duration-500">
+              <img
+                src={IntroImg3}
+                alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+                className="w-full h-full object-cover -rotate-45 scale-150"
+              />
+            </div>
+
+            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl -top-20 z-10 div4 hover:scale-105 duration-500">
+              <img
+                src={IntroImg4}
+                alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+                className="w-full h-full object-cover -rotate-45 scale-150"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -129,11 +140,14 @@ const Home = () => {
         <img src={AboutImg} className="w-full object-cover" alt="" />
       </section>
       <section className="relative">
-        <img
-          src={CooperationImg}
-          alt=""
-          className="w-80 h-80 rotate-45 rounded-3xl  object-cover absolute -z-50 right-20 top-44"
-        />
+        <div className="w-72 h-72 rotate-45 overflow-hidden rounded-3xl absolute right-20 top-44 -z-10">
+          <img
+            src={CooperationImg}
+            alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+            className="w-full h-full object-cover -rotate-45 scale-150"
+          />
+        </div>
+
         <div className="w-full text-[#2D4972] max-w-[1100px] mx-auto pt-24 pb-7">
           <h2 className="text-customBlue text-[40px] w-full max-w-[730px] leading-[50px] font-black mb-5">
             Мы гордимся сотрудничеством с ведущими компаниями
@@ -186,24 +200,19 @@ const Home = () => {
           </p>
           <div className="grid grid-cols-2 gap-x-0 gap-y-5">
             <Link
-              to="/products"
+              to="/lubricants"
               className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/lubricants-img.png)] overflow-hidden"
             >
-              {/* Затемняющий слой для фона */}
               <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
-
               <span className="text-xl font-semibold text-white z-10 relative group-hover:text-2xl transition-all duration-700">
                 Смазочные материалы
               </span>
-
               <Link
-                to="/products"
+                to=""
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
               </Link>
-
-              {/* Поднимающийся фон на hover */}
               <div className="absolute inset-0 bg-[#2D4972D9] opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-full group-hover:translate-y-0 rounded-2xl"></div>
             </Link>
 
@@ -213,7 +222,7 @@ const Home = () => {
                 Нефтепродукты
               </span>
               <Link
-                to="/products"
+                to=""
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
@@ -226,7 +235,7 @@ const Home = () => {
                 Текстильная продукция
               </span>
               <Link
-                to="/products"
+                to="/textile"
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
@@ -239,7 +248,7 @@ const Home = () => {
                 Упаковочные материалы
               </span>
               <Link
-                to="/products"
+                to=""
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
@@ -252,7 +261,7 @@ const Home = () => {
                 Цветные металлы
               </span>
               <Link
-                to="/products"
+                to=""
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
@@ -265,7 +274,7 @@ const Home = () => {
                 Кабельно-проводниковая продукция
               </span>
               <Link
-                to="/products"
+                to="/"
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
