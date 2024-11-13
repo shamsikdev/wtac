@@ -216,20 +216,20 @@ const Home = () => {
               <div className="absolute inset-0 bg-[#2D4972D9] opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-full group-hover:translate-y-0 rounded-2xl"></div>
             </Link>
 
-            <li className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/crude-oil-img.png)] overflow-hidden">
+            <Link className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/crude-oil-img.png)] overflow-hidden">
               <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
               <span className="text-xl font-semibold text-white z-10 relative group-hover:text-2xl transition-all duration-700">
                 Нефтепродукты
               </span>
               <Link
-                to=""
+                to="/"
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
               </Link>
               <div className="absolute inset-0 bg-[#2D4972D9] opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-full group-hover:translate-y-0 rounded-2xl"></div>
-            </li>
-            <li className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/textile-img.png)] overflow-hidden">
+            </Link>
+            <Link className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/textile-img.png)] overflow-hidden">
               <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
               <span className="text-xl font-semibold text-white z-10 relative group-hover:text-2xl transition-all duration-700">
                 Текстильная продукция
@@ -241,34 +241,34 @@ const Home = () => {
                 <FaArrowRight className="text-2xl" />
               </Link>
               <div className="absolute inset-0 bg-[#2D4972D9] opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-full group-hover:translate-y-0 rounded-2xl"></div>
-            </li>
-            <li className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/packaging-img.png)] overflow-hidden">
+            </Link>
+            <Link className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/packaging-img.png)] overflow-hidden">
               <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
               <span className="text-xl font-semibold text-white z-10 relative group-hover:text-2xl transition-all duration-700">
                 Упаковочные материалы
               </span>
               <Link
-                to=""
+                to="/"
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
               </Link>
               <div className="absolute inset-0 bg-[#2D4972D9] opacity- group-hover:opacity-100 transition-all duration-700 translate-y-full group-hover:translate-y-0 rounded-2xl"></div>
-            </li>
-            <li className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/colored-metal-img.png)] overflow-hidden">
+            </Link>
+            <Link className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/colored-metal-img.png)] overflow-hidden">
               <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
               <span className="text-xl font-semibold text-white z-10 relative group-hover:text-2xl transition-all duration-700">
                 Цветные металлы
               </span>
               <Link
-                to=""
+                to="/"
                 className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
               >
                 <FaArrowRight className="text-2xl" />
               </Link>
               <div className="absolute inset-0 bg-[#2D4972D9] opacity- group-hover:opacity-100 transition-all duration-700 translate-y-full group-hover:translate-y-0 rounded-2xl"></div>
-            </li>
-            <li className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/electric-cables-img.png)] overflow-hidden">
+            </Link>
+            <Link className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/electric-cables-img.png)] overflow-hidden">
               <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
               <span className="text-xl font-semibold text-white z-10 relative group-hover:text-2xl transition-all duration-700">
                 Кабельно-проводниковая продукция
@@ -280,7 +280,7 @@ const Home = () => {
                 <FaArrowRight className="text-2xl" />
               </Link>
               <div className="absolute inset-0 bg-[#2D4972D9] opacity- group-hover:opacity-100 transition-all duration-700 translate-y-full group-hover:translate-y-0 rounded-2xl"></div>
-            </li>
+            </Link>
           </div>
         </div>
       </section>

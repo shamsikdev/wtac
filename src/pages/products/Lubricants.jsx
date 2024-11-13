@@ -16,6 +16,13 @@ import TransmissionIcon from "../../assets/transmission-icon.svg";
 import GazolineImg from "../../assets/gazoline-img.png";
 import { GoArrowRight } from "react-icons/go";
 const Products = () => {
+  const handleScrollContact = (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 2325,
+      behavior: "smooth",
+    });
+  };
   const oilItems = [
     {
       icon: EngineIcon,
@@ -77,11 +84,14 @@ const Products = () => {
               соответствуют международным стандартам качества ISO и требованиям
               современных технологий.
             </p>
-            <Link className="bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full max-w-56">
+            <Link
+              onClick={handleScrollContact}
+              className="bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full max-w-56"
+            >
               Связаться с нами
             </Link>
           </div>
-          <div className="parent1 absolute right-[10%] top-[15%]">
+          <div className="parent1 absolute right-[10%] top-[15%] -z-10">
             <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-36 right-28 div5 hover:scale-105 duration-500">
               <img
                 src={IntroImg5}
@@ -127,160 +137,6 @@ const Products = () => {
         </div>
         <div className="bg-customSkyBlue">
           <div className="w-full max-w-[1100px] mx-auto py-14">
-            {/* <ul className="flex flex-wrap  items-center justify-center gap-5">
-              <li className="bg-white w-80 h-64 p-5 rounded-3xl relative group">
-                <div className="flex justify-between items-center">
-                  <div className="bg-customSkyBlue p-5 rounded-full w-24 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                    <img src={EngineIcon} alt="" className="w-12 h-12" />
-                  </div>
-                  <GoArrowRight className="text-5xl text-customLightBlue mr-5 transition-opacity duration-500 opacity-0 group-hover:opacity-100" />
-                </div>
-                <h3 className="text-xl text-customLightBlue mt-20">
-                  Моторные масла для дизельных двигателей
-                </h3>
-                <img
-                  src={EngineIcon}
-                  alt=""
-                  className="absolute top-3 left-7 w-[80%] transition-opacity duration-500 opacity-0 group-hover:opacity-10"
-                />
-              </li>
-
-              <li className="bg-white w-80 h-64  p-5 rounded-3xl relative group ">
-                <div className="flex justify-between items-center">
-                  <div className="bg-customSkyBlue p-5 rounded-full w-24 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
-                    <img src={EngineIcon2} alt="" className="w-12 h-12" />
-                  </div>
-                  <GoArrowRight className="text-5xl text-customLightBlue opacity-0 group-hover:opacity-100 transition-opacity duration-500 mr-5" />
-                </div>
-                <h3 className="text-xl text-customLightBlue w-full max-w-60 mt-20">
-                  Моторные масла уровня ГОСТ
-                </h3>
-                <img
-                  src={EngineIcon2}
-                  className="opacity-0 absolute top-6 w-[85%] left-7 transition-opacity group-hover:opacity-10 duration-500"
-                  alt=""
-                />
-              </li>
-
-              <li className="bg-white w-80 h-64  p-5 rounded-3xl relative group ">
-                <div className="flex justify-between items-center">
-                  <div className="bg-customSkyBlue p-5 rounded-full w-24 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
-                    <img src={TransmissionIcon} alt="" className="w-12 h-12" />
-                  </div>
-                  <GoArrowRight className="text-5xl text-customLightBlue opacity-0 group-hover:opacity-100 transition-opacity duration-500 mr-5" />
-                </div>
-                <h3 className="text-xl text-customLightBlue w-full max-w-60 mt-[99px]">
-                  Трансмиссионные масла
-                </h3>
-                <img
-                  src={TransmissionIcon}
-                  className="opacity-0 absolute top-3 w-[70%] left-16 transition-opacity group-hover:opacity-10 duration-500"
-                  alt=""
-                />
-              </li>
-
-              <li className="bg-white w-80 h-64 p-5 rounded-3xl relative group">
-                <div className="flex justify-between items-center">
-                  <div className="bg-customSkyBlue p-5 rounded-full w-24 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                    <img src={HydraulicIcon} alt="" className="w-12 h-12" />
-                  </div>
-                  <GoArrowRight className="text-5xl text-customLightBlue mr-5 transition-opacity duration-500 opacity-0 group-hover:opacity-100" />
-                </div>
-                <h3 className="text-xl text-customLightBlue mt-[99px]">
-                  Гидравлические масла
-                </h3>
-                <img
-                  src={HydraulicIcon}
-                  alt=""
-                  className="absolute top-3 left-20 w-[45%] transition-opacity duration-500 opacity-0 group-hover:opacity-10"
-                />
-              </li>
-
-              <li className="bg-white w-80 h-64 p-5 rounded-3xl relative group">
-                <div className="flex justify-between items-center">
-                  <div className="bg-customSkyBlue p-5 rounded-full w-24 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                    <img src={GearsIcon} alt="" className="w-12 h-12" />
-                  </div>
-                  <GoArrowRight className="text-5xl text-customLightBlue mr-5 transition-opacity duration-500 opacity-0 group-hover:opacity-100" />
-                </div>
-                <h3 className="text-xl text-customLightBlue mt-[99px]">
-                  Редукторные масла
-                </h3>
-                <img
-                  src={GearsIcon}
-                  alt=""
-                  className="absolute top-3 left-10 w-[70%] transition-opacity duration-500 opacity-0 group-hover:opacity-10"
-                />
-              </li>
-
-              <li className="bg-white w-80 h-64 p-5 rounded-3xl relative group">
-                <div className="flex justify-between items-center">
-                  <div className="bg-customSkyBlue p-5 rounded-full w-24 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                    <img src={TurbineIcon} alt="" className="w-12 h-12" />
-                  </div>
-                  <GoArrowRight className="text-5xl text-customLightBlue mr-5 transition-opacity duration-500 opacity-0 group-hover:opacity-100" />
-                </div>
-                <h3 className="text-xl text-customLightBlue mt-[99px]">
-                  Турбинные масла
-                </h3>
-                <img
-                  src={TurbineIcon}
-                  alt=""
-                  className="absolute top-8 left-10 w-[70%] transition-opacity duration-500 opacity-0 group-hover:opacity-10"
-                />
-              </li>
-
-              <li className="bg-white w-80 h-64 p-5 rounded-3xl relative group">
-                <div className="flex justify-between items-center">
-                  <div className="bg-customSkyBlue p-5 rounded-full w-24 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                    <img src={CompressorIcon} alt="" className="w-12 h-12" />
-                  </div>
-                  <GoArrowRight className="text-5xl text-customLightBlue mr-5 transition-opacity duration-500 opacity-0 group-hover:opacity-100" />
-                </div>
-                <h3 className="text-xl text-customLightBlue mt-[99px]">
-                  Компрессорные масла
-                </h3>
-                <img
-                  src={CompressorIcon}
-                  alt=""
-                  className="absolute top-8 left-10 w-[70%] transition-opacity duration-500 opacity-0 group-hover:opacity-10"
-                />
-              </li>
-
-              <li className="bg-white w-80 h-64 p-5 rounded-3xl relative group">
-                <div className="flex justify-between items-center">
-                  <div className="bg-customSkyBlue p-5 rounded-full w-24 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                    <img src={TransformerIcon} alt="" className="w-12 h-12" />
-                  </div>
-                  <GoArrowRight className="text-5xl text-customLightBlue mr-5 transition-opacity duration-500 opacity-0 group-hover:opacity-100" />
-                </div>
-                <h3 className="text-xl text-customLightBlue mt-[99px]">
-                  Трансформаторное масло
-                </h3>
-                <img
-                  src={TransformerIcon}
-                  alt=""
-                  className="absolute -top-14 left-12 w-[70%] transition-opacity duration-500 opacity-0 group-hover:opacity-10"
-                />
-              </li>
-
-              <li className="bg-white w-80 h-64 p-5 rounded-3xl relative group">
-                <div className="flex justify-between items-center">
-                  <div className="bg-customSkyBlue p-5 rounded-full w-24 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                    <img src={CoolOilIcon} alt="" className="w-12 h-12" />
-                  </div>
-                  <GoArrowRight className="text-5xl text-customLightBlue mr-5 transition-opacity duration-500 opacity-0 group-hover:opacity-100" />
-                </div>
-                <h3 className="text-xl text-customLightBlue mt-[99px]">
-                  Холодильное масло
-                </h3>
-                <img
-                  src={CoolOilIcon}
-                  alt=""
-                  className="absolute top-3 left-10 w-[70%] transition-opacity duration-500 opacity-0 group-hover:opacity-10"
-                />
-              </li>
-            </ul> */}
             <ul className="flex flex-wrap items-center justify-center gap-5">
               {oilItems.map(({ icon, title, style }, index) => (
                 <li
