@@ -1071,6 +1071,26 @@ export default {
       50: "50",
     },
     extend: {
+      animation: {
+        "bounce-in": "bounceIn 0.5s ease-out forwards",
+        wiggle: "wiggle 1s ease-in-out infinite",
+        "fade-in": "fadeIn 0.7s ease-out",
+      },
+      keyframes: {
+        bounceIn: {
+          "0%": { opacity: 0, transform: "scale(0.5) translateY(-100%)" },
+          "60%": { opacity: 1, transform: "scale(1.05) translateY(10px)" },
+          "100%": { transform: "scale(1) translateY(0)" },
+        },
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      },
       colors: {
         customBlue: "#454A69",
         customLightBlue: "#2D4972",

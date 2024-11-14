@@ -107,11 +107,11 @@ const Textile = () => {
       </section>
       <section>
         <div className="w-full max-w-[1100px] mx-auto flex justify-around items-center py-16">
-          <div className="w-72 h-72 rotate-45 overflow-hidden rounded-3xl hover:scale-105 duration-500 gazoline-img">
+          <div className="w-72 h-72 rotate-45 overflow-hidden rounded-3xl duration-500 gazoline-img hover:rotate-0">
             <img
               src={UpholsteryImg}
               alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
-              className="w-full h-full object-cover -rotate-45 scale-150"
+              className="w-full h-full object-cover -rotate-45 scale-150 hover:rotate-0 duration-500"
             />
           </div>
           <div className="flex flex-col justify-center items-center w-full max-w-[656px]">

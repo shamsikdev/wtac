@@ -1,4 +1,4 @@
-import "./Products.css";
+import "./Lubricants.css";
 import { Link } from "react-router-dom";
 import IntroImg5 from "../../assets/intro-img5.png";
 import IntroImg6 from "../../assets/intro-img6.png";
@@ -91,7 +91,7 @@ const Products = () => {
               Связаться с нами
             </Link>
           </div>
-          <div className="parent1 absolute right-[10%] top-[15%] -z-10">
+          <div className="parent absolute right-[10%] top-[15%] -z-10">
             <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-36 right-28 div5 hover:scale-105 duration-500">
               <img
                 src={IntroImg5}
@@ -170,11 +170,11 @@ const Products = () => {
       </section>
       <section>
         <div className="w-full max-w-[1100px] mx-auto flex justify-between items-center pt-24 pb-28">
-          <div className="w-72 h-72 rotate-45 overflow-hidden rounded-3xl hover:scale-105 duration-500 gazoline-img">
+          <div className="w-72 h-72 rotate-45 overflow-hidden rounded-3xl hover:rotate-0 duration-500 gazoline-img">
             <img
               src={GazolineImg}
               alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
-              className="w-full h-full object-cover -rotate-45 scale-150"
+              className="w-full h-full object-cover -rotate-45 scale-150 duration-500 hover:rotate-0 hover:scale-100"
             />
           </div>
 

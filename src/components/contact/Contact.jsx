@@ -1,6 +1,30 @@
-import "./Contact.css";
+// react
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+// images
 import Shadow from "../../assets/shadow.png";
-const Contact = () => {
+const Contact = ({ setOpenModal }) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_ytmyezs", "template_jkm98lo", form.current, {
+        publicKey: "mIugaRSrMOiqO0z6R",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setOpenModal(true);
+          form.current.reset();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          setOpenModal(false);
+        }
+      );
+  };
   return (
     <section className="contact-section bg-no-repeat relative bg-[length:970px_984px]">
       <img src={Shadow} className="absolute left-[10%] z-[1]" alt="" />
@@ -14,14 +38,20 @@ const Contact = () => {
             поддержку и консультацию по выбору и применению смазочных
             материалов, а также услуги по техническому сопровождению
           </p>
-          <form action="" className="flex flex-col gap-y-3">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex flex-col gap-y-3"
+          >
             <input
+              name="user_email"
               type="text"
               className="border-2 text-gray-600 text-base rounded-md py-3 pl-3 w-full max-w-md outline-customLightBlue"
               placeholder="Email"
               required
             />
             <input
+              name="user_name"
               type="text"
               className="border-2 text-gray-600 text-base rounded-md py-3 pl-3 w-full max-w-md outline-customLightBlue"
               placeholder="Ф.И.О"
@@ -30,6 +60,7 @@ const Contact = () => {
             <button
               className=" w-full max-w-md rounded-md py-3 text-xl bg-customLightBlue text-white"
               type="submit"
+              value="Send"
             >
               Получить консультацию
             </button>

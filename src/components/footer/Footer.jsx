@@ -1,6 +1,6 @@
-import "./Footer.css";
+// rrd
 import { Link } from "react-router-dom";
-// icons
+// icons images
 import FacebookIcon from "../../assets/facebook-icon.svg";
 import TelegramIcon from "../../assets/telegram-icon.svg";
 import TwitterIcon from "../../assets/twitter-icon.svg";
@@ -33,11 +33,13 @@ const Footer = () => {
             src={FacebookIcon}
             alt="facebook icon"
           />
-          <img
-            className="mr-6 w-6 h-6"
-            src={TelegramIcon}
-            alt="telegram icon"
-          />
+          <a target="blank" href="https://t.me/WTACFER">
+            <img
+              className="mr-6 w-6 h-6"
+              src={TelegramIcon}
+              alt="telegram icon"
+            />
+          </a>
           <img className="w-6 h-6" src={TwitterIcon} alt="twitter icon" />
         </div>
         <span className="text-sm text-white opacity-75">

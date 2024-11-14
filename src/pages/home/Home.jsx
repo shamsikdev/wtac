@@ -156,7 +156,7 @@ const Home = () => {
             Наши партнеры — это компании, с которыми мы делимся общими
             ценностями и вместе достигаем поставленных целей
           </p>
-          <ul className="grid grid-cols-3 gap-8">
+          <ul className="flex flex-wrap gap-8">
             <li className="p-2 rounded-xl shadow-md w-80 h-44 bg-white">
               <img src={TalkoLogo} alt="" className="w-24 h-24 mb-5" />
               <h3 className="text-base font-semibold">
@@ -255,7 +255,7 @@ const Home = () => {
               </Link>
               <div className="absolute inset-0 bg-[#2D4972D9] opacity- group-hover:opacity-100 transition-all duration-700 translate-y-full group-hover:translate-y-0 rounded-2xl"></div>
             </Link>
-            <Link className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/colored-metal-img.png)] overflow-hidden">
+            <Link className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/colored-metal-img.jpg)] overflow-hidden">
               <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
               <span className="text-xl font-semibold text-white z-10 relative group-hover:text-2xl transition-all duration-700">
                 Цветные металлы
@@ -268,7 +268,7 @@ const Home = () => {
               </Link>
               <div className="absolute inset-0 bg-[#2D4972D9] opacity- group-hover:opacity-100 transition-all duration-700 translate-y-full group-hover:translate-y-0 rounded-2xl"></div>
             </Link>
-            <Link className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/electric-cables-img.png)] overflow-hidden">
+            <Link className="group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(./assets/electric-cables-img.jpg)] overflow-hidden">
               <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
               <span className="text-xl font-semibold text-white z-10 relative group-hover:text-2xl transition-all duration-700">
                 Кабельно-проводниковая продукция
