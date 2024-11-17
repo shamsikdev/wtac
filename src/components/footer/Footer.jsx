@@ -1,5 +1,5 @@
 // rrd
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // icons images
 import FacebookIcon from "../../assets/facebook-icon.svg";
 import TelegramIcon from "../../assets/telegram-icon.svg";
@@ -12,6 +12,9 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
+  const { pathname } = useLocation();
+  pathname.includes("/textile") ? console.log(pathname) : console.log("oops");
+
   return (
     <footer className="bg-customLightBlue bg-no-repeat bg-[length:350px_300px] bg-left">
       <div className="w-full max-w-[1100px] mx-auto pt-32 pb-24 flex flex-col justify-center items-center">

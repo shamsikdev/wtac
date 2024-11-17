@@ -81,23 +81,26 @@ const Textile = () => {
             <li className="flex flex-col justify-between relative p-6 w-[530px] h-80 rounded-2xl bg-cover bg-[url(./assets/textile-img1.png)] overflow-hidden group">
               <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
               <div className="relative w-16 h-16 bg-[#EBF7FC] rounded-full flex items-center justify-center transition duration-300 group-hover:bg-transparent">
-                <GoArrowRight className="text-4xl text-customLightBlue group-hover:translate-x-96 group-hover:text-white group-hover:text-6xl transition duration-500" />
+                <GoArrowRight className="text-4xl text-customLightBlue group-hover:translate-x-96 group-hover:text-white transition duration-500" />
               </div>
               <span className="relative z-10 text-3xl text-white transition duration-700">
                 Домашний текстиль
               </span>
             </li>
 
-            <li className="group relative flex h-80 w-[530px] flex-col justify-between overflow-hidden rounded-2xl bg-[url(./assets/t-shirts-img.png)] bg-cover p-6">
+            <Link
+              to="/textile/clothing"
+              className="group relative flex h-80 w-[530px] flex-col justify-between overflow-hidden rounded-2xl bg-[url(./assets/t-shirts-img.png)] bg-cover p-6"
+            >
               <div className="absolute inset-0 rounded-2xl bg-black opacity-30" />
               <div className="relative h-16 w-16">
                 <div className="absolute inset-0 rounded-full bg-[#EBF7FC] transition-opacity duration-300 group-hover:opacity-0" />
-                <GoArrowRight className="absolute inset-0 m-auto text-4xl text-customLightBlue transition-all duration-500 group-hover:translate-x-96 group-hover:text-6xl group-hover:text-white" />
+                <GoArrowRight className="absolute inset-0 m-auto text-4xl text-customLightBlue transition-all duration-500 group-hover:translate-x-96 group-hover:text-white" />
               </div>
               <span className="relative text-3xl text-white">
                 Мужская и женская одежда
               </span>
-            </li>
+            </Link>
           </ul>
           <p className="text-customGray text-2xl w-full">
             Продукция представленная в категориях - является примером, для
