@@ -236,7 +236,7 @@ const Home = () => {
               <Link
                 key={index}
                 to={item.link}
-                className={`group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url(${item.bgImage})] overflow-hidden`}
+                className={`group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url('${item.bgImage}')] overflow-hidden`}
               >
                 <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
                 <span className="text-xl font-semibold text-white z-10 relative group-hover:text-2xl transition-all duration-700">
