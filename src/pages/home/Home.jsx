@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { ImQuotesLeft } from "react-icons/im";
+import { motion } from "framer-motion";
 import IntroImg1 from "../../assets/intro-img1.png";
 import IntroImg2 from "../../assets/intro-img2.png";
 import IntroImg3 from "../../assets/intro-img3.png";
@@ -29,6 +30,12 @@ import NikolayKapustin from "../../assets/nikolay-kapustin.svg";
 import NikolaevArseniy from "../../assets/nikolaev-arseniy.svg";
 import LarionovVladimir from "../../assets/larionov-vladimir.svg";
 import SokolovYaroslav from "../../assets/sokolov-yaroslav.svg";
+import Lubricants from "../../assets/lubricants-img.png";
+import CrudeOil from "../../assets/crude-oil-img.png";
+import Textile from "../../assets/textile-img.png";
+import Packaging from "../../assets/packaging-img.png";
+import ColoredMetal from "../../assets/colored-metal-img.jpg";
+import ElectricCables from "../../assets/electric-cables-img.jpg";
 const Home = () => {
   const handleScrollContact = (event) => {
     event.preventDefault();
@@ -41,32 +48,32 @@ const Home = () => {
     {
       title: "Смазочные материалы",
       link: "/lubricants",
-      bgImage: "./assets/lubricants-img.png",
+      bgImage: Lubricants,
     },
     {
       title: "Нефтепродукты",
       link: "/",
-      bgImage: "./assets/crude-oil-img.png",
+      bgImage: CrudeOil,
     },
     {
       title: "Текстильная продукция",
       link: "/textile",
-      bgImage: "./assets/textile-img.png",
+      bgImage: Textile,
     },
     {
       title: "Упаковочные материалы",
       link: "/",
-      bgImage: "./assets/packaging-img.png",
+      bgImage: Packaging,
     },
     {
       title: "Цветные металлы",
       link: "/",
-      bgImage: "./assets/colored-metal-img.jpg",
+      bgImage: ColoredMetal,
     },
     {
       title: "Кабельно-проводниковая продукция",
       link: "/",
-      bgImage: "./assets/electric-cables-img.jpg",
+      bgImage: ElectricCables,
     },
   ];
 
@@ -78,6 +85,7 @@ const Home = () => {
             <h2 className="text-4xl text-customBlue font-extrabold mb-6">
               World Trade and Consult LLC
             </h2>
+
             <p className="text-customGray text-xl w-full max-w-[600px] mb-12">
               Торговая компания, основанная в 2023 году и специализирующаяся на
               оптовой торговле смазочными маслами, нефтепродуктами, текстильной
@@ -236,7 +244,8 @@ const Home = () => {
               <Link
                 key={index}
                 to={item.link}
-                className={`group relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover bg-[url('${item.bgImage}')] overflow-hidden`}
+                className={`group f relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover  overflow-hidden`}
+                style={{ backgroundImage: `url('${item.bgImage}')` }}
               >
                 <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
                 <span className="text-xl font-semibold text-white z-10 relative group-hover:text-2xl transition-all duration-700">

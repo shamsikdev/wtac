@@ -5,83 +5,60 @@ import { GoArrowLeft } from "react-icons/go";
 import { IoIosList } from "react-icons/io";
 import { HiOutlineViewGrid } from "react-icons/hi";
 import { RxHamburgerMenu } from "react-icons/rx";
-import HoodieImg from "../../assets/hoodie-img.svg";
-import HoodieManImg from "../../assets/hoodie-img.png";
-import SweatshirtImg from "../../assets/sweatshirt-img.png";
-import SweatshirtManImg from "../../assets/sweatshirt-man-img.png";
-import TShirtImg from "../../assets/t-shirt-img.png";
-import TShirtManImg from "../../assets/t-shirt-man-img.png";
-const products = [
+import ZicOil from "../../assets/zic-oil.png";
+import CastrolOil from "../../assets/castrol-oil.png";
+import CastrolVehicleOil from "../../assets/castrol-multivehicle-oil.png";
+const oil_data = [
   {
     id: 1,
-    name: "Hoodie",
-    image: HoodieImg,
-    sizes: ["S", "M", "L", "XL"],
-    gap: "mb-9",
-    category: "women",
-    type: "oversize",
+    name: "Castrol - ATF DEX II MULTIVEHICLE",
+    volume: "1L",
+    image: CastrolOil,
   },
   {
     id: 2,
-    name: "Sweatshirt",
-    image: SweatshirtImg,
-    sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
-    // gap: "mb-9",
-    category: "women",
-    type: "oversize",
+    name: "Castrol - ATF MULTIVEHICLE",
+    volume: "1L",
+    image: CastrolVehicleOil,
   },
   {
     id: 3,
-    name: "Hoodie",
-    image: HoodieManImg,
-    sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
-    category: "women",
-    type: "straight",
+    name: "ZIC ATF MULTI LF",
+    volume: "4L",
+    image: ZicOil,
   },
   {
     id: 4,
-    name: "Sweatshirt",
-    image: SweatshirtManImg,
-    sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
-    category: "women",
-    type: "straight",
+    name: "ZIC ATF MULTI HT",
+    volume: "4L",
+    image: CastrolOil,
   },
   {
     id: 5,
-    name: "WOMEN’S T-SHIRTS Oversize model",
-    image: TShirtImg,
-    sizes: ["S", "M", "L", "XL"],
-    gap: "mb-9",
-    category: "men",
-    type: "oversize",
+    name: "ZIC ATF MULTI HT",
+    volume: "4L",
+    image: ZicOil,
   },
   {
     id: 6,
-    name: "WOMEN’S T-SHIRTS Oversize model",
-    image: TShirtManImg,
-    sizes: ["S", "M", "L", "XL"],
-    gap: "mb-9",
-    category: "men",
-    type: "oversize",
+    name: "ZIC ATF MULTI HT",
+    volume: "4L",
+    image: ZicOil,
   },
   {
     id: 7,
-    name: "WOMEN’S T-SHIRTS Straight cut T-shirt",
-    image: SweatshirtManImg,
-    sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
-    category: "men",
-    type: "straight",
+    name: "ZIC ATF MULTI HT",
+    volume: "4L",
+    image: ZicOil,
   },
   {
     id: 8,
-    name: "WOMEN’S T-SHIRTS Straight cut T-shirt",
-    image: TShirtManImg,
-    sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
-    category: "men",
-    type: "straight",
+    name: "ZIC ATF MULTI HT",
+    volume: "1L",
+    image: CastrolOil,
   },
 ];
-function Clothing() {
+const TransmissionOils = () => {
   const [activeButton, setActiveButton] = useState(1);
   const [quantity, setQuantity] = useState(1);
   const [showSelectedButton, setShowSelectedButton] = useState(null);
@@ -105,7 +82,7 @@ function Clothing() {
   return (
     <section>
       <div className="w-full max-w-[1100px] mx-auto pt-44">
-        <Link to="/textile " className="flex items-center mb-12">
+        <Link to="/lubricants" className="flex items-center mb-12">
           <GoArrowLeft className="mr-3 text-4xl  text-customLightBlue" />
           <span className="text-4xl font-black text-customLightBlue">
             Мужская и женская одежда
@@ -147,29 +124,21 @@ function Clothing() {
       <div className="bg-customSkyBlue">
         <div className="w-full max-w-[1100px] mx-auto py-12">
           <ul className="flex flex-wrap gap-x-5 gap-y-20">
-            {products?.map((product) => {
+            {oil_data?.map((datum) => {
               return (
                 <li className="bg-white px-3 pt-2 pb-5 flex flex-col rounded-xl w-full max-w-64 h-full max-h-[500px]">
-                  <img src={product.image} alt="" className="mb-6" />
-                  <span className="text-lg  text-customBlue mb-1">
-                    {product.name}
+                  <img src={datum.image} alt="" className="mb-6" />
+                  <span className="text-base  text-customBlue mb-1">
+                    {datum.name}
                   </span>
-                  <div className={`flex flex-wrap gap-1 ${product.gap}`}>
-                    {product?.sizes?.map((size) => {
-                      return (
-                        <button
-                          onClick={() => setShowSelectedButton(product.id)}
-                          className="text-sm text-customLightBlue bg-customSkyBlue w-10 h-8 p-[6px] rounded-md"
-                        >
-                          {size}
-                        </button>
-                      );
-                    })}
-                  </div>
-                  {showSelectedButton == product.id && (
-                    <div
-                      className={`flex flex-col ${product.gap ? "" : "mt-6"}`}
-                    >
+                  <button
+                    onClick={() => setShowSelectedButton(datum.id)}
+                    className="text-sm text-customLightBlue bg-customSkyBlue w-10 h-8 p-[6px] rounded-md mb-6"
+                  >
+                    {datum.volume}
+                  </button>
+                  {showSelectedButton == datum.id && (
+                    <div className={`flex flex-col`}>
                       <div className="flex justify-between items-center mb-6">
                         <button
                           onClick={decreaseQuantity}
@@ -198,5 +167,6 @@ function Clothing() {
       </div>
     </section>
   );
-}
-export default Clothing;
+};
+
+export default TransmissionOils;

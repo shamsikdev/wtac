@@ -6,12 +6,14 @@ import Lubricants from "./pages/products/Lubricants";
 import Textile from "./pages/products/Textile";
 // goods
 import Clothing from "./pages/goods/Clothing";
+import TransmissionOils from "./pages/goods/TransmissionOils";
 // layouts
 import HomeLayout from "./layouts/HomeLayout";
 import TextileLayout from "./layouts/TextileLayout";
 // components
 import Cart from "./pages/cart/Cart";
 import PageNotFound from "./components/PageNotFound";
+import LubricantsLayout from "./layouts/LubricantsLayout";
 const App = () => {
   const routes = createBrowserRouter([
     {
@@ -24,7 +26,17 @@ const App = () => {
         },
         {
           path: "/lubricants",
-          element: <Lubricants />,
+          element: <LubricantsLayout />,
+          children: [
+            {
+              index: true,
+              element: <Lubricants />,
+            },
+            {
+              path: "/lubricants/transmission-oils",
+              element: <TransmissionOils />,
+            },
+          ],
         },
         {
           path: "/textile",

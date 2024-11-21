@@ -139,7 +139,8 @@ const Products = () => {
           <div className="w-full max-w-[1100px] mx-auto py-14">
             <ul className="flex flex-wrap items-center justify-center gap-5">
               {oilItems.map(({ icon, title, style }, index) => (
-                <li
+                <Link
+                  to="/lubricants/transmission-oils"
                   key={index}
                   className="bg-white w-80 h-64 p-5 rounded-3xl relative group"
                 >
@@ -162,7 +163,7 @@ const Products = () => {
                     }}
                     className="absolute transition-opacity duration-500 opacity-0 group-hover:opacity-10"
                   />
-                </li>
+                </Link>
               ))}
             </ul>
           </div>

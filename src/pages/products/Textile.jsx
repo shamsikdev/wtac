@@ -102,7 +102,7 @@ const Textile = () => {
               </span>
             </Link>
           </ul>
-          <p className="text-customGray text-2xl w-full">
+          <p className="text-customGray text-xl w-full">
             Продукция представленная в категориях - является примером, для
             получения актуальных товаров оставьте запрос на консультацию
           </p>
