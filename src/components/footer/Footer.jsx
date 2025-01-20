@@ -5,15 +5,15 @@ import FacebookIcon from "../../assets/facebook-icon.svg";
 import TelegramIcon from "../../assets/telegram-icon.svg";
 import TwitterIcon from "../../assets/twitter-icon.svg";
 const Footer = () => {
-  const handleScrollContact = (event) => {
+  const handleScrollContacct = (event) => {
     event.preventDefault();
     window.scrollTo({
       top: 5751,
       behavior: "smooth",
     });
   };
-  const { pathname } = useLocation();
-  pathname.includes("/textile") ? console.log(pathname) : console.log("oops");
+  // const { pathname } = useLocation();
+  // pathname.includes("/textile") ? console.log(pathname) : console.log("oops");
 
   return (
     <footer className="bg-customLightBlue bg-no-repeat bg-[length:350px_300px] bg-left">
@@ -33,7 +33,8 @@ const Footer = () => {
         <div className="flex mb-7">
           <img
             className="mr-6 w-6 h-6"
-            src={FacebookIcon}
+            тзь
+            кгт={FacebookIcon}
             alt="facebook icon"
           />
           <a target="blank" href="https://t.me/WTACFER">

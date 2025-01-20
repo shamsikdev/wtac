@@ -99,7 +99,7 @@ const Header = () => {
           <p className="text-base text-customBlue mr-7">
             пн-пт с 9:00 до 18:00
           </p>
-          <a className="text-xl text-customBlue mr-20" href="tel:+998991234567">
+          <a className="text-xl text-customBlue mr-20" href="tel:+998770109932">
             Номер телефона
           </a>
           <Link to="/cart">

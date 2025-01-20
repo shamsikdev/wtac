@@ -1,4 +1,3 @@
-import "./Textile.css";
 import { Link } from "react-router-dom";
 import IntroImg9 from "../../assets/intro-img9.png";
 import IntroImg10 from "../../assets/intro-img10.png";

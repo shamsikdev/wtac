@@ -1,4 +1,3 @@
-import "./Lubricants.css";
 import { Link } from "react-router-dom";
 import IntroImg5 from "../../assets/intro-img5.png";
 import IntroImg6 from "../../assets/intro-img6.png";
