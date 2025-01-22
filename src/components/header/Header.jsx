@@ -5,8 +5,11 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import SiteLogo from "../../assets/wtac-logo.svg";
 import BasketIcon from "../../assets/basket-icon.svg";
 import { IoIosArrowDown } from "react-icons/io";
+import UsaFlag from "../../assets/usa-flag.png";
+import RussiaFlag from "../../assets/russia-flag.png";
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [show, setShow] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
@@ -102,6 +105,20 @@ const Header = () => {
           <a className="text-xl text-customBlue mr-20" href="tel:+998770109932">
             Номер телефона
           </a>
+          <div
+            className="mr-20 flex items-center relative"
+            onClick={() => {
+              setShow((prev) => !prev);
+            }}
+          >
+            <img src={UsaFlag} className="w-6 object-cover" alt="" />
+            <IoIosArrowDown />
+            {show && (
+              <p className="absolute p-4 text-red-600 font-semibold w-72 top-10 bg-white -right-32 rounded-md">
+                В данный момент переключение языка не доступно!
+              </p>
+            )}
+          </div>
           <Link to="/cart">
             <img
               className="cursor-pointer"

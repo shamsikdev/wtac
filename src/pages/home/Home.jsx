@@ -80,17 +80,25 @@ const Home = () => {
   return (
     <>
       <section className="relative mt-28">
-        <div className="w-full max-w-[1100px] mx-auto flex justify-between items-center py-44">
+        <div className="w-full max-w-[1100px] mx-auto flex justify-between items-center pb-44 pt-20">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl text-customBlue font-extrabold mb-6">
               World Trade and Consult LLC
             </h2>
 
-            <p className="text-customGray text-xl w-full max-w-[600px] mb-12">
-              Торговая компания, основанная в 2023 году и специализирующаяся на
-              оптовой торговле смазочными маслами, нефтепродуктами, текстильной
-              продукцией, цветными металлами, кабельно-проводниковой продукцией,
-              продуктами из пластмасса и упаковочными материалами.
+            <p className="text-customGray text-lg w-full max-w-[550px] mb-6">
+              Наша компания, основанная в 2023 году, специализируется на оптовой
+              торговле и продвижении на экспорт продукции, произведенной в
+              Узбекистане. Мы сотрудничаем с производителями из различных
+              отраслей, предлагая широкий ассортимент товаров, включая смазочные
+              масла, нефтепродукты, текстильную продукцию, цветные металлы,
+              кабельно-проводниковую продукцию, изделия из пластмассы,
+              упаковочные материалы, а также любую другую продукцию узбекского
+              производства, востребованную на международных рынках.
+            </p>
+            <p className="text-customGray text-lg w-full max-w-[500px] font-semibold mb-12">
+              Также мы оказываем консалтинговые услуги на территории Узбекистана
+              и СНГ
             </p>
             <Link
               onClick={handleScrollContact}
@@ -99,7 +107,7 @@ const Home = () => {
               Связаться с нами
             </Link>
           </div>
-          <div className="parent absolute right-[10%] -top-[15%]">
+          <div className="parent absolute right-[5%] -top-[12%]">
             <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-20 div1 hover:scale-105 duration-500">
               <img
                 src={IntroImg1}

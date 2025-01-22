@@ -57,6 +57,21 @@ const Contact = ({ setOpenModal }) => {
               placeholder="Ф.И.О"
               required
             />
+            <select
+              className="border-2 text-gray-600 text-base rounded-md py-3 pl-3 w-full max-w-md outline-customLightBlue"
+              name=""
+            >
+              <option disabled value="1">
+                Выберите услугу
+              </option>
+              <option value="">Смазочные материалы</option>
+              <option value="">Нефтепродукты</option>
+              <option value="">Текстильная продукция</option>
+              <option value="">Упаковачные материалы</option>
+              <option value="">Цветные металлы</option>
+              <option value="">Кабельно-проводниковая продукция</option>
+              <option value="">Консалтинговые услуги</option>
+            </select>
             <button
               className=" w-full max-w-md rounded-md py-3 text-xl bg-customLightBlue text-white"
               type="submit"

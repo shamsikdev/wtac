@@ -5,7 +5,7 @@ import FacebookIcon from "../../assets/facebook-icon.svg";
 import TelegramIcon from "../../assets/telegram-icon.svg";
 import TwitterIcon from "../../assets/twitter-icon.svg";
 const Footer = () => {
-  const handleScrollContacct = (event) => {
+  const handleScrollContact = (event) => {
     event.preventDefault();
     window.scrollTo({
       top: 5751,
