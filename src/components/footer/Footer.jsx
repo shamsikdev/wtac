@@ -33,8 +33,7 @@ const Footer = () => {
         <div className="flex mb-7">
           <img
             className="mr-6 w-6 h-6"
-            тзь
-            кгт={FacebookIcon}
+            src={FacebookIcon}
             alt="facebook icon"
           />
           <a target="blank" href="https://t.me/WTACFER">

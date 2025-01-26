@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { ImQuotesLeft } from "react-icons/im";
-import { motion } from "framer-motion";
 import IntroImg1 from "../../assets/intro-img1.png";
 import IntroImg2 from "../../assets/intro-img2.png";
 import IntroImg3 from "../../assets/intro-img3.png";
@@ -36,14 +35,13 @@ import Textile from "../../assets/textile-img.png";
 import Packaging from "../../assets/packaging-img.png";
 import ColoredMetal from "../../assets/colored-metal-img.jpg";
 import ElectricCables from "../../assets/electric-cables-img.jpg";
-const Home = () => {
-  const handleScrollContact = (event) => {
-    event.preventDefault();
-    window.scrollTo({
-      top: 5910,
-      behavior: "smooth",
-    });
-  };
+const Home = ({ handleScrollContact }) => {
+  // const handleScrollContact = () => {
+  //   window.scrollTo({
+  //     top: 5910,
+  //     behavior: "smooth",
+  //   });
+  // };
   const items = [
     {
       title: "Смазочные материалы",
@@ -291,12 +289,12 @@ const Home = () => {
               Consult LLC вы можете быть уверены в надежности и качестве каждой
               сделки.
             </p>
-            <Link
-              onClick={handleScrollContact}
+            <button
+              onClick={() => console.log("Button clicked")}
               className="bg-customLightBlue text-white hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue duration-500 text-xl py-4 px-7 rounded-md w-full max-w-56"
             >
               Связаться с нами
-            </Link>
+            </button>
           </div>
           <img src={ManWithHelmetImg} alt="" className="pt-8" />
         </div>

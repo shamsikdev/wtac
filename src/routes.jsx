@@ -16,6 +16,16 @@ import Cart from "./pages/cart/Cart";
 import PageNotFound from "./components/PageNotFound";
 import LubricantsLayout from "./layouts/LubricantsLayout";
 const App = () => {
+  const handleScrollContact = (event, arg) => {
+    console.log("Event: ", event);
+    console.log("Argument: ", arg);
+    event.preventDefault();
+
+    // window.scrollTo({
+    //   top: top,
+    //   behavior: "smooth",
+    // });
+  };
   const routes = createBrowserRouter([
     {
       path: "/",
@@ -23,7 +33,7 @@ const App = () => {
       children: [
         {
           index: true,
-          element: <Home />,
+          element: <Home handleScrollContact={handleScrollContact} />,
         },
         {
           path: "/lubricants",

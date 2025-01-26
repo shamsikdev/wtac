@@ -59,18 +59,20 @@ const Contact = ({ setOpenModal }) => {
             />
             <select
               className="border-2 text-gray-600 text-base rounded-md py-3 pl-3 w-full max-w-md outline-customLightBlue"
-              name=""
+              name="services"
             >
-              <option disabled value="1">
+              <option selected disabled value="1">
                 Выберите услугу
               </option>
-              <option value="">Смазочные материалы</option>
-              <option value="">Нефтепродукты</option>
-              <option value="">Текстильная продукция</option>
-              <option value="">Упаковачные материалы</option>
-              <option value="">Цветные металлы</option>
-              <option value="">Кабельно-проводниковая продукция</option>
-              <option value="">Консалтинговые услуги</option>
+              <option value="lubricants">Смазочные материалы</option>
+              <option value="petroleum-products">Нефтепродукты</option>
+              <option value="textile">Текстильная продукция</option>
+              <option value="packaging-materials">Упаковачные материалы</option>
+              <option value="colored-metals">Цветные металлы</option>
+              <option value="electric-cables">
+                Кабельно-проводниковая продукция
+              </option>
+              <option value="consulting-services">Консалтинговые услуги</option>
             </select>
             <button
               className=" w-full max-w-md rounded-md py-3 text-xl bg-customLightBlue text-white"
