@@ -78,7 +78,10 @@ const Header = () => {
                       Текстильная продукция
                     </span>
                   </NavLink>
-                  <NavLink to="/c" className="px-4 py-4 hover:bg-gray-100">
+                  <NavLink
+                    to="/packaging-materials"
+                    className="px-4 py-4 hover:bg-gray-100"
+                  >
                     <span className="text-xl text-customBlue">
                       Упаковочные материалы
                     </span>
@@ -114,7 +117,7 @@ const Header = () => {
             <img src={UsaFlag} className="w-6 object-cover" alt="" />
             <IoIosArrowDown />
             {show && (
-              <p className="absolute p-4 text-red-600 font-semibold w-72 top-10 bg-white -right-32 rounded-md">
+              <p className="absolute p-4 text-red-600 font-semiboldnpm  w-72 top-10 bg-white -right-32 rounded-md">
                 В данный момент переключение языка не доступно!
               </p>
             )}

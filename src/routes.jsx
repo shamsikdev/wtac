@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import Certificate from "./pages/Certificate";
 import Lubricants from "./pages/products/Lubricants";
 import Textile from "./pages/products/Textile";
+import Packaging from "./pages/products/Packaging";
 // goods
 import Clothing from "./pages/goods/Clothing";
 import TransmissionOils from "./pages/goods/TransmissionOils";
@@ -51,6 +52,10 @@ const App = () => {
               element: <Clothing />,
             },
           ],
+        },
+        {
+          path: "/packaging-materials",
+          element: <Packaging />,
         },
         {
           path: "/cart",

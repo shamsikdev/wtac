@@ -40,7 +40,7 @@ const Home = () => {
   const handleScrollContact = (event) => {
     event.preventDefault();
     window.scrollTo({
-      top: 5751,
+      top: 5910,
       behavior: "smooth",
     });
   };
@@ -62,7 +62,7 @@ const Home = () => {
     },
     {
       title: "Упаковочные материалы",
-      link: "/",
+      link: "/packaging-materials",
       bgImage: Packaging,
     },
     {
