@@ -13,7 +13,7 @@ import PandaLogo from "../../assets/panda-c-logo.svg";
 import TantanaLogo from "../../assets/tantana-logo.svg";
 import RtpLogo from "../../assets/rtp-logo.svg";
 import SanegLogo from "../../assets/saneg-logo.svg";
-import ManWithHelmetImg from "../../assets/man-with-helmet-img.png";
+import WomanWithHelmetImg from "../../assets/woman-with-helmet-img.png";
 import KabeltechLogo from "../../assets/kabeltech-logo.svg";
 import NgmkLogo from "../../assets/ngmk-logo.svg";
 import UtyLogo from "../../assets/uty-logo.svg";
@@ -275,7 +275,7 @@ const Home = ({ handleScrollContact }) => {
             <h2 className="text-customBlue text-[40px] w-full max-w-[640px] leading-[50px] font-black mb-5">
               Мы уделяем большой упор на качество нашего товара
             </h2>
-            <p className="text-customGray text-xl w-full max-w-[805px] mb-12">
+            <p className="text-customGray text-xl w-[805px] mb-12">
               World Trade and Consult LLC – это надежный партнер в сфере
               международной торговли, который стремится предоставлять только
               продукцию высочайшего качества. Наша компания гордится тем, что мы
@@ -296,7 +296,7 @@ const Home = ({ handleScrollContact }) => {
               Связаться с нами
             </button>
           </div>
-          <img src={ManWithHelmetImg} alt="" className="pt-8" />
+          <img src={WomanWithHelmetImg} alt="" className="pt-10" />
         </div>
       </section>
       <section>
