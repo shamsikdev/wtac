@@ -178,11 +178,10 @@ const Home = () => {
 
         <div className="w-full text-[#2D4972] max-w-[1100px] mx-auto pt-24 pb-7">
           <h2 className="text-customBlue text-[40px] w-full max-w-[730px] leading-[50px] font-black mb-5">
-            Мы гордимся сотрудничеством с ведущими компаниями
+            {t("partners_title")}
           </h2>
           <p className="text-customGray text-xl w-full max-w-[770px] mb-10">
-            Наши партнеры — это компании, с которыми мы делимся общими
-            ценностями и вместе достигаем поставленных целей
+            {t("partners_description")}
           </p>
           <ul className="flex flex-wrap gap-8">
             <li className="p-2 rounded-xl shadow-md w-80 h-44 bg-white">
@@ -219,12 +218,10 @@ const Home = () => {
       <section>
         <div className="w-full text-[#2D4972] max-w-[1100px] mx-auto pt-20 pb-12">
           <h2 className="text-customBlue text-[40px] w-full max-w-[730px] leading-[50px] font-black mb-5">
-            Наш ассортимент продукции
+            {t("product_assortment")}
           </h2>
           <p className="text-customGray text-xl w-full mb-12">
-            Наш товар соответствуют международным стандартам качества и
-            требованиям современных технологий, Так же у нас большой ассортимент
-            продукции и вы легко найдете все что вам необходимо
+            {t("product_description")}
           </p>
 
           <div className="grid grid-cols-2 gap-x-0 gap-y-5">
@@ -255,10 +252,10 @@ const Home = () => {
         <div className="w-full text-[#2D4972] max-w-[1100px] mx-auto flex items-end">
           <div className="flex flex-col justify-center pb-8">
             <h2 className="text-customBlue text-[40px] w-full max-w-[640px] leading-[50px] font-black mb-5">
-              Мы уделяем большой упор на качество нашего товара
+              {t("quality_focus")}
             </h2>
             <p className="text-customGray text-xl w-[805px] mb-12">
-              World Trade and Consult LLC – это надежный партнер в сфере
+              {/* World Trade and Consult LLC – это надежный партнер в сфере
               международной торговли, который стремится предоставлять только
               продукцию высочайшего качества. Наша компания гордится тем, что мы
               обеспечиваем строгий контроль качества на всех этапах поставок.{" "}
@@ -269,13 +266,11 @@ const Home = () => {
               работаем с проверенными поставщиками и всегда стремимся к тому,
               чтобы наши клиенты получали только лучшее. С World Trade and
               Consult LLC вы можете быть уверены в надежности и качестве каждой
-              сделки.
+              сделки. */}
+              {t("quality_description")}
             </p>
-            <button
-              onClick={() => console.log("Button clicked")}
-              className="bg-customLightBlue text-white hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue duration-500 text-xl py-4 px-7 rounded-md w-full max-w-56"
-            >
-              Связаться с нами
+            <button className="bg-customLightBlue text-white hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue duration-500 text-xl py-4 px-7 rounded-md w-full max-w-56">
+              {t("contact_us")}
             </button>
           </div>
           <img src={WomanWithHelmetImg} alt="" className="pt-10" />
