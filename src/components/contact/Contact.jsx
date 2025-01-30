@@ -58,10 +58,11 @@ const Contact = ({ setOpenModal }) => {
               required
             />
             <select
+              defaultValue="1"
               className="border-2 text-gray-600 text-base rounded-md py-3 pl-3 w-full max-w-md outline-customLightBlue"
               name="services"
             >
-              <option selected disabled value="1">
+              <option disabled value="1">
                 Выберите услугу
               </option>
               <option value="lubricants">Смазочные материалы</option>

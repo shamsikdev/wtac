@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { ImQuotesLeft } from "react-icons/im";
+import { useTranslation } from "react-i18next";
 import IntroImg1 from "../../assets/intro-img1.png";
 import IntroImg2 from "../../assets/intro-img2.png";
 import IntroImg3 from "../../assets/intro-img3.png";
@@ -35,13 +36,15 @@ import Textile from "../../assets/textile-img.png";
 import Packaging from "../../assets/packaging-img.png";
 import ColoredMetal from "../../assets/colored-metal-img.jpg";
 import ElectricCables from "../../assets/electric-cables-img.jpg";
-const Home = ({ handleScrollContact }) => {
-  // const handleScrollContact = () => {
-  //   window.scrollTo({
-  //     top: 5910,
-  //     behavior: "smooth",
-  //   });
-  // };
+const Home = () => {
+  const handleScrollContact = () => {
+    window.scrollTo({
+      top: 5910,
+      behavior: "smooth",
+    });
+  };
+  const { t, i18n } = useTranslation();
+
   const items = [
     {
       title: "Смазочные материалы",
@@ -83,26 +86,17 @@ const Home = ({ handleScrollContact }) => {
             <h2 className="text-4xl text-customBlue font-extrabold mb-6">
               World Trade and Consult LLC
             </h2>
-
             <p className="text-customGray text-lg w-full max-w-[550px] mb-6">
-              Наша компания, основанная в 2023 году, специализируется на оптовой
-              торговле и продвижении на экспорт продукции, произведенной в
-              Узбекистане. Мы сотрудничаем с производителями из различных
-              отраслей, предлагая широкий ассортимент товаров, включая смазочные
-              масла, нефтепродукты, текстильную продукцию, цветные металлы,
-              кабельно-проводниковую продукцию, изделия из пластмассы,
-              упаковочные материалы, а также любую другую продукцию узбекского
-              производства, востребованную на международных рынках.
+              {t("company_description")}
             </p>
             <p className="text-customGray text-lg w-full max-w-[500px] font-semibold mb-12">
-              Также мы оказываем консалтинговые услуги на территории Узбекистана
-              и СНГ
+              {t("consulting_services")}
             </p>
             <Link
               onClick={handleScrollContact}
               className="bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full max-w-56"
             >
-              Связаться с нами
+              {t("contact_us")}
             </Link>
           </div>
           <div className="parent absolute right-[5%] -top-[12%]">
@@ -143,42 +137,30 @@ const Home = ({ handleScrollContact }) => {
       <section className="bg-customSkyBlue">
         <div className="w-full max-w-[1100px] mx-auto pt-24 pb-12">
           <h2 className="text-4xl text-customBlue font-extrabold mb-6">
-            О нас
+            {t("about_us")}
           </h2>
           <div className="flex justify-between">
             <div className="flex flex-col justify-center">
               <p className="text-customGray text-xl w-full max-w-[555px] mb-6">
-                Мы стремимся к лидерству, предлагая высококачественную продукцию
-                и надежные, инновационные решения для поддержки устойчивого
-                роста наших клиентов
+                {t("about_us_description")}
               </p>
               <p className="text-customGray text-xl w-full max-w-[555px] mb-3">
-                Наши товары пользуются высоким спросом как на внутреннем, так и
-                на внешнем рынке. Мы экспортируем в Казахстан, Кыргызстан,
-                Таджикистан и Италию.
+                {t("market_demand")}
               </p>
               <p className="text-customGray text-xl w-full max-w-[555px]">
-                Мы стремимся предлагать индивидуальные решения по экспорту,
-                гарантируя, что мы можем удовлетворить ваши конкретные
-                требования на взаимовыгодных условиях. Производственный процесс
-                проходит строгий контроль качества в полном соответствии с
-                требованиями ГОСТ.
+                {t("export_solutions")}
               </p>
             </div>
             <article className="py-3 px-5 rounded-xl bg-white relative">
               <img src={Icon} alt="" className="absolute -right-6 -top-3" />
               <h3 className="text-customBlue text-2xl font-semibold mb-6">
-                Наша миссия
+                {t("our_mission")}
               </h3>
               <p className="text-customGray text-xl w-full max-w-[420px] mb-8">
-                С момента нашего основания в 2023 году мы установили себя как
-                значимый игрок в своей отрасли благодаря высокому качеству
-                продукции и надежности поставок.
+                {t("mission_description")}
               </p>
               <p className="text-customGray text-xl w-full max-w-[420px]">
-                Стремясь к постоянному росту, мы активно стремимся расширить
-                ассортимент нашей продукции и укрепить партнерские отношения как
-                с потенциальными, так и с текущими клиентами.
+                {t("mission_growth")}
               </p>
             </article>
           </div>

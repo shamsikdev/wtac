@@ -7,10 +7,15 @@ import BasketIcon from "../../assets/basket-icon.svg";
 import { IoIosArrowDown } from "react-icons/io";
 import UsaFlag from "../../assets/usa-flag.png";
 import RussiaFlag from "../../assets/russia-flag.png";
+import { useTranslation } from "react-i18next";
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [show, setShow] = useState(false);
-
+  // const [show, setShow] = useState(false);
+  const { t, i18n } = useTranslation();
+  const handleChange = (e) => {
+    const selectedLanguage = e.target.value;
+    i18n.changeLanguage(selectedLanguage);
+  };
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
   };
@@ -105,23 +110,18 @@ const Header = () => {
           <p className="text-base text-customBlue mr-7">
             пн-пт с 9:00 до 18:00
           </p>
-          <a className="text-xl text-customBlue mr-20" href="tel:+998770109932">
+          <a className="text-xl text-customBlue mr-10" href="tel:+998770109932">
             Номер телефона
           </a>
-          <div
-            className="mr-20 flex items-center relative"
-            onClick={() => {
-              setShow((prev) => !prev);
-            }}
+          <select
+            className="text-lg mr-10 text-customBlue outline-none"
+            onChange={handleChange}
+            name="Lng"
+            id="lng"
           >
-            <img src={UsaFlag} className="w-6 object-cover" alt="" />
-            <IoIosArrowDown />
-            {show && (
-              <p className="absolute p-4 text-red-600 font-semiboldnpm  w-72 top-10 bg-white -right-32 rounded-md">
-                В данный момент переключение языка не доступно!
-              </p>
-            )}
-          </div>
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+          </select>
           <Link to="/cart">
             <img
               className="cursor-pointer"
