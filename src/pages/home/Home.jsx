@@ -176,7 +176,7 @@ const Home = () => {
           />
         </div>
 
-        <div className="w-full text-[#2D4972] max-w-[1100px] mx-auto pt-24 pb-7">
+        <div className="w-full  text-customLightBlue max-w-[1100px] mx-auto pt-24 pb-7">
           <h2 className="text-customBlue text-[40px] w-full max-w-[730px] leading-[50px] font-black mb-5">
             {t("partners_title")}
           </h2>

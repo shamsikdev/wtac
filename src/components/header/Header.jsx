@@ -70,7 +70,10 @@ const Header = () => {
                       Смазочные материалы
                     </span>
                   </NavLink>
-                  <NavLink to="/c" className="px-4 py-4 hover:bg-gray-100">
+                  <NavLink
+                    to="/petroleum-products"
+                    className="px-4 py-4 hover:bg-gray-100"
+                  >
                     <span className="text-xl text-customBlue">
                       Нефтепродукты
                     </span>
