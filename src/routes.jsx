@@ -5,6 +5,7 @@ import Certificate from "./pages/Certificate";
 import Lubricants from "./pages/products/Lubricants";
 import Textile from "./pages/products/Textile";
 import Packaging from "./pages/products/Packaging";
+import PetroleumProducts from "./pages/products/PetroleumProducts";
 // goods
 import Clothing from "./pages/goods/Clothing";
 import TransmissionOils from "./pages/goods/TransmissionOils";
@@ -57,6 +58,10 @@ const App = () => {
         {
           path: "/packaging-materials",
           element: <Packaging />,
+        },
+        {
+          path: "/petroleum-products",
+          element: <PetroleumProducts />,
         },
         {
           path: "/cart",

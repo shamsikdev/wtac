@@ -91,7 +91,7 @@ const Header = () => {
                       Упаковочные материалы
                     </span>
                   </NavLink>
-                  <NavLink to="/c" className="px-4 py-4 hover:bg-gray-100">
+                  {/* <NavLink to="/c" className="px-4 py-4 hover:bg-gray-100">
                     <span className="text-xl text-customBlue">
                       Цветные металлы
                     </span>
@@ -100,7 +100,7 @@ const Header = () => {
                     <span className="text-xl text-customBlue">
                       Кабельно-проводниковая продукция
                     </span>
-                  </NavLink>
+                  </NavLink> */}
                 </ul>
               </div>
             )}

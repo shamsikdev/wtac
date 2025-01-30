@@ -53,7 +53,7 @@ const Home = () => {
     },
     {
       title: "Нефтепродукты",
-      link: "/",
+      link: "/petroleum-products",
       bgImage: CrudeOil,
     },
     {
@@ -66,16 +66,16 @@ const Home = () => {
       link: "/packaging-materials",
       bgImage: Packaging,
     },
-    {
-      title: "Цветные металлы",
-      link: "/",
-      bgImage: ColoredMetal,
-    },
-    {
-      title: "Кабельно-проводниковая продукция",
-      link: "/",
-      bgImage: ElectricCables,
-    },
+    // {
+    //   title: "Цветные металлы",
+    //   link: "/",
+    //   bgImage: ColoredMetal,
+    // },
+    // {
+    //   title: "Кабельно-проводниковая продукция",
+    //   link: "/",
+    //   bgImage: ElectricCables,
+    // },
   ];
 
   return (
