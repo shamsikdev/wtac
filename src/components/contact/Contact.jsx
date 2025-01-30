@@ -69,10 +69,6 @@ const Contact = ({ setOpenModal }) => {
               <option value="petroleum-products">Нефтепродукты</option>
               <option value="textile">Текстильная продукция</option>
               <option value="packaging-materials">Упаковачные материалы</option>
-              <option value="colored-metals">Цветные металлы</option>
-              <option value="electric-cables">
-                Кабельно-проводниковая продукция
-              </option>
               <option value="consulting-services">Консалтинговые услуги</option>
             </select>
             <button

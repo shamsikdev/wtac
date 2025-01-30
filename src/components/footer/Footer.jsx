@@ -1,9 +1,10 @@
 // rrd
 import { Link, useLocation } from "react-router-dom";
+import { AiFillInstagram } from "react-icons/ai";
 // icons images
 import FacebookIcon from "../../assets/facebook-icon.svg";
 import TelegramIcon from "../../assets/telegram-icon.svg";
-import TwitterIcon from "../../assets/twitter-icon.svg";
+// import TwitterIcon from "../../assets/twitter-icon.svg";
 const Footer = () => {
   const handleScrollContact = (event) => {
     event.preventDefault();
@@ -30,7 +31,7 @@ const Footer = () => {
             <Link onClick={handleScrollContact}>Контакты</Link>
           </li>
         </ul>
-        <div className="flex mb-7">
+        <div className="flex items-center mb-7">
           <img
             className="mr-6 w-6 h-6"
             src={FacebookIcon}
@@ -38,12 +39,13 @@ const Footer = () => {
           />
           <a target="blank" href="https://t.me/WTACFER">
             <img
-              className="mr-6 w-6 h-6"
+              className="mr-5 w-6 h-6"
               src={TelegramIcon}
               alt="telegram icon"
             />
           </a>
-          <img className="w-6 h-6" src={TwitterIcon} alt="twitter icon" />
+          <AiFillInstagram className="w-[30px] text-white h-[30px]" />
+          {/* <img className="w-6 h-6" src={TwitterIcon} alt="twitter icon" /> */}
         </div>
         <span className="text-sm text-white opacity-75">
           © Copyright 2024 - World Trade and Consult LLC

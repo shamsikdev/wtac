@@ -4,18 +4,19 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 // images icons
 import SiteLogo from "../../assets/wtac-logo.svg";
 import BasketIcon from "../../assets/basket-icon.svg";
+import RuFlag from "../../assets/ru-flag.png";
+import UkFlag from "../../assets/uk-flag.png";
 import { IoIosArrowDown } from "react-icons/io";
-import UsaFlag from "../../assets/usa-flag.png";
-import RussiaFlag from "../../assets/russia-flag.png";
 import { useTranslation } from "react-i18next";
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   // const [show, setShow] = useState(false);
   const { t, i18n } = useTranslation();
   const handleChange = (e) => {
-    const selectedLanguage = e.target.value;
+    const selectedLanguage = e.target.dataset.value;
     i18n.changeLanguage(selectedLanguage);
   };
+
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
   };
@@ -116,15 +117,23 @@ const Header = () => {
           <a className="text-xl text-customBlue mr-10" href="tel:+998770109932">
             Номер телефона
           </a>
-          <select
-            className="text-lg mr-10 text-customBlue outline-none"
-            onChange={handleChange}
-            name="Lng"
-            id="lng"
-          >
-            <option value="ru">Русский</option>
-            <option value="en">English</option>
-          </select>
+
+          <div className="flex gap-x-3 mr-10 cursor-pointer">
+            <img
+              onClick={handleChange}
+              data-value="en"
+              src={UkFlag}
+              alt="Flag of United Kingdom"
+              className="w-6 h-6"
+            />
+            <img
+              onClick={handleChange}
+              data-value="ru"
+              src={RuFlag}
+              alt="Flag of Russia"
+              className="w-6 h-6"
+            />
+          </div>
           <Link to="/cart">
             <img
               className="cursor-pointer"

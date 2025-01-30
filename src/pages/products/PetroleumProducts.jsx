@@ -22,7 +22,7 @@ export default function Home() {
       </ul>
 
       <section className="mb-12">
-        <h3 className="text-4xl text-customBlue font-black mb-10">
+        <h3 className="text-2xl text-customBlue font-black mb-10">
           Наши преимущества
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -43,7 +43,7 @@ export default function Home() {
       </section>
 
       <section className="mb-12">
-        <h3 className="text-4xl text-customBlue font-black mb-4">
+        <h3 className="text-2xl text-customBlue font-black mb-4">
           Высокий уровень сервиса
         </h3>
         <p className="text-customGray text-xl mb-4">
@@ -57,14 +57,14 @@ export default function Home() {
       </section>
 
       <section className="mb-12">
-        <h3 className="text-4xl text-customBlue font-black mb-4">
+        <h3 className="text-2xl text-customBlue font-black mb-4">
           Базовые масла для вашего производства
         </h3>
         <p className="text-customGray text-xl mb-4 w-4/5">
           ООО Riders Trading Pro предлагает широкий ассортимент базовых масел,
           которые могут быть использованы в вашем производстве.
         </p>
-        <h4 className="text-4xl text-customBlue font-black mb-2">
+        <h4 className="text-2xl text-customBlue font-black mb-2">
           Наши базовые масла:
         </h4>
         <ul className="list-disc list-inside text-customGray text-xl">
@@ -79,7 +79,7 @@ export default function Home() {
             добавления присадок
           </li>
         </ul>
-        <h4 className="text-4xl text-customBlue font-black mb-4">
+        <h4 className="text-2xl text-customBlue font-black mb-4">
           С помощью наших базовых масел вы можете:
         </h4>
         <ul className="list-disc list-inside text-customGray text-xl mb-10">

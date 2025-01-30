@@ -17,7 +17,7 @@ const HomeLayout = () => {
       <Footer />
       {openModal && <SuccesModal setOpenModal={setOpenModal} />}
       {openModal && (
-        <div class="fixed inset-0 bg-black bg-opacity-75 z-40"></div>
+        <div className="fixed inset-0 bg-black bg-opacity-75 z-40"></div>
       )}
     </>
   );
