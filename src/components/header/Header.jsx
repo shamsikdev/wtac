@@ -114,7 +114,7 @@ const Header = () => {
           <p className="text-base text-customBlue mr-7">
             пн-пт с 9:00 до 18:00
           </p>
-          <a className="text-xl text-customBlue mr-10" href="tel:+998770109932">
+          <a className="text-xl text-customBlue mr-10" href="tel:+998990059932">
             Номер телефона
           </a>
 
