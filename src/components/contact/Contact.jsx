@@ -1,9 +1,11 @@
 // react
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 // images
 import Shadow from "../../assets/shadow.png";
 const Contact = ({ setOpenModal }) => {
+  const { t, i18n } = useTranslation();
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -31,12 +33,11 @@ const Contact = ({ setOpenModal }) => {
       <div className="w-full max-w-[1100px] mx-auto flex justify-between items-center pb-52 pt-12">
         <div className="flex flex-col justify-center z-[2]">
           <h2 className="text-customBlue text-[40px] leading-[47px]  font-semibold w-full max-w-4xl mb-5">
-            Свяжитесь с нами <br /> и получите полную консультацию
+            {t("contact_us_for_consultation1")}
+            <br /> {t("contact_us_for_consultation2")}
           </h2>
           <p className="text-customGray text-xl w-full max-w-3xl mb-5 font-medium">
-            Наша команда специалистов готова оказать полную техническую
-            поддержку и консультацию по выбору и применению смазочных
-            материалов, а также услуги по техническому сопровождению
+            {t("consultation_description")}
           </p>
           <form
             ref={form}
@@ -76,7 +77,7 @@ const Contact = ({ setOpenModal }) => {
               type="submit"
               value="Send"
             >
-              Получить консультацию
+              {t("get_consultation")}
             </button>
           </form>
         </div>

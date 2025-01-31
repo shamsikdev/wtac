@@ -10,14 +10,7 @@ import IntroImg16 from "../../assets/intro-img16.png";
 import AvangardImg from "../../assets/avangard-img.png";
 import RollPackage from "../../assets/roll-package-img.png";
 import ChineseImg from "../../assets/chinese-worker-img.png";
-const Packaging = () => {
-  const handleScrollContact = (event) => {
-    event.preventDefault();
-    window.scrollTo({
-      top: 1820,
-      behavior: "smooth",
-    });
-  };
+const Packaging = ({ handleScrollContact }) => {
   return (
     <>
       <section className="relative mb-28">
@@ -31,7 +24,7 @@ const Packaging = () => {
               качества с использованием современных технологий.
             </p>
             <Link
-              onClick={handleScrollContact}
+              onClick={(e) => handleScrollContact(e, 2080)}
               className="bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full max-w-56"
             >
               Связаться с нами

@@ -34,15 +34,8 @@ import Lubricants from "../../assets/lubricants-img.png";
 import CrudeOil from "../../assets/crude-oil-img.png";
 import Textile from "../../assets/textile-img.png";
 import Packaging from "../../assets/packaging-img.png";
-import ColoredMetal from "../../assets/colored-metal-img.jpg";
-import ElectricCables from "../../assets/electric-cables-img.jpg";
-const Home = () => {
-  const handleScrollContact = () => {
-    window.scrollTo({
-      top: 5910,
-      behavior: "smooth",
-    });
-  };
+
+const Home = ({ handleScrollContact }) => {
   const { t, i18n } = useTranslation();
 
   const items = [
@@ -77,7 +70,38 @@ const Home = () => {
     //   bgImage: ElectricCables,
     // },
   ];
-
+  const testimonials = [
+    {
+      name: "Попов Иван",
+      imgSrc: IvanPopov,
+      text: "Сотрудничаю с World Trade and Consult LLC уже полгода и могу с уверенностью сказать, что это надежный и профессиональный партнер.",
+    },
+    {
+      name: "Смирнова Екатерина",
+      imgSrc: EkatirinaSmirnova,
+      text: "В World Trade and Consult LLC я всегда могу найти все необходимые мне товары: смазочные масла, нефтепродукты, текстиль, пластмассу.",
+    },
+    {
+      name: "Капустин Николай",
+      imgSrc: NikolayKapustin,
+      text: "WTaC предлагает своим клиентам выгодные цены и гибкие условия оплаты, что делает сотрудничество с ними еще более привлекательным.",
+    },
+    {
+      name: "Николаев Арсений",
+      imgSrc: NikolaevArseniy,
+      text: "Сотрудники World Trade and Consult LLC всегда готовы помочь с выбором товаров, ответить на любые вопросы и оформить заказ.",
+    },
+    {
+      name: "Ларионов Владимир",
+      imgSrc: LarionovVladimir,
+      text: "World Trade and Consult LLC ценит своих клиентов и всегда старается найти индивидуальный подход к каждому.",
+    },
+    {
+      name: "Соколов Ярослав",
+      imgSrc: SokolovYaroslav,
+      text: "World Trade and Consult LLC обеспечивает быструю и безопасную доставку товаров в любую точку мира.",
+    },
+  ];
   return (
     <>
       <section className="relative mt-28">
@@ -92,12 +116,12 @@ const Home = () => {
             <p className="text-customGray text-lg w-full max-w-[500px] font-semibold mb-12">
               {t("consulting_services")}
             </p>
-            <Link
-              onClick={handleScrollContact}
+            <button
+              onClick={(e) => handleScrollContact(e, 5550)}
               className="bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full max-w-56"
             >
               {t("contact_us")}
-            </Link>
+            </button>
           </div>
           <div className="parent absolute right-[5%] -top-[12%]">
             <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-20 div1 hover:scale-105 duration-500">
@@ -269,7 +293,10 @@ const Home = () => {
               сделки. */}
               {t("quality_description")}
             </p>
-            <button className="bg-customLightBlue text-white hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue duration-500 text-xl py-4 px-7 rounded-md w-full max-w-56">
+            <button
+              onClick={(e) => handleScrollContact(e, 5550)}
+              className="bg-customLightBlue text-white hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue duration-500 text-xl py-4 px-7 rounded-md w-full max-w-56"
+            >
               {t("contact_us")}
             </button>
           </div>
@@ -279,7 +306,7 @@ const Home = () => {
       <section>
         <div className="w-full max-w-[1100px] mx-auto py-20">
           <h2 className="text-customBlue text-[40px] w-full mb-24 leading-[50px] font-black">
-            Клиенты, которыми мы дорожим
+            {t("clients_we_value")}
           </h2>
           <ul className="flex justify-center  flex-wrap gap-7">
             <li className="p-2 shadow-md rounded-xl w-full max-w-80">
@@ -349,141 +376,28 @@ const Home = () => {
       <section>
         <div className="w-full max-w-[1100px] mx-auto py-24">
           <h2 className="text-customBlue text-[40px] w-full mb-6 leading-[50px] font-black">
-            Отзывы, которым можно доверять
+            {t("reviews_you_can_trust")}
           </h2>
           <p className="text-customGray text-2xl mb-12">
-            Сделайте правильный выбор, основанный на опыте наших клиентах
+            {t("reviews_description")}
           </p>
           <ul className="flex flex-wrap gap-4">
-            <li className="rounded-xl shadow-md p-3">
-              <div className="flex mb-2">
-                <div className="flex items-center">
-                  <img
-                    src={IvanPopov}
-                    alt="photo of man named Ivan Popov"
-                    className="mr-2"
-                  />
+            {testimonials.map(({ name, imgSrc, text }, index) => (
+              <li key={index} className="rounded-xl shadow-md p-3">
+                <div className="flex mb-2 items-center">
+                  <img src={imgSrc} alt={`Фото ${name}`} className="mr-2" />
                   <h3 className="text-base font-semibold text-customGray">
-                    Попов Иван
+                    {name}
                   </h3>
                 </div>
-              </div>
-              <div className="flex">
-                <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
-                <p className="text-customBlue text-base font-medium w-full max-w-72">
-                  Сотрудничаю с World Trade and Consult LLC уже полгода и могу с
-                  уверенностью сказать, что это надежный и профессиональный
-                  партнер.
-                </p>
-              </div>
-            </li>
-            <li className="rounded-xl shadow-md p-3">
-              <div className="flex mb-2">
-                <div className="flex items-center">
-                  <img
-                    src={EkatirinaSmirnova}
-                    alt="photo of man named Ekatirina Smirnova"
-                    className="mr-2"
-                  />
-                  <h3 className="text-base font-semibold text-customGray">
-                    Смирнова Екатерина
-                  </h3>
+                <div className="flex">
+                  <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
+                  <p className="text-customBlue text-base font-medium w-full max-w-72">
+                    {text}
+                  </p>
                 </div>
-              </div>
-              <div className="flex">
-                <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
-                <p className="text-customBlue text-base font-medium w-full max-w-72">
-                  В World Trade and Consult LLC я всегда могу найти все
-                  необходимые мне товары: смазочные масла, нефтепродукты,
-                  текстиль, пластмассу.
-                </p>
-              </div>
-            </li>
-            <li className="rounded-xl shadow-md p-3">
-              <div className="flex mb-2">
-                <div className="flex items-center">
-                  <img
-                    src={NikolayKapustin}
-                    alt="photo of man named Nikolay Kapustin"
-                    className="mr-2"
-                  />
-                  <h3 className="text-base font-semibold text-customGray">
-                    Капустин Николай
-                  </h3>
-                </div>
-              </div>
-              <div className="flex">
-                <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
-                <p className="text-customBlue text-base font-medium w-full max-w-72">
-                  WTaC предлагает своим клиентам выгодные цены и гибкие условия
-                  оплаты, что делает сотрудничество с ними еще более
-                  привлекательным.
-                </p>
-              </div>
-            </li>
-            <li className="rounded-xl shadow-md p-3">
-              <div className="flex mb-2">
-                <div className="flex items-center">
-                  <img
-                    src={NikolaevArseniy}
-                    alt="photo of man named Ivan Popov"
-                    className="mr-2"
-                  />
-                  <h3 className="text-base font-semibold text-customGray">
-                    Николаев Арсений
-                  </h3>
-                </div>
-              </div>
-              <div className="flex">
-                <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
-                <p className="text-customBlue text-base font-medium w-full max-w-72">
-                  Сотрудники World Trade and Consult LLC всегда готовы помочь с
-                  выбором товаров, ответить на любые вопросы и оформить заказ.
-                </p>
-              </div>
-            </li>
-            <li className="rounded-xl shadow-md p-3">
-              <div className="flex mb-2">
-                <div className="flex items-center">
-                  <img
-                    src={LarionovVladimir}
-                    alt="photo of man named Ivan Popov"
-                    className="mr-2"
-                  />
-                  <h3 className="text-base font-semibold text-customGray">
-                    Ларионов Владимир
-                  </h3>
-                </div>
-              </div>
-              <div className="flex">
-                <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
-                <p className="text-customBlue text-base font-medium w-full max-w-72">
-                  World Trade and Consult LLC ценит своих клиентов и всегда
-                  старается найти индивидуальный подход к каждому.
-                </p>
-              </div>
-            </li>
-            <li className="rounded-xl shadow-md p-3">
-              <div className="flex mb-2">
-                <div className="flex items-center">
-                  <img
-                    src={SokolovYaroslav}
-                    alt="photo of man named Ivan Popov"
-                    className="mr-2"
-                  />
-                  <h3 className="text-base font-semibold text-customGray">
-                    Соколов Ярослав
-                  </h3>
-                </div>
-              </div>
-              <div className="flex">
-                <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
-                <p className="text-customBlue text-base font-medium w-full max-w-72">
-                  World Trade and Consult LLC обеспечивает быструю и безопасную
-                  доставку товаров в любую точку мира.
-                </p>
-              </div>
-            </li>
+              </li>
+            ))}
           </ul>
         </div>
       </section>

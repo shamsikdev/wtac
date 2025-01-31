@@ -18,14 +18,21 @@ import PageNotFound from "./components/PageNotFound";
 
 import LubricantsLayout from "./layouts/LubricantsLayout";
 const App = () => {
+  const handleScrollContact = (e, top) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: top,
+      behavior: "smooth",
+    });
+  };
   const routes = createBrowserRouter([
     {
       path: "/",
-      element: <HomeLayout />,
+      element: <HomeLayout handleScrollContact={handleScrollContact} />,
       children: [
         {
           index: true,
-          element: <Home />,
+          element: <Home handleScrollContact={handleScrollContact} />,
         },
         {
           path: "/lubricants",
@@ -33,7 +40,7 @@ const App = () => {
           children: [
             {
               index: true,
-              element: <Lubricants />,
+              element: <Lubricants handleScrollContact={handleScrollContact} />,
             },
             {
               path: "/lubricants/transmission-oils",
@@ -47,7 +54,7 @@ const App = () => {
           children: [
             {
               index: true,
-              element: <Textile />,
+              element: <Textile handleScrollContact={handleScrollContact} />,
             },
             {
               path: "/textile/clothing",
@@ -57,7 +64,7 @@ const App = () => {
         },
         {
           path: "/packaging-materials",
-          element: <Packaging />,
+          element: <Packaging handleScrollContact={handleScrollContact} />,
         },
         {
           path: "/petroleum-products",

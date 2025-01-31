@@ -5,14 +5,7 @@ import IntroImg11 from "../../assets/intro-img11.png";
 import IntroImg12 from "../../assets/intro-img12.png";
 import UpholsteryImg from "../../assets/upholstery-img.png";
 import { GoArrowRight } from "react-icons/go";
-const Textile = () => {
-  const handleScrollContact = (event) => {
-    event.preventDefault();
-    window.scrollTo({
-      top: 1820,
-      behavior: "smooth",
-    });
-  };
+const Textile = ({ handleScrollContact }) => {
   return (
     <>
       <section className="relative mb-28">
@@ -27,7 +20,7 @@ const Textile = () => {
               современных технологий.
             </p>
             <Link
-              onClick={handleScrollContact}
+              onClick={(e) => handleScrollContact(e, 1800)}
               className="bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full max-w-56"
             >
               Связаться с нами

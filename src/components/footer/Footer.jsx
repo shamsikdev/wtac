@@ -5,14 +5,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import FacebookIcon from "../../assets/facebook-icon.svg";
 import TelegramIcon from "../../assets/telegram-icon.svg";
 // import TwitterIcon from "../../assets/twitter-icon.svg";
-const Footer = () => {
-  const handleScrollContact = (event) => {
-    event.preventDefault();
-    window.scrollTo({
-      top: 5751,
-      behavior: "smooth",
-    });
-  };
+const Footer = ({ handleScrollContact }) => {
   // const { pathname } = useLocation();
   // pathname.includes("/textile") ? console.log(pathname) : console.log("oops");
 
@@ -28,7 +21,13 @@ const Footer = () => {
             <Link to="/certificates">Сертификаты</Link>
           </li>
           <li className="text-base text-white">
-            <Link onClick={handleScrollContact}>Контакты</Link>
+            <button
+              onClick={(e) => {
+                handleScrollContact(e, 5550);
+              }}
+            >
+              Контакты
+            </button>
           </li>
         </ul>
         <div className="flex items-center mb-7">

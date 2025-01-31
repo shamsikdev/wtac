@@ -14,14 +14,7 @@ import TurbineIcon from "../../assets/turbine-icon.svg";
 import TransmissionIcon from "../../assets/transmission-icon.svg";
 import GazolineImg from "../../assets/gazoline-img.png";
 import { GoArrowRight } from "react-icons/go";
-const Products = () => {
-  const handleScrollContact = (event) => {
-    event.preventDefault();
-    window.scrollTo({
-      top: 2325,
-      behavior: "smooth",
-    });
-  };
+const Lubricants = ({ handleScrollContact }) => {
   const oilItems = [
     {
       icon: EngineIcon,
@@ -84,7 +77,7 @@ const Products = () => {
               современных технологий.
             </p>
             <Link
-              onClick={handleScrollContact}
+              onClick={(e) => handleScrollContact(e, 2325)}
               className="bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full max-w-56"
             >
               Связаться с нами
@@ -199,4 +192,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Lubricants;
