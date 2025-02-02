@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   // const [show, setShow] = useState(false);
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const handleChange = (e) => {
     const selectedLanguage = e.target.dataset.value;
     i18n.changeLanguage(selectedLanguage);

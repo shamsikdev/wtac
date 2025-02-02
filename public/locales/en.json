@@ -32,5 +32,7 @@
   "email": "Email",
   "full_name": "Full Name",
   "select_service": "Select Service",
-  "get_consultation": "Get Consultation"
+  "get_consultation": "Get Consultation",
+  "page_not_found": "Page Not Found",
+  "back_to_home": "Back to home"
 }

@@ -5,14 +5,14 @@ import Backend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import enTranslation from "../public/locales/en.json";
 import ruTranslation from "../public/locales/ru.json";
-
+const selectedLanguage = localStorage.getItem("i18nextLng") || "ru";
 i18n
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     fallbackLng: "en",
-    lng: "ru",
+    lng: selectedLanguage,
     debug: true,
     resources: {
       en: { translation: enTranslation },

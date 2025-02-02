@@ -105,15 +105,15 @@ const Home = ({ handleScrollContact }) => {
   return (
     <>
       <section className="relative mt-28">
-        <div className="w-full max-w-[1100px] mx-auto flex justify-between items-center pb-44 pt-20">
+        <div className="w-full max-w-[1100px] mx-auto flex justify-between items-center py-20">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl text-customBlue font-extrabold mb-6">
               World Trade and Consult LLC
             </h2>
-            <p className="text-customGray text-lg w-full max-w-[550px] mb-6">
+            <p className="text-customGray text-lg w-full max-w-[600px] mb-6">
               {t("company_description")}
             </p>
-            <p className="text-customGray text-lg w-full max-w-[500px] font-semibold mb-12">
+            <p className="text-customGray text-lg w-full max-w-[500px] font-semibold mb-8">
               {t("consulting_services")}
             </p>
             <button
@@ -123,7 +123,7 @@ const Home = ({ handleScrollContact }) => {
               {t("contact_us")}
             </button>
           </div>
-          <div className="parent absolute right-[5%] -top-[12%]">
+          <div className="parent absolute right-[10%] -top-[15%]">
             <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-20 div1 hover:scale-105 duration-500">
               <img
                 src={IntroImg1}
@@ -374,7 +374,7 @@ const Home = ({ handleScrollContact }) => {
         </div>
       </section>
       <section>
-        <div className="w-full max-w-[1100px] mx-auto py-24">
+        <div className="w-full max-w-[1100px] mx-auto pb-24">
           <h2 className="text-customBlue text-[40px] w-full mb-6 leading-[50px] font-black">
             {t("reviews_you_can_trust")}
           </h2>

@@ -32,5 +32,7 @@
   "email": "Email",
   "full_name": "Ф.И.О.",
   "select_service": "Выберите услугу",
-  "get_consultation": "Получить консультацию"
+  "get_consultation": "Получить консультацию",
+  "page_not_found": "Страница не найдена",
+  "back_to_home": "Вернуться к сайту"
 }
