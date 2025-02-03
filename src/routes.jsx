@@ -19,21 +19,6 @@ import PageNotFound from "./components/PageNotFound";
 
 import LubricantsLayout from "./layouts/LubricantsLayout";
 const App = () => {
-  const [lastVisit, setLastVisit] = useState(null);
-
-  useEffect(() => {
-    // Получаем время последнего визита из localStorage
-    const storedTime = localStorage.getItem("lastVisit");
-    if (storedTime) {
-      const formattedTime = new Date(storedTime).toLocaleString();
-      setLastVisit(formattedTime);
-      console.log("Ваш последний визит: ", formattedTime);
-    }
-
-    // Сохраняем текущее время как время последнего визита
-    const now = new Date().toISOString();
-    localStorage.setItem("lastVisit", now);
-  }, []);
   const handleScrollContact = (e, top) => {
     e.preventDefault();
     window.scrollTo({
