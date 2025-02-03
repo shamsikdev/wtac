@@ -128,7 +128,7 @@ const App = () => {
 
                 <div>
                   <div className="mt-2 p-3 bg-gray-50 rounded-md">
-                    <code className="text-sm text-gray-600">
+                    <code className="text-sm text-red-600">
                       ERR_CONNECTION_TIMED_OUT
                     </code>
                   </div>
