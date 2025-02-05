@@ -21,7 +21,7 @@ import PageNotFound from "./components/PageNotFound";
 
 import LubricantsLayout from "./layouts/LubricantsLayout";
 const App = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   const handleScrollContact = (e, top) => {
     e.preventDefault();
@@ -138,7 +138,6 @@ const App = () => {
           </div>
         </div>
       )}
-      ;
     </>
   );
 };
