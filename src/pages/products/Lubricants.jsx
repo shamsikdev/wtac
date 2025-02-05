@@ -14,7 +14,9 @@ import TurbineIcon from "../../assets/turbine-icon.svg";
 import TransmissionIcon from "../../assets/transmission-icon.svg";
 import GazolineImg from "../../assets/gazoline-img.png";
 import { GoArrowRight } from "react-icons/go";
+import { useTranslation } from "react-i18next";
 const Lubricants = ({ handleScrollContact }) => {
+  const { t, i18n } = useTranslation();
   const oilItems = [
     {
       icon: EngineIcon,
@@ -69,19 +71,19 @@ const Lubricants = ({ handleScrollContact }) => {
         <div className="w-full max-w-[1100px] mx-auto flex justify-center items-center py-44">
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-4xl text-customBlue font-extrabold mb-6">
-              Смазочные материалы
+              {t("lubricants_page.name")}
             </h2>
             <p className="text-customGray text-xl w-full max-w-[600px] mb-12 text-center">
-              Мы предлагаем широкий спектр смазочных материалов, которые
-              соответствуют международным стандартам качества ISO и требованиям
-              современных технологий.
+              {t("lubricants_page.description")}
             </p>
-            <Link
+            <button
               onClick={(e) => handleScrollContact(e, 2325)}
-              className="bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full max-w-56"
+              className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full ${
+                i18n.language == "en" ? "max-w-40" : "max-w-56"
+              }`}
             >
-              Связаться с нами
-            </Link>
+              {t("contact_us")}
+            </button>
           </div>
           <div className="parent absolute right-[10%] top-[15%] -z-10">
             <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-36 right-28 div5 hover:scale-105 duration-500">

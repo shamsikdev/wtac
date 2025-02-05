@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   // const [show, setShow] = useState(false);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const handleChange = (e) => {
     const selectedLanguage = e.target.dataset.value;
     i18n.changeLanguage(selectedLanguage);
@@ -37,6 +37,8 @@ const Header = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
+  console.log(i18n.language);
+
   // scroll top
   const { pathname } = useLocation();
   useEffect(() => {
@@ -53,7 +55,9 @@ const Header = () => {
             className="relative flex items-center cursor-pointer dropdown"
             onClick={toggleDropdown}
           >
-            <span className="text-xl text-customBlue mr-2">Наши продукты</span>
+            <span className="text-xl text-customBlue mr-2">
+              {t("header.our_products")}
+            </span>
             <IoIosArrowDown
               className={`text-xl text-customBlue mt-1 transform transition-all duration-500 ${
                 isDropdownOpen ? "rotate-180" : ""
@@ -68,7 +72,7 @@ const Header = () => {
                     className="px-4 py-4 hover:bg-gray-100"
                   >
                     <span className="text-xl text-customBlue">
-                      Смазочные материалы
+                      {t("products.lubricants")}
                     </span>
                   </NavLink>
                   <NavLink
@@ -76,7 +80,7 @@ const Header = () => {
                     className="px-4 py-4 hover:bg-gray-100"
                   >
                     <span className="text-xl text-customBlue">
-                      Нефтепродукты
+                      {t("products.petroleum_products")}
                     </span>
                   </NavLink>
                   <NavLink
@@ -84,7 +88,7 @@ const Header = () => {
                     className="px-4 py-4 hover:bg-gray-100"
                   >
                     <span className="text-xl text-customBlue">
-                      Текстильная продукция
+                      {t("products.textile_products")}
                     </span>
                   </NavLink>
                   <NavLink
@@ -92,19 +96,9 @@ const Header = () => {
                     className="px-4 py-4 hover:bg-gray-100"
                   >
                     <span className="text-xl text-customBlue">
-                      Упаковочные материалы
+                      {t("products.packaging_materials")}
                     </span>
                   </NavLink>
-                  {/* <NavLink to="/c" className="px-4 py-4 hover:bg-gray-100">
-                    <span className="text-xl text-customBlue">
-                      Цветные металлы
-                    </span>
-                  </NavLink>
-                  <NavLink to="/c" className="px-4 py-4 hover:bg-gray-100">
-                    <span className="text-xl text-customBlue">
-                      Кабельно-проводниковая продукция
-                    </span>
-                  </NavLink> */}
                 </ul>
               </div>
             )}
@@ -112,10 +106,10 @@ const Header = () => {
         </div>
         <address className="flex items-end not-italic">
           <p className="text-base text-customBlue mr-7">
-            пн-пт с 9:00 до 18:00
+            {t("header.working_hours")}
           </p>
           <a className="text-xl text-customBlue mr-10" href="tel:+998990059932">
-            Номер телефона
+            {t("header.phone_number")}
           </a>
 
           <div className="flex gap-x-3 mr-10 cursor-pointer">

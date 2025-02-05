@@ -1,24 +1,24 @@
 // rrd
-import { Link, useLocation } from "react-router-dom";
-import { AiFillInstagram } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 // icons images
 import FacebookIcon from "../../assets/facebook-icon.svg";
+import { AiFillInstagram } from "react-icons/ai";
 import TelegramIcon from "../../assets/telegram-icon.svg";
-// import TwitterIcon from "../../assets/twitter-icon.svg";
 const Footer = ({ handleScrollContact }) => {
   // const { pathname } = useLocation();
   // pathname.includes("/textile") ? console.log(pathname) : console.log("oops");
-
+  const { t } = useTranslation();
   return (
     <footer className="bg-customLightBlue bg-no-repeat bg-[length:350px_300px] bg-left">
       <div className="w-full max-w-[1100px] mx-auto pt-32 pb-24 flex flex-col justify-center items-center">
         <ul className="flex mb-7">
-          <li className="text-base text-white mr-8">Главная</li>
-          <li className="text-base text-white mr-8">О нас</li>
-          <li className="text-base text-white mr-8">Партнеры</li>
-          <li className="text-base text-white mr-8">Наша продукция</li>
+          <li className="text-base text-white mr-8">{t("footer.home")}</li>
+          <li className="text-base text-white mr-8">{t("footer.about")}</li>
+          <li className="text-base text-white mr-8">{t("footer.partners")}</li>
+          <li className="text-base text-white mr-8">{t("footer.products")}</li>
           <li className="text-base text-white mr-8">
-            <Link to="/certificates">Сертификаты</Link>
+            <Link to="/certificates">{t("footer.certificates")}</Link>
           </li>
           <li className="text-base text-white">
             <button
@@ -26,7 +26,7 @@ const Footer = ({ handleScrollContact }) => {
                 handleScrollContact(e, 5550);
               }}
             >
-              Контакты
+              {t("footer.contacts")}
             </button>
           </li>
         </ul>

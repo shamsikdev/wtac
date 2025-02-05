@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { IoReload } from "react-icons/io5";
-import { MdKeyboardArrowDown } from "react-icons/md";
 // pages
 import Home from "./pages/home/Home";
 import Certificate from "./pages/Certificate";
@@ -21,7 +20,7 @@ import PageNotFound from "./components/PageNotFound";
 
 import LubricantsLayout from "./layouts/LubricantsLayout";
 const App = () => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   const handleScrollContact = (e, top) => {
     e.preventDefault();

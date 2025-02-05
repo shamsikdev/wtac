@@ -37,75 +37,69 @@ import Packaging from "../../assets/packaging-img.png";
 
 const Home = ({ handleScrollContact }) => {
   const { t, i18n } = useTranslation();
-
-  const items = [
+  const clients = [
+    { img: NgmkLogo, name: "clients.ngmk" },
+    { img: UtyLogo, name: "clients.uty" },
+    { img: CeLogo, name: "clients.ce" },
+    { img: [SanyLogo, XcmgLogo, ShantuiLogo], name: "clients.sany" },
+    { img: [KirgizaltinLogo, KtjLogo], name: "clients.kg" },
+  ];
+  const products = [
     {
-      title: "Смазочные материалы",
+      key: "lubricants",
       link: "/lubricants",
       bgImage: Lubricants,
     },
     {
-      title: "Нефтепродукты",
+      key: "petroleum_products",
       link: "/petroleum-products",
       bgImage: CrudeOil,
     },
     {
-      title: "Текстильная продукция",
+      key: "textile_products",
       link: "/textile",
       bgImage: Textile,
     },
     {
-      title: "Упаковочные материалы",
+      key: "packaging_materials",
       link: "/packaging-materials",
       bgImage: Packaging,
     },
-    // {
-    //   title: "Цветные металлы",
-    //   link: "/",
-    //   bgImage: ColoredMetal,
-    // },
-    // {
-    //   title: "Кабельно-проводниковая продукция",
-    //   link: "/",
-    //   bgImage: ElectricCables,
-    // },
   ];
   const testimonials = [
     {
-      name: "Попов Иван",
+      key: "popov_ivan",
       imgSrc: IvanPopov,
-      text: "Сотрудничаю с World Trade and Consult LLC уже полгода и могу с уверенностью сказать, что это надежный и профессиональный партнер.",
     },
     {
-      name: "Смирнова Екатерина",
+      key: "smirnova_ekaterina",
       imgSrc: EkatirinaSmirnova,
-      text: "В World Trade and Consult LLC я всегда могу найти все необходимые мне товары: смазочные масла, нефтепродукты, текстиль, пластмассу.",
     },
     {
-      name: "Капустин Николай",
+      key: "kapustin_nikolay",
       imgSrc: NikolayKapustin,
-      text: "WTaC предлагает своим клиентам выгодные цены и гибкие условия оплаты, что делает сотрудничество с ними еще более привлекательным.",
     },
     {
-      name: "Николаев Арсений",
+      key: "nikolaev_arseniy",
       imgSrc: NikolaevArseniy,
-      text: "Сотрудники World Trade and Consult LLC всегда готовы помочь с выбором товаров, ответить на любые вопросы и оформить заказ.",
     },
     {
-      name: "Ларионов Владимир",
+      key: "larionov_vladimir",
       imgSrc: LarionovVladimir,
-      text: "World Trade and Consult LLC ценит своих клиентов и всегда старается найти индивидуальный подход к каждому.",
     },
     {
-      name: "Соколов Ярослав",
+      key: "sokolov_yaroslav",
       imgSrc: SokolovYaroslav,
-      text: "World Trade and Consult LLC обеспечивает быструю и безопасную доставку товаров в любую точку мира.",
     },
   ];
   return (
     <>
       <section className="relative mt-28">
-        <div className="w-full max-w-[1100px] mx-auto flex justify-between items-center py-20">
+        <div
+          className={`w-full max-w-[1100px] mx-auto flex justify-between items-center ${
+            i18n.language == "en" ? "pt-20 pb-40" : "py-20"
+          }`}
+        >
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl text-customBlue font-extrabold mb-6">
               World Trade and Consult LLC
@@ -118,7 +112,9 @@ const Home = ({ handleScrollContact }) => {
             </p>
             <button
               onClick={(e) => handleScrollContact(e, 5550)}
-              className="bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full max-w-56"
+              className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full ${
+                i18n.language == "en" ? "max-w-40" : "max-w-56"
+              }`}
             >
               {t("contact_us")}
             </button>
@@ -249,19 +245,19 @@ const Home = ({ handleScrollContact }) => {
           </p>
 
           <div className="grid grid-cols-2 gap-x-0 gap-y-5">
-            {items.map((item, index) => (
+            {products.map((product) => (
               <Link
-                key={index}
-                to={item.link}
+                key={product.key}
+                to={product.link}
                 className={`group f relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover  overflow-hidden`}
-                style={{ backgroundImage: `url('${item.bgImage}')` }}
+                style={{ backgroundImage: `url('${product.bgImage}')` }}
               >
-                <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
+                <div className="absolute inset-0 bg-black opacity-40 rounded-2xl"></div>
                 <span className="text-xl font-semibold text-white z-10 relative group-hover:text-2xl transition-all duration-700">
-                  {item.title}
+                  {t(`products.${product.key}`)}
                 </span>
                 <Link
-                  to={item.link}
+                  to={product.link}
                   className="bg-white p-3 rounded-xl z-10 w-12 h-12 block relative top-44 -right-[90%] opacity-0 group-hover:opacity-100 duration-700"
                 >
                   <FaArrowRight className="text-2xl" />
@@ -279,23 +275,13 @@ const Home = ({ handleScrollContact }) => {
               {t("quality_focus")}
             </h2>
             <p className="text-customGray text-xl w-[805px] mb-12">
-              {/* World Trade and Consult LLC – это надежный партнер в сфере
-              международной торговли, который стремится предоставлять только
-              продукцию высочайшего качества. Наша компания гордится тем, что мы
-              обеспечиваем строгий контроль качества на всех этапах поставок.{" "}
-              <br />
-              <br />
-              Наши опытные специалисты тщательно проверяют каждый товар, чтобы
-              гарантировать его соответствие самым высоким стандартам. Мы
-              работаем с проверенными поставщиками и всегда стремимся к тому,
-              чтобы наши клиенты получали только лучшее. С World Trade and
-              Consult LLC вы можете быть уверены в надежности и качестве каждой
-              сделки. */}
               {t("quality_description")}
             </p>
             <button
               onClick={(e) => handleScrollContact(e, 5550)}
-              className="bg-customLightBlue text-white hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue duration-500 text-xl py-4 px-7 rounded-md w-full max-w-56"
+              className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full ${
+                i18n.language == "en" ? "max-w-40" : "max-w-56"
+              }`}
             >
               {t("contact_us")}
             </button>
@@ -308,7 +294,7 @@ const Home = ({ handleScrollContact }) => {
           <h2 className="text-customBlue text-[40px] w-full mb-24 leading-[50px] font-black">
             {t("clients_we_value")}
           </h2>
-          <ul className="flex justify-center  flex-wrap gap-7">
+          {/* <ul className="flex justify-center  flex-wrap gap-7">
             <li className="p-2 shadow-md rounded-xl w-full max-w-80">
               <img src={NgmkLogo} alt="" className="object-cover mb-2" />
               <span className="text-base text-[#3A475E] font-semibold">
@@ -370,6 +356,36 @@ const Home = ({ handleScrollContact }) => {
                 «Кыргызалтын» и «Кыргыз ЖД»
               </span>
             </li>
+          </ul> */}
+          <ul className="flex justify-center flex-wrap gap-7">
+            {clients.map((client, index) => (
+              <li
+                key={index}
+                className="p-2 shadow-md rounded-xl w-full max-w-80"
+              >
+                <div className="flex">
+                  {Array.isArray(client.img) ? (
+                    client.img.map((src, idx) => (
+                      <img
+                        key={idx}
+                        src={src}
+                        alt={client.name}
+                        className="object-cover mr-4"
+                      />
+                    ))
+                  ) : (
+                    <img
+                      src={client.img}
+                      alt={client.name}
+                      className="object-cover mb-2"
+                    />
+                  )}
+                </div>
+                <span className="text-base text-[#3A475E] font-semibold">
+                  {t(client.name)}
+                </span>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
@@ -382,18 +398,22 @@ const Home = ({ handleScrollContact }) => {
             {t("reviews_description")}
           </p>
           <ul className="flex flex-wrap gap-4">
-            {testimonials.map(({ name, imgSrc, text }, index) => (
-              <li key={index} className="rounded-xl shadow-md p-3">
+            {testimonials.map(({ key, imgSrc }) => (
+              <li key={key} className="rounded-xl shadow-md p-3">
                 <div className="flex mb-2 items-center">
-                  <img src={imgSrc} alt={`Фото ${name}`} className="mr-2" />
+                  <img
+                    src={imgSrc}
+                    alt={t(`testimonials.${key}.name`)}
+                    className="mr-2"
+                  />
                   <h3 className="text-base font-semibold text-customGray">
-                    {name}
+                    {t(`testimonials.${key}.name`)}
                   </h3>
                 </div>
                 <div className="flex">
                   <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
                   <p className="text-customBlue text-base font-medium w-full max-w-72">
-                    {text}
+                    {t(`testimonials.${key}.text`)}
                   </p>
                 </div>
               </li>

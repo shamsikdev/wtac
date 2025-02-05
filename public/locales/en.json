@@ -1,4 +1,75 @@
 {
+  "header": {
+    "our_products": "Our Products",
+    "working_hours": "Mon-Fri from 9:00 to 18:00",
+    "phone_number": "Phone Number"
+  },
+  "footer": {
+    "home": "Home",
+    "about": "About us",
+    "partners": "Partners",
+    "products": "Our products",
+    "certificates": "Certificates",
+    "contacts": "Contacts"
+  },
+  "products": {
+    "lubricants": "Lubricant materials",
+    "petroleum_products": "Petroleum Products",
+    "textile_products": "Textile Products",
+    "packaging_materials": "Packaging Materials"
+  },
+  "clients": {
+    "ngmk": "Navoi Mining and Metallurgical Combine",
+    "uty": "Uzbekistan Railways",
+    "ce": "Cengiz Energy",
+    "sany": "Sany, Shantui, XCMG",
+    "kg": "«Кыргызалтын» и «Кыргыз ЖД»"
+  },
+  "testimonials": {
+    "popov_ivan": {
+      "name": "Ivan Popov",
+      "text": "I have been working with World Trade and Consult LLC for six months and I can confidently say that this is a reliable and professional partner."
+    },
+    "smirnova_ekaterina": {
+      "name": "Ekaterina Smirnova",
+      "text": "At World Trade and Consult LLC, I can always find all the necessary products: lubricating oils, petroleum products, textiles, and plastics."
+    },
+    "kapustin_nikolay": {
+      "name": "Nikolay Kapustin",
+      "text": "WTaC offers its clients favorable prices and flexible payment terms, making cooperation with them even more attractive."
+    },
+    "nikolaev_arseniy": {
+      "name": "Arseniy Nikolaev",
+      "text": "The employees of World Trade and Consult LLC are always ready to help with product selection, answer any questions, and process orders."
+    },
+    "larionov_vladimir": {
+      "name": "Vladimir Larionov",
+      "text": "World Trade and Consult LLC values its customers and always strives to find an individual approach to each one."
+    },
+    "sokolov_yaroslav": {
+      "name": "Yaroslav Sokolov",
+      "text": "World Trade and Consult LLC ensures fast and safe delivery of goods anywhere in the world."
+    }
+  },
+  "lubricants_page": {
+    "name": "Lubricant materials",
+    "description": "Мы предлагаем широкий спектр смазочных материалов, которые соответствуют международным стандартам качества ISO и требованиям современных технологий.",
+    "1": "Наш ассортимент смазочной продукции",
+    "2": "Мы специализируемся на поставке масел для коммерческого транспорта, строительной, карьерной и специальной техники:",
+    "3": "В производстве премиальных масел, которые мы поставляем, используются присадки от ведущих мировых производителей, таких как Lubrizol, Afton Chemical, Evonik и Infineum.",
+    "4": "Менеджмент качества ФНПЗ полностью соответствует стандартам качества ISO 9001, 14001, 45001, 50001 в области производства нефтепродуктов. Сертифицированная лаборатория обеспечивает надежный контроль качества производства, гарантируя высокий уровень производственных процессов и соответствие продукции международным стандартам качества."
+  },
+  "textile_page": {
+    "name": "Textile product",
+    "description": "Мы предлагаем широкий ассортимент текстильной продукции, которая соответствует международным стандартам качества и требованиям современных технологий.",
+    "1": "Наш ассортимент текстильной продукции",
+    "2": "Мы предлагаем текстильные изделия для домашнего и коммерческого использования:",
+    "product1": "Домашний текстиль",
+    "product2": "Male and female clothes",
+    "warning": "Продукция представленная в категориях - является примером, для получения актуальных товаров оставьте запрос на консультацию",
+    "3": "В производстве наших изделий используются качественные материалы от ведущих мировых производителей, таких как Panda и Tantana.",
+    "4": "Сертифицированная лаборатория обеспечивает надежный контроль качества производства, гарантируя высокий уровень производственных процессов и соответствие продукции международным стандартам качества."
+  },
   "company_name": "World Trade and Consult LLC",
   "company_description": "Our company, founded in 2023, specializes in wholesale trade and export promotion of products manufactured in Uzbekistan. We collaborate with manufacturers from various industries, offering a wide range of products, including lubricants, petroleum products, textiles, non-ferrous metals, cable and wire products, plastic products, packaging materials, and any other Uzbek-made products in demand in international markets.",
   "consulting_services": "We also provide consulting services in Uzbekistan and the CIS.",
@@ -12,15 +83,8 @@
   "mission_growth": "Striving for continuous growth, we actively seek to expand our product range and strengthen partnerships with both potential and existing clients.",
   "partners_title": "We are proud to collaborate with leading companies",
   "partners_description": "Our partners are companies with whom we share common values and together achieve set goals.",
-
   "product_assortment": "Our Product Assortment",
   "product_description": "Our products meet international quality standards and modern technology requirements. We also have a wide range of products, making it easy for you to find everything you need.",
-  "lubricants": "Lubricants",
-  "petroleum_products": "Petroleum Products",
-  "textile_products": "Textile Products",
-  "packaging_materials": "Packaging Materials",
-  "nonferrous_metals": "Non-Ferrous Metals",
-  "cable_products": "Cable and Wire Products",
   "quality_focus": "We Place Great Emphasis on the Quality of Our Products",
   "quality_description": "World Trade and Consult LLC is a reliable partner in international trade, committed to providing only the highest quality products. Our company takes pride in ensuring strict quality control at every stage of supply.\n\nOur experienced specialists carefully inspect each product to guarantee its compliance with the highest standards. We work with trusted suppliers and strictly monitor to ensure our products are the best. With World Trade and Consult LLC, you can be confident in the reliability and quality of every transaction.",
   "clients_we_value": "Clients We Value",
