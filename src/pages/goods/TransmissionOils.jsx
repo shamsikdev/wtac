@@ -85,7 +85,7 @@ const TransmissionOils = () => {
         <Link to="/lubricants" className="flex items-center mb-12">
           <GoArrowLeft className="mr-3 text-4xl  text-customLightBlue" />
           <span className="text-4xl font-black text-customLightBlue">
-            Мужская и женская одежда
+            Трансмиссонные масла
           </span>
         </Link>
         <div className="flex justify-between mb-6">

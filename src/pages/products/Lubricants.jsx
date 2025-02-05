@@ -17,50 +17,50 @@ import { GoArrowRight } from "react-icons/go";
 import { useTranslation } from "react-i18next";
 const Lubricants = ({ handleScrollContact }) => {
   const { t, i18n } = useTranslation();
-  const oilItems = [
+  const oilProducts = [
     {
       icon: EngineIcon,
-      title: "Моторные масла для дизельных двигателей",
+      key: "diesel_engine_oil",
       style: { width: "75%", top: "12px", left: "45px", mt: "mt-20" },
     },
     {
       icon: EngineIcon2,
-      title: "Моторные масла уровня ГОСТ",
+      key: "gost_engine_oil",
       style: { width: "80%", top: "24px", left: "30px", mt: "mt-20" },
     },
     {
       icon: TransmissionIcon,
-      title: "Трансмиссионные масла",
+      key: "transmission_oil",
       style: { width: "70%", top: "3px", left: "55px", mt: "mt-[99px]" },
     },
     {
       icon: HydraulicIcon,
-      title: "Гидравлические масла",
+      key: "hydraulic_oil",
       style: { width: "45%", top: "26px", left: "90px", mt: "mt-[99px]" },
     },
     {
       icon: GearsIcon,
-      title: "Редукторные масла",
+      key: "gear_oil",
       style: { width: "70%", top: "12px", left: "42px", mt: "mt-[99px]" },
     },
     {
       icon: TurbineIcon,
-      title: "Турбинные масла",
+      key: "turbine_oil",
       style: { width: "70%", top: "32px", left: "42px", mt: "mt-[99px]" },
     },
     {
       icon: CompressorIcon,
-      title: "Компрессорные масла",
+      key: "compressor_oil",
       style: { width: "70%", top: "22px", left: "52px", mt: "mt-[99px]" },
     },
     {
       icon: TransformerIcon,
-      title: "Трансформаторное масло",
+      key: "transformer_oil",
       style: { width: "55%", top: "12px", left: "70px", mt: "mt-[99px]" },
     },
     {
       icon: CoolOilIcon,
-      title: "Холодильное масло",
+      key: "cooling_oil",
       style: { width: "70%", top: "3px", left: "42px", mt: "mt-[99px]" },
     },
   ];
@@ -71,7 +71,7 @@ const Lubricants = ({ handleScrollContact }) => {
         <div className="w-full max-w-[1100px] mx-auto flex justify-center items-center py-44">
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-4xl text-customBlue font-extrabold mb-6">
-              {t("lubricants_page.name")}
+              {t("lubricants_page.title")}
             </h2>
             <p className="text-customGray text-xl w-full max-w-[600px] mb-12 text-center">
               {t("lubricants_page.description")}
@@ -85,7 +85,7 @@ const Lubricants = ({ handleScrollContact }) => {
               {t("contact_us")}
             </button>
           </div>
-          <div className="parent absolute right-[10%] top-[15%] -z-10">
+          <div className="parent absolute right-[13%] top-[15%] -z-10">
             <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-36 right-28 div5 hover:scale-105 duration-500">
               <img
                 src={IntroImg5}
@@ -121,21 +121,20 @@ const Lubricants = ({ handleScrollContact }) => {
         <div className="w-full max-w-[1100px] mx-auto flex justify-center items-center pt-44">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl text-customBlue font-extrabold mb-6">
-              Наш ассортимент смазочной продукции
+              {t("lubricants_page.range_of_lubricants")}
             </h2>
             <p className="text-customGray text-xl w-full mb-12">
-              Мы специализируемся на поставке масел для коммерческого
-              транспорта, строительной, карьерной и специальной техники:
+              {t("lubricants_page.specialization")}
             </p>
           </div>
         </div>
         <div className="bg-customSkyBlue">
           <div className="w-full max-w-[1100px] mx-auto py-14">
             <ul className="flex flex-wrap items-center justify-center gap-5">
-              {oilItems.map(({ icon, title, style }, index) => (
+              {oilProducts.map(({ icon, key, style }) => (
                 <Link
                   to="/lubricants/transmission-oils"
-                  key={index}
+                  key={key}
                   className="bg-white w-80 h-64 p-5 rounded-3xl relative group"
                 >
                   <div className="flex justify-between items-center">
@@ -145,11 +144,11 @@ const Lubricants = ({ handleScrollContact }) => {
                     <GoArrowRight className="text-5xl text-customLightBlue mr-5 transition-opacity duration-500 opacity-0 group-hover:opacity-100" />
                   </div>
                   <h3 className={`text-xl text-customLightBlue ${style.mt}`}>
-                    {title}
+                    {t(`lubricants_page.oil_products.${key}`)}
                   </h3>
                   <img
                     src={icon}
-                    alt=""
+                    alt={t(`lubricants_page.oil_products.${key}`)}
                     style={{
                       width: style.width,
                       top: style.top,
@@ -175,17 +174,10 @@ const Lubricants = ({ handleScrollContact }) => {
 
           <div className="flex flex-col justify-center items-center w-full max-w-[656px]">
             <p className="text-xl text-customGray mb-5">
-              В производстве премиальных масел, которые мы поставляем,
-              используются присадки от ведущих мировых производителей, таких как
-              Lubrizol, Afton Chemical, Evonik и Infineum.
+              {t("lubricants_page.premium_oil_production")}
             </p>
             <p className="text-xl text-customGray">
-              Менеджмент качества ФНПЗ полностью соответствует стандартам
-              качества ISO 9001, 14001, 45001, 50001 в области производства
-              нефтепродуктов. Сертифицированная лаборатория обеспечивает
-              надежный контроль качества производства, гарантируя высокий
-              уровень производственных процессов и соответствие продукции
-              международным стандартам качества.
+              {t("lubricants_page.quality_management")}
             </p>
           </div>
         </div>

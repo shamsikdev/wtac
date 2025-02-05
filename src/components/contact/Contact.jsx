@@ -55,7 +55,7 @@ const Contact = ({ setOpenModal }) => {
               name="user_name"
               type="text"
               className="border-2 text-gray-600 text-base rounded-md py-3 pl-3 w-full max-w-md outline-customLightBlue"
-              placeholder="Ф.И.О"
+              placeholder={t("full_name")}
               required
             />
             <select
@@ -64,13 +64,19 @@ const Contact = ({ setOpenModal }) => {
               name="services"
             >
               <option disabled value="1">
-                Выберите услугу
+                {t("select_service")}
               </option>
-              <option value="lubricants">Смазочные материалы</option>
-              <option value="petroleum-products">Нефтепродукты</option>
-              <option value="textile">Текстильная продукция</option>
-              <option value="packaging-materials">Упаковачные материалы</option>
-              <option value="consulting-services">Консалтинговые услуги</option>
+              <option value="lubricants">{t("products.lubricants")}</option>
+              <option value="petroleum-products">
+                {t("products.petroleum_products")}
+              </option>
+              <option value="textile">{t("products.textile_products")}</option>
+              <option value="packaging-materials">
+                {t("products.packaging_materials")}
+              </option>
+              <option value="consulting-services">
+                {t("consulting_service")}
+              </option>
             </select>
             <button
               className=" w-full max-w-md rounded-md py-3 text-xl bg-customLightBlue text-white"

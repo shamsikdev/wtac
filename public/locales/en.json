@@ -46,29 +46,41 @@
       "name": "Vladimir Larionov",
       "text": "World Trade and Consult LLC values its customers and always strives to find an individual approach to each one."
     },
-    "sokolov_yaroslav1": {
+    "sokolov_yaroslav": {
       "name": "Yaroslav Sokolov",
       "text": "World Trade and Consult LLC ensures fast and safe delivery of goods anywhere in the world."
     }
   },
   "lubricants_page": {
-    "name": "Lubricant materials",
-    "description": "Мы предлагаем широкий спектр смазочных материалов, которые соответствуют международным стандартам качества ISO и требованиям современных технологий.",
-    "1": "Наш ассортимент смазочной продукции",
-    "2": "Мы специализируемся на поставке масел для коммерческого транспорта, строительной, карьерной и специальной техники:",
-    "3": "В производстве премиальных масел, которые мы поставляем, используются присадки от ведущих мировых производителей, таких как Lubrizol, Afton Chemical, Evonik и Infineum.",
-    "4": "Менеджмент качества ФНПЗ полностью соответствует стандартам качества ISO 9001, 14001, 45001, 50001 в области производства нефтепродуктов. Сертифицированная лаборатория обеспечивает надежный контроль качества производства, гарантируя высокий уровень производственных процессов и соответствие продукции международным стандартам качества."
+    "title": "Lubricant materials",
+    "description": "We offer a wide range of lubricants that meet international ISO quality standards and modern technology requirements.",
+    "range_of_lubricants": "Our range of lubricant products",
+    "specialization": "We specialize in the supply of oils for commercial vehicles, construction, quarry and special equipment:",
+    "oil_products": {
+      "diesel_engine_oil": "Diesel engine oils",
+      "gost_engine_oil": "GOST standard engine oils",
+      "transmission_oil": "Transmission oils",
+      "hydraulic_oil": "Hydraulic oils",
+      "gear_oil": "Gear oils",
+      "turbine_oil": "Turbine oils",
+      "compressor_oil": "Compressor oils",
+      "transformer_oil": "Transformer oil",
+      "cooling_oil": "Cooling oil"
+    },
+    "premium_oil_production": "In the production of premium oils we supply, additives from leading global manufacturers such as Lubrizol, Afton Chemical, Evonik, and Infineum are used.",
+    "quality_management": "The quality management of FNPZ fully complies with ISO 9001, 14001, 45001, and 50001 standards in the field of petroleum product manufacturing. A certified laboratory ensures reliable quality control of production, guaranteeing a high level of manufacturing processes and compliance with international quality standards."
   },
+
   "textile_page": {
-    "name": "Textile product",
-    "description": "Мы предлагаем широкий ассортимент текстильной продукции, которая соответствует международным стандартам качества и требованиям современных технологий.",
-    "1": "Наш ассортимент текстильной продукции",
-    "2": "Мы предлагаем текстильные изделия для домашнего и коммерческого использования:",
-    "product1": "Домашний текстиль",
-    "product2": "Male and female clothes",
-    "warning": "Продукция представленная в категориях - является примером, для получения актуальных товаров оставьте запрос на консультацию",
-    "3": "В производстве наших изделий используются качественные материалы от ведущих мировых производителей, таких как Panda и Tantana.",
-    "4": "Сертифицированная лаборатория обеспечивает надежный контроль качества производства, гарантируя высокий уровень производственных процессов и соответствие продукции международным стандартам качества."
+    "title": "Textile products",
+    "description": "We offer a wide range of textile products that meet international quality standards and modern technology requirements.",
+    "range_of_textile": "Our range of textile products",
+    "specialization": "We offer textile products for home and commercial use:",
+    "product_home_textile": "Home textiles",
+    "product_clothing": "Men's and women's clothing",
+    "warning": "The products presented in the categories are examples. To get up-to-date products, please request a consultation.",
+    "premium_materials": "Our products are made using high-quality materials from leading global manufacturers such as Panda and Tantana.",
+    "quality_assurance": "A certified laboratory ensures reliable quality control of production, guaranteeing a high level of manufacturing processes and compliance with international quality standards."
   },
   "company_name": "World Trade and Consult LLC",
   "company_description": "Our company, founded in 2023, specializes in wholesale trade and export promotion of products manufactured in Uzbekistan. We collaborate with manufacturers from various industries, offering a wide range of products, including lubricants, petroleum products, textiles, non-ferrous metals, cable and wire products, plastic products, packaging materials, and any other Uzbek-made products in demand in international markets.",
@@ -93,9 +105,9 @@
   "contact_us_for_consultation1": "Contact Us",
   "contact_us_for_consultation2": "for a Full Consultation",
   "consultation_description": "Our team of specialists is ready to provide full technical support and consultation on the selection and application of lubricants, as well as technical support services.",
-  "email": "Email",
   "full_name": "Full Name",
   "select_service": "Select Service",
+  "consulting_service": "Consulting services",
   "get_consultation": "Get Consultation",
   "page_not_found": "Page Not Found",
   "back_to_home": "Back to home"

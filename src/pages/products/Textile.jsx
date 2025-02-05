@@ -5,28 +5,30 @@ import IntroImg11 from "../../assets/intro-img11.png";
 import IntroImg12 from "../../assets/intro-img12.png";
 import UpholsteryImg from "../../assets/upholstery-img.png";
 import { GoArrowRight } from "react-icons/go";
+import { useTranslation } from "react-i18next";
 const Textile = ({ handleScrollContact }) => {
+  const { t, i18n } = useTranslation();
   return (
     <>
       <section className="relative mb-28">
         <div className="w-full max-w-[1100px] mx-auto flex justify-center items-center py-44">
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-4xl text-customBlue font-extrabold mb-6">
-              Текстильная продукция
+              {t("textile_page.title")}
             </h2>
             <p className="text-customGray text-xl w-full max-w-[600px] mb-12 text-center">
-              Мы предлагаем широкий ассортимент текстильной продукции, которая
-              соответствует международным стандартам качества и требованиям
-              современных технологий.
+              {t("textile_page.description")}
             </p>
-            <Link
+            <button
               onClick={(e) => handleScrollContact(e, 1800)}
-              className="bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full max-w-56"
+              className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full ${
+                i18n.language == "en" ? "max-w-40" : "max-w-56"
+              }`}
             >
-              Связаться с нами
-            </Link>
+              {t("contact_us")}
+            </button>
           </div>
-          <div className="parent absolute right-[10%] top-[15%] -z-10">
+          <div className="parent absolute right-[13%] top-[15%] -z-10">
             <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-36 right-28 div5 hover:scale-105 duration-500">
               <img
                 src={IntroImg9}
@@ -62,11 +64,10 @@ const Textile = ({ handleScrollContact }) => {
         <div className="w-full max-w-[1100px] mx-auto flex  flex-col  pt-44 pb-12">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl text-customBlue font-black mb-6">
-              Наш ассортимент текстильной продукции
+              {t("textile_page.range_of_textile")}
             </h2>
             <p className="text-customGray text-2xl w-full mb-12">
-              Мы предлагаем текстильные изделия для домашнего и коммерческого
-              использования:
+              {t("textile_page.specialization")}
             </p>
           </div>
           <ul className="flex gap-x-5 mb-5">
@@ -76,7 +77,7 @@ const Textile = ({ handleScrollContact }) => {
                 <GoArrowRight className="text-4xl text-customLightBlue group-hover:translate-x-96 group-hover:text-white transition duration-500" />
               </div>
               <span className="relative z-10 text-3xl text-white transition duration-700">
-                Домашний текстиль
+                {t("textile_page.product_home_textile")}
               </span>
             </li>
 
@@ -90,13 +91,12 @@ const Textile = ({ handleScrollContact }) => {
                 <GoArrowRight className="absolute inset-0 m-auto text-4xl text-customLightBlue transition-all duration-500 group-hover:translate-x-96 group-hover:text-white" />
               </div>
               <span className="relative text-3xl text-white">
-                Мужская и женская одежда
+                {t("textile_page.product_clothing")}
               </span>
             </Link>
           </ul>
           <p className="text-customGray text-xl w-full">
-            Продукция представленная в категориях - является примером, для
-            получения актуальных товаров оставьте запрос на консультацию
+            {t("textile_page.warning")}
           </p>
         </div>
       </section>
@@ -109,16 +109,12 @@ const Textile = ({ handleScrollContact }) => {
               className="w-full h-full object-cover -rotate-45 scale-150 hover:rotate-0 duration-500"
             />
           </div>
-          <div className="flex flex-col justify-center items-center w-full max-w-[656px]">
+          <div className="flex flex-col justify-center items-center w-full max-w-[500px]">
             <p className="text-xl text-customGray mb-5">
-              В производстве наших изделий используются качественные материалы
-              от ведущих мировых производителей, таких как Panda и Tantana.
+              {t("textile_page.premium_materials")}
             </p>
             <p className="text-xl text-customGray">
-              Сертифицированная лаборатория обеспечивает надежный контроль
-              качества производства, гарантируя высокий уровень производственных
-              процессов и соответствие продукции международным стандартам
-              качества.
+              {t("textile_page.quality_assurance")}
             </p>
           </div>
         </div>
