@@ -10,27 +10,30 @@ import IntroImg16 from "../../assets/intro-img16.png";
 import AvangardImg from "../../assets/avangard-img.png";
 import RollPackage from "../../assets/roll-package-img.png";
 import ChineseImg from "../../assets/chinese-worker-img.png";
+import { useTranslation } from "react-i18next";
 const Packaging = ({ handleScrollContact }) => {
+  const { t, i18n } = useTranslation();
   return (
     <>
       <section className="relative mb-28">
         <div className="w-full max-w-[1100px] mx-auto flex justify-center items-center py-44">
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-4xl text-customBlue font-extrabold mb-6">
-              Упаковычные материалы
+              {t("packaging_page.title")}
             </h2>
             <p className="text-customGray text-xl w-full max-w-[500px] mb-12 text-center">
-              Мы производим полимерные плёнки и упаковочные материалы высокого
-              качества с использованием современных технологий.
+              {t("packaging_page.description")}
             </p>
-            <Link
-              onClick={(e) => handleScrollContact(e, 2080)}
-              className="bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full max-w-56"
+            <button
+              onClick={(e) => handleScrollContact(e, 2325)}
+              className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full ${
+                i18n.language == "en" ? "max-w-40" : "max-w-56"
+              }`}
             >
-              Связаться с нами
-            </Link>
+              {t("contact_us")}
+            </button>
           </div>
-          <div className="parent absolute right-[13%] top-[15%] -z-10">
+          <div className="parent absolute right-[9%] top-[15%] -z-10">
             <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-36 right-28 div5 hover:scale-105 duration-500">
               <img
                 src={IntroImg13}
@@ -65,7 +68,7 @@ const Packaging = ({ handleScrollContact }) => {
       <section className="mb-20">
         <div className="w-full max-w-[1100px] mx-auto flex flex-col  pt-44 pb-12">
           <h2 className="text-4xl text-customBlue font-black mb-32">
-            Наше преимущество
+            {t("packaging_page.advantages.title")}
           </h2>
           <ul className="flex flex-col gap-y-36">
             <li className="flex items-center justify-between">
@@ -78,14 +81,10 @@ const Packaging = ({ handleScrollContact }) => {
               </div>
               <div className="flex flex-col">
                 <h3 className="text-3xl text-customBlue font-black mb-3">
-                  Гарантии и качество
+                  {t("packaging_page.advantages.quality_guarantee.title")}
                 </h3>
                 <p className="text-xl text-customGray w-[750px]">
-                  Средний срок использования парниковых пленок с запросами
-                  потребителя от 12 до 48 месяцев, при правильной установке и
-                  эксплуатации. На заводе имеется собственная лаборатория
-                  потехническим испытаниям и контролю качества выпускаемой
-                  продукции.
+                  {t("packaging_page.advantages.quality_guarantee.description")}
                 </p>
               </div>
             </li>
@@ -99,19 +98,17 @@ const Packaging = ({ handleScrollContact }) => {
               </div>
               <div className="flex flex-col">
                 <h3 className="text-3xl text-customBlue font-black mb-3">
-                  Ассортимент продукции
+                  {t("packaging_page.advantages.product_range.title")}
                 </h3>
                 <p className="text-xl text-customGray w-[706px] mb-3">
-                  Полиэтиленовые пленки шириной от 1 000 мм до 12 000 мм,
-                  толщиной от 20 до 200 микрон, с добавлением добавок таких как
-                  UV, AF, IK, идеально подходящие для теплиц.
+                  {t("packaging_page.advantages.product_range.description")}
                 </p>
                 <div className="flex gap-x-6">
                   <div className="flex flex-col">
                     <div className="flex items-center">
                       <AiOutlineColumnWidth className="text-customBlue text-3xl mr-1" />
                       <span className="text-xl text-[#484848] font-semibold">
-                        Ширина:
+                        {t("packaging_page.advantages.product_range.width")}
                       </span>
                     </div>
                     <p className="text-xl text-customGray">1 000 - 12 000 мм</p>
@@ -120,7 +117,7 @@ const Packaging = ({ handleScrollContact }) => {
                     <div className="flex items-center">
                       <PiListBold className="text-customBlue text-2xl mr-1" />
                       <span className="text-xl text-[#484848] font-semibold">
-                        Толщина:
+                        {t("packaging_page.advantages.product_range.thickness")}
                       </span>
                     </div>
                     <p className="text-xl text-customGray">20 - 200 мм</p>
@@ -129,7 +126,7 @@ const Packaging = ({ handleScrollContact }) => {
                     <div className="flex items-center">
                       <PiPlusCircleBold className="text-customBlue text-2xl mr-1" />
                       <span className="text-xl text-[#484848] font-semibold">
-                        Добавки:
+                        {t("packaging_page.advantages.product_range.additives")}
                       </span>
                     </div>
                     <p className="text-xl text-customGray">UV, AF, IK</p>
@@ -147,32 +144,33 @@ const Packaging = ({ handleScrollContact }) => {
               </div>
               <div className="flex flex-col">
                 <h3 className="text-3xl text-customBlue font-black mb-3">
-                  Профессионализм
+                  {t("packaging_page.advantages.professionalism.title")}
                 </h3>
                 <ul className="flex flex-col">
                   <li className="flex items-center mb-3">
                     <FaCheckCircle className="text-customBlue mr-2" />
                     <p className="text-xl text-customGray">
-                      Команда состоящая из более чем 25-ти профессионалов.
+                      {t("packaging_page.advantages.professionalism.team")}
                     </p>
                   </li>
                   <li className="flex items-start mb-3">
                     <FaCheckCircle className="text-customBlue mr-2 mt-1" />
                     <p className="text-xl text-customGray w-[706px]">
-                      Высококвалифицированный технолог из Китая с 30-летним
-                      опытом в производстве пленок.
+                      {t("packaging_page.advantages.professionalism.expertise")}
                     </p>
                   </li>
                   <li className="flex items-center mb-3">
                     <FaCheckCircle className="text-customBlue mr-2" />
                     <p className="text-xl text-customGray">
-                      3 000 м2 произведенных мощностей в городе Фергане.
+                      {t("packaging_page.advantages.professionalism.capacity")}
                     </p>
                   </li>
                   <li className="flex items-center">
                     <FaCheckCircle className="text-customBlue mr-2" />
                     <p className="text-xl text-customGray">
-                      Более чем 8 000 тон произведственной продукции в год.
+                      {t(
+                        "packaging_page.advantages.professionalism.production"
+                      )}
                     </p>
                   </li>
                 </ul>

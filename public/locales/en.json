@@ -82,6 +82,31 @@
     "premium_materials": "Our products are made using high-quality materials from leading global manufacturers such as Panda and Tantana.",
     "quality_assurance": "A certified laboratory ensures reliable quality control of production, guaranteeing a high level of manufacturing processes and compliance with international quality standards."
   },
+  "packaging_page": {
+    "title": "Packaging Materials",
+    "description": "We manufacture high-quality polymer films and packaging materials using modern technologies.",
+    "advantages": {
+      "title": "Our Advantage",
+      "quality_guarantee": {
+        "title": "Guarantees and Quality",
+        "description": "The average service life of greenhouse films with consumer requests is from 12 to 48 months, with proper installation and operation. The factory has its own laboratory for technological tests and quality control of the produced products."
+      },
+      "product_range": {
+        "title": "Product Range",
+        "description": "Polyethylene films with a width from 1,000 mm to 12,000 mm, thickness from 20 to 200 microns, with additives such as UV, AF, IK, ideally suited for greenhouses.",
+        "width": "Width:",
+        "thickness": "Thickness:",
+        "additives": "Additives:"
+      },
+      "professionalism": {
+        "title": "Professionalism",
+        "team": "A team of more than 25 professionals.",
+        "expertise": "A highly qualified technologist from China with 30 years of experience in film production.",
+        "capacity": "3,000 m² of production facilities in the city of Fergana.",
+        "production": "More than 8,000 tons of produced products per year."
+      }
+    }
+  },
   "company_name": "World Trade and Consult LLC",
   "company_description": "Our company, founded in 2023, specializes in wholesale trade and export promotion of products manufactured in Uzbekistan. We collaborate with manufacturers from various industries, offering a wide range of products, including lubricants, petroleum products, textiles, non-ferrous metals, cable and wire products, plastic products, packaging materials, and any other Uzbek-made products in demand in international markets.",
   "consulting_services": "We also provide consulting services in Uzbekistan and the CIS.",
@@ -110,5 +135,46 @@
   "consulting_service": "Consulting services",
   "get_consultation": "Get Consultation",
   "page_not_found": "Page Not Found",
-  "back_to_home": "Back to home"
+  "back_to_home": "Back to home",
+
+  "company": {
+    "title": "About Riders Trading Pro LLC",
+    "description": "Reliable supplier of petroleum products since 2009",
+    "about": "Riders Trading Pro LLC is a dynamically developing company operating in CIS market since 2009. We specialize in the wholesale supply of high-quality petroleum products, including:"
+  },
+  "artp_products": {
+    "gasoline": "Gasoline",
+    "diesel": "Diesel fuel",
+    "base_oils": "Industrial base oils"
+  },
+  "artp_advantages": {
+    "title": "Our advantages",
+    "wide_range": "Wide range of products: in our assortment, you will find all necessary petroleum products for your business.",
+    "quality": "Impeccable quality: we offer only certified products that have undergone thorough quality control.",
+    "prices": "Competitive prices: we provide our clients with competitive prices for all our products.",
+    "individual_approach": "Individual approach: we are always ready to find the best solutions for each client, taking into account their needs and budget.",
+    "service": "High level of service"
+  },
+  "service": {
+    "description": "We offer our clients a high-quality service, including:",
+    "consultation": "Professional consultation",
+    "delivery": "Fast delivery",
+    "support": "Continuous technical support"
+  },
+  "base_oils": {
+    "title": "Base oils for your production",
+    "description": "Riders Trading Pro LLC offers a wide range of base oils that can be used in your production.",
+    "base_oils_advantages": {
+      "title": "Our Base Oils:",
+      "standards": "Meet all industry requirements and standards",
+      "efficiency": "Ensure reliable and efficient operation of your equipment",
+      "usage": "Can be used to produce commercial oils by adding additives"
+    },
+    "benefits": {
+      "title": "With our base oils, you can:",
+      "costs": "Reduce lubrication costs",
+      "productivity": "Increase productivity of your equipment",
+      "lifespan": "Extend lifespan of your equipment"
+    }
+  }
 }

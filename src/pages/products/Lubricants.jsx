@@ -85,7 +85,7 @@ const Lubricants = ({ handleScrollContact }) => {
               {t("contact_us")}
             </button>
           </div>
-          <div className="parent absolute right-[13%] top-[15%] -z-10">
+          <div className="parent absolute right-[9%] top-[15%] -z-10">
             <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-36 right-28 div5 hover:scale-105 duration-500">
               <img
                 src={IntroImg5}
