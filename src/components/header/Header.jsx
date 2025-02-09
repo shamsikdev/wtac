@@ -46,7 +46,7 @@ const Header = () => {
   }, [pathname]);
   return (
     <header className="bg-white shadow-lg fixed w-full z-40">
-      <div className="w-full max-w-[1100px] mx-auto py-5 flex justify-between items-center">
+      <div className="w-full max-w-[1100px]  mx-auto py-5 flex justify-between items-center">
         <div className="flex justify-center items-center">
           <a href="/">
             <img className="mr-9" src={SiteLogo} alt="WTAC LLC logo" />
@@ -104,14 +104,13 @@ const Header = () => {
             )}
           </div>
         </div>
-        <address className="flex items-end not-italic">
+        <address className="flex items-center not-italic">
           <p className="text-base text-customBlue mr-7">
             {t("header.working_hours")}
           </p>
           <a className="text-xl text-customBlue mr-10" href="tel:+998990059932">
-            {t("header.phone_number")}
+            +998 99 005 99 32
           </a>
-
           <div className="flex gap-x-3 mr-10 cursor-pointer">
             <img
               onClick={handleChange}

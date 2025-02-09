@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import PageNotFoundImg from "../assets/page-not-found.png";
 import { useTranslation } from "react-i18next";
 const PageNotFound = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <section className="flex items-center pt-10 h-svh flex-col bg-customSkyBlue">
       <img

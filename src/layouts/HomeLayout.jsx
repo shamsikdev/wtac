@@ -4,7 +4,7 @@ import { useState } from "react";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Contact from "../components/contact/Contact";
-import SuccesModal from "../components/SuccesModal";
+import SuccessModal from "../components/SuccessModal";
 const HomeLayout = ({ handleScrollContact }) => {
   const [openModal, setOpenModal] = useState(false);
   return (
@@ -15,7 +15,7 @@ const HomeLayout = ({ handleScrollContact }) => {
       </main>
       <Contact setOpenModal={setOpenModal} />
       <Footer handleScrollContact={handleScrollContact} />
-      {openModal && <SuccesModal setOpenModal={setOpenModal} />}
+      {openModal && <SuccessModal setOpenModal={setOpenModal} />}
       {openModal && (
         <div className="fixed inset-0 bg-black bg-opacity-75 z-40"></div>
       )}

@@ -1,8 +1,7 @@
 {
   "header": {
     "our_products": "Our Products",
-    "working_hours": "Mon-Fri from 9:00 to 18:00",
-    "phone_number": "Phone Number"
+    "working_hours": "Mon-Fri from 9:00 to 18:00"
   },
   "footer": {
     "home": "Home",
@@ -19,11 +18,11 @@
     "packaging_materials": "Packaging Materials"
   },
   "clients": {
-    "ngmk": "Navoi Mining and Metallurgical Combine",
-    "uty": "Uzbekistan Railways",
+    "ngmk": "Navoinskiy gornometallurgicheskiy kombinat",
+    "uty": "Uzbekiston Temir Yullari",
     "ce": "Cengiz Energy",
     "sany": "Sany, Shantui, XCMG",
-    "kg": "«Кыргызалтын» и «Кыргыз ЖД»"
+    "kg": "«Kyrgyzaltyn» и «Kyrgyz JD»"
   },
   "testimonials": {
     "popov_ivan": {
@@ -106,6 +105,11 @@
         "production": "More than 8,000 tons of produced products per year."
       }
     }
+  },
+  "success_modal": {
+    "title": "Request received",
+    "text": "Our specialists will contact you within 30 minutes.",
+    "close_btn": "Close"
   },
   "company_name": "World Trade and Consult LLC",
   "company_description": "Our company, founded in 2023, specializes in wholesale trade and export promotion of products manufactured in Uzbekistan. We collaborate with manufacturers from various industries, offering a wide range of products, including lubricants, petroleum products, textiles, non-ferrous metals, cable and wire products, plastic products, packaging materials, and any other Uzbek-made products in demand in international markets.",

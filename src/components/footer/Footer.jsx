@@ -1,10 +1,10 @@
 // rrd
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-// icons images
-import FacebookIcon from "../../assets/facebook-icon.svg";
+// icons
 import { AiFillInstagram } from "react-icons/ai";
-import TelegramIcon from "../../assets/telegram-icon.svg";
+import { FaTelegram, FaFacebook } from "react-icons/fa";
+
 const Footer = ({ handleScrollContact }) => {
   // const { pathname } = useLocation();
   // pathname.includes("/textile") ? console.log(pathname) : console.log("oops");
@@ -30,21 +30,28 @@ const Footer = ({ handleScrollContact }) => {
             </button>
           </li>
         </ul>
-        <div className="flex items-center mb-7">
-          <img
-            className="mr-6 w-6 h-6"
-            src={FacebookIcon}
-            alt="facebook icon"
-          />
-          <a target="blank" href="https://t.me/WTACFER">
-            <img
-              className="mr-5 w-6 h-6"
-              src={TelegramIcon}
-              alt="telegram icon"
-            />
+        <div className="flex items-end gap-x-4 mb-7">
+          <a
+            href="https://t.me/WTACFER"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <FaTelegram className="w-[24px] text-white h-[30px]" />
           </a>
-          <AiFillInstagram className="w-[30px] text-white h-[30px]" />
-          {/* <img className="w-6 h-6" src={TwitterIcon} alt="twitter icon" /> */}
+          <a
+            href="https://instagram.com"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <AiFillInstagram className="w-[30px] text-white h-[30px]" />
+          </a>
+          <a
+            href="https://facebook.com"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebook className="w-[24px] text-white h-[30px]" />
+          </a>
         </div>
         <span className="text-sm text-white opacity-75">
           © Copyright 2024 - World Trade and Consult LLC

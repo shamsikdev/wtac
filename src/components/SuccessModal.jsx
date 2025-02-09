@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import CallCentreIcon from "../assets/callcentre-icon.svg";
+import { useTranslation } from "react-i18next";
 
 const SuccesModal = ({ setOpenModal }) => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -10,9 +12,12 @@ const SuccesModal = ({ setOpenModal }) => {
 
   const closeModal = () => {
     setIsVisible(false);
-    setTimeout(() => setOpenModal(false), 500);
+    setOpenModal(false);
   };
-
+  setTimeout(() => {
+    setIsVisible(false);
+    setOpenModal(false);
+  }, 20000);
   return (
     <section
       className={`flex justify-center flex-col items-center bg-white w-[500px] h-[503px] top-10 left-[35%] rounded-xl shadow-md p-5 fixed z-50 transition-transform duration-500 ease-out ${
@@ -23,16 +28,16 @@ const SuccesModal = ({ setOpenModal }) => {
     >
       <img src={CallCentreIcon} alt="" className="mb-6 animate-wiggle" />
       <h2 className="text-4xl text-customBlue animate-fade-in">
-        Заявка получена
+        {t("success_modal.title")}
       </h2>
       <p className="text-base text-customGray font-semibold mb-12 animate-fade-in">
-        Наши специалисты свяжутся с вами в течение 30 минут
+        {t("success_modal.text")}
       </p>
       <button
         onClick={closeModal}
         className="text-white text-xl bg-customLightBlue py-4 rounded w-full animate-fade-in"
       >
-        Закрыть
+        {t("success_modal.close_btn")}
       </button>
     </section>
   );
