@@ -94,33 +94,33 @@ const Home = ({ handleScrollContact }) => {
   ];
   return (
     <>
-      <section className="relative mt-28">
+      <section className="relative sm:mt-28 mt-14">
         <div
-          className={`w-full max-w-[1100px] mx-auto flex justify-between items-center ${
-            i18n.language == "en" ? "pt-20 pb-40" : "py-20"
+          className={`w-full max-w-[1100px] pb-10 pt-20 mx-auto px-6 sm:px-0 flex justify-between sm:flex-row flex-col-reverse items-center ${
+            i18n.language == "en" ? "sm:pt-20 sm:pb-40" : "sm:py-20"
           }`}
         >
           <div className="flex flex-col justify-center">
-            <h2 className="text-4xl text-customBlue font-extrabold mb-6">
+            <h2 className="sm:text-4xl text-3xl w-full  text-customBlue font-extrabold mb-6">
               World Trade and Consult LLC
             </h2>
-            <p className="text-customGray text-lg w-full max-w-[600px] mb-6">
+            <p className="text-customGray sm:text-lg text-base w-full max-w-[600px] mb-6">
               {t("company_description")}
             </p>
-            <p className="text-customGray text-lg w-full max-w-[500px] font-semibold mb-8">
+            <p className="text-customGray sm:text-lg text-base w-full sm:max-w-[500px] max-w-[350px] font-semibold sm:mb-8 mb-6">
               {t("consulting_services")}
             </p>
             <button
               onClick={(e) => handleScrollContact(e, 5550)}
-              className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full ${
-                i18n.language == "en" ? "max-w-40" : "max-w-56"
+              className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white sm:text-xl text-base sm:py-4 py-3 px-7 rounded-md w-full ${
+                i18n.language == "en" ? "sm:max-w-40" : "sm:max-w-56"
               }`}
             >
               {t("contact_us")}
             </button>
           </div>
-          <div className="parent absolute right-[10%] -top-[15%]">
-            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-20 div1 hover:scale-105 duration-500">
+          <div className="parent sm:absolute sm:right-[10%] sm:-top-[15%] mb-10 sm:mb-0">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-xl sm:top-20 div1 hover:scale-105 duration-500">
               <img
                 src={IntroImg1}
                 alt="White bathrobe, slippers, towels, and a bath mat with footprints; a minimal spa set on a wooden floor."
@@ -128,7 +128,7 @@ const Home = ({ handleScrollContact }) => {
               />
             </div>
 
-            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl left-20 div2 hover:scale-105 duration-500">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-xl sm:left-20 div2 hover:scale-105 duration-500">
               <img
                 src={IntroImg2}
                 alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
@@ -136,7 +136,7 @@ const Home = ({ handleScrollContact }) => {
               />
             </div>
 
-            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl left-40 -top-20 z-10 div3 hover:scale-105 duration-500">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-242 rotate-45 overflow-hidden sm:rounded-3xl rounded-xl sm:left-40 sm:-top-20 z-10 div3 hover:scale-105 duration-500">
               <img
                 src={IntroImg3}
                 alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
@@ -144,7 +144,7 @@ const Home = ({ handleScrollContact }) => {
               />
             </div>
 
-            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl -top-20 z-10 div4 hover:scale-105 duration-500">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-xl sm:-top-20 z-10 div4 hover:scale-105 duration-500">
               <img
                 src={IntroImg4}
                 alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
@@ -154,7 +154,7 @@ const Home = ({ handleScrollContact }) => {
           </div>
         </div>
       </section>
-      <section className="bg-customSkyBlue">
+      {/* <section className="bg-customSkyBlue">
         <div className="w-full max-w-[1100px] mx-auto pt-24 pb-12">
           <h2 className="text-4xl text-customBlue font-extrabold mb-6">
             {t("about_us")}
@@ -294,69 +294,6 @@ const Home = ({ handleScrollContact }) => {
           <h2 className="text-customBlue text-[40px] w-full mb-24 leading-[50px] font-black">
             {t("clients_we_value")}
           </h2>
-          {/* <ul className="flex justify-center  flex-wrap gap-7">
-            <li className="p-2 shadow-md rounded-xl w-full max-w-80">
-              <img src={NgmkLogo} alt="" className="object-cover mb-2" />
-              <span className="text-base text-[#3A475E] font-semibold">
-                Навоинский горнометаллургический комбинат
-              </span>
-            </li>
-            <li className="p-2 shadow-md rounded-xl w-full max-w-80">
-              <img src={UtyLogo} alt="" className="object-cover mb-2" />
-              <span className="text-base text-[#3A475E] font-semibold">
-                Узбекистон Темир Йуллари
-              </span>
-            </li>
-            <li className="p-2 shadow-md rounded-xl w-full max-w-80">
-              <img
-                src={CeLogo}
-                alt="Логотип Навоинский горнометаллургический комбинат"
-                className="object-cover mb-2"
-              />
-              <span className="text-base text-[#3A475E] font-semibold">
-                Cengiz Energy
-              </span>
-            </li>
-            <li className="p-3 shadow-md rounded-xl w-full max-w-[330px]">
-              <div className="flex">
-                <img
-                  src={SanyLogo}
-                  alt="SANY logo"
-                  className="object-cover mr-4"
-                />
-                <img
-                  src={XcmgLogo}
-                  alt="XCMG logo"
-                  className="object-cover mr-4"
-                />
-                <img
-                  src={ShantuiLogo}
-                  alt="SHANTUI logo"
-                  className="object-cover"
-                />
-              </div>
-              <span className="text-base text-[#3A475E] font-semibold">
-                Sany, Shantui, XCMG
-              </span>
-            </li>
-            <li className="p-2 shadow-md rounded-xl w-full max-w-80">
-              <div className="flex">
-                <img
-                  src={KirgizaltinLogo}
-                  alt="КЫРГЫЗАЛТЫН logo"
-                  className="object-cover mr-4"
-                />
-                <img
-                  src={KtjLogo}
-                  alt="КЫРГЫЗ ТЕМИР ЖОЛУ logo"
-                  className="object-cover"
-                />
-              </div>
-              <span className="text-base text-[#3A475E] font-semibold">
-                «Кыргызалтын» и «Кыргыз ЖД»
-              </span>
-            </li>
-          </ul> */}
           <ul className="flex justify-center flex-wrap gap-7">
             {clients.map((client, index) => (
               <li
@@ -420,7 +357,7 @@ const Home = ({ handleScrollContact }) => {
             ))}
           </ul>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

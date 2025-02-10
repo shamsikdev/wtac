@@ -10,9 +10,9 @@ const HomeLayout = ({ handleScrollContact }) => {
   return (
     <>
       <Header />
-      {/* <main className="flex-grow">
+      <main className="flex-grow">
         <Outlet />
-      </main> */}
+      </main>
       {/* <Contact setOpenModal={setOpenModal} /> */}
       {/* <Footer handleScrollContact={handleScrollContact} /> */}
       {openModal && <SuccessModal setOpenModal={setOpenModal} />}
