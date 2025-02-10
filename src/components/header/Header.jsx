@@ -10,6 +10,7 @@ import { IoIosArrowDown, IoIosMenu, IoMdClose } from "react-icons/io";
 import { useTranslation } from "react-i18next";
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const [show, setShow] = useState(false);
   const { t, i18n } = useTranslation();
   const handleChange = (e) => {
@@ -49,7 +50,11 @@ const Header = () => {
       <div className="w-full max-w-[1100px]  mx-auto py-5 sm:px-0 px-6 flex justify-between items-center">
         <div className="flex justify-center items-center">
           <a href="/">
-            <img className="mr-9" src={SiteLogo} alt="WTAC LLC logo" />
+            <img
+              className="mr-9 w-20 sm:w-24"
+              src={SiteLogo}
+              alt="WTAC LLC logo"
+            />
           </a>
           <div
             className="relative sm:flex hidden items-center cursor-pointer dropdown"
@@ -133,7 +138,7 @@ const Header = () => {
                 className="w-6 h-6"
               />
             </div>
-            <div className="flex items-center gap-x-16">
+            <div className="flex items-center gap-x-10">
               <Link to="/cart">
                 <img
                   className="sm:w-6 w-7 cursor-pointer"
@@ -141,7 +146,16 @@ const Header = () => {
                   alt="basket icon"
                 />
               </Link>
-              <IoIosMenu className="text-4xl block sm:hidden" />
+              <button
+                className="md:hidden text-customBlue text-2xl"
+                onClick={() => setIsMenuOpen((prev) => !prev)}
+              >
+                {isMenuOpen ? (
+                  <IoMdClose className="text-4xl block sm:hidden" />
+                ) : (
+                  <IoIosMenu className="text-4xl block sm:hidden" />
+                )}
+              </button>
             </div>
           </div>
         </div>
