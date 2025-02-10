@@ -156,18 +156,18 @@ const Home = ({ handleScrollContact }) => {
       </section>
       <section className="bg-customSkyBlue">
         <div className="w-full max-w-[1100px] mx-auto sm:pt-24 sm:pb-12 p-6">
-          <h2 className="sm:text-4xl text-3xl text-customBlue font-extrabold sm:mb-6 sm:pl-0 pl-6 mb-4">
+          <h2 className="sm:text-4xl text-3xl text-customBlue font-extrabold sm:mb-6 mb-4">
             {t("about_us")}
           </h2>
           <div className="flex sm:flex-row flex-col sm:justify-between items-center">
             <div className="flex flex-col justify-center">
-              <p className="text-customGray sm:text-xl sm:text-left text-justify text-base w-full sm:max-w-[555px] max-w-72 sm:mb-6 mb-2">
+              <p className="text-customGray sm:text-xl sm:text-left text-justify text-base w-full sm:max-w-[555px]  sm:mb-6 mb-2">
                 {t("about_us_description")}
               </p>
-              <p className="text-customGray sm:text-xl sm:text-left text-justify text-base w-full sm:max-w-[555px] max-w-72 sm:mb-3 mb-2">
+              <p className="text-customGray sm:text-xl sm:text-left text-justify text-base w-full sm:max-w-[555px]  sm:mb-3 mb-2">
                 {t("market_demand")}
               </p>
-              <p className="text-customGray sm:text-xl sm:text-left text-justify text-base w-full sm:max-w-[555px] max-w-72 sm:mb-0 mb-5">
+              <p className="text-customGray sm:text-xl sm:text-left text-justify text-base w-full sm:max-w-[555px]  sm:mb-0 mb-5">
                 {t("export_solutions")}
               </p>
             </div>
@@ -176,10 +176,10 @@ const Home = ({ handleScrollContact }) => {
               <h3 className="text-customBlue sm:text-2xl text-3xl font-semibold sm:mb-6 mb-2">
                 {t("our_mission")}
               </h3>
-              <p className="text-customGray sm:text-xl text-base w-full sm:max-w-[420px] max-w-72 sm:mb-8 mb-4">
+              <p className="text-customGray sm:text-xl text-base w-full sm:max-w-[420px]  sm:mb-8 mb-4">
                 {t("mission_description")}
               </p>
-              <p className="text-customGray sm:text-xl text-base w-full sm:max-w-[420px] max-w-72">
+              <p className="text-customGray sm:text-xl text-base w-full sm:max-w-[420px] ">
                 {t("mission_growth")}
               </p>
             </article>
