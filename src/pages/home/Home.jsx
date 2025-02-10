@@ -154,32 +154,32 @@ const Home = ({ handleScrollContact }) => {
           </div>
         </div>
       </section>
-      {/* <section className="bg-customSkyBlue">
-        <div className="w-full max-w-[1100px] mx-auto pt-24 pb-12">
-          <h2 className="text-4xl text-customBlue font-extrabold mb-6">
+      <section className="bg-customSkyBlue">
+        <div className="w-full max-w-[1100px] mx-auto sm:pt-24 sm:pb-12 p-6">
+          <h2 className="sm:text-4xl text-2xl text-customBlue font-extrabold sm:mb-6 mb-4">
             {t("about_us")}
           </h2>
-          <div className="flex justify-between">
+          <div className="flex sm:flex-row flex-col justify-between">
             <div className="flex flex-col justify-center">
-              <p className="text-customGray text-xl w-full max-w-[555px] mb-6">
+              <p className="text-customGray sm:text-xl text-base w-full sm:max-w-[555px] max-w-72 sm:mb-6 mb-2">
                 {t("about_us_description")}
               </p>
-              <p className="text-customGray text-xl w-full max-w-[555px] mb-3">
+              <p className="text-customGray sm:text-xl text-base w-full sm:max-w-[555px] max-w-72 sm:mb-3 mb-2">
                 {t("market_demand")}
               </p>
-              <p className="text-customGray text-xl w-full max-w-[555px]">
+              <p className="text-customGray sm:text-xl text-base w-full sm:max-w-[555px] max-w-72 sm:mb-0 mb-5">
                 {t("export_solutions")}
               </p>
             </div>
             <article className="py-3 px-5 rounded-xl bg-white relative">
-              <img src={Icon} alt="" className="absolute -right-6 -top-3" />
-              <h3 className="text-customBlue text-2xl font-semibold mb-6">
+              <img src={Icon} alt="" className="w-8 absolute right-2 top-2" />
+              <h3 className="text-customBlue sm:text-2xl text-3xl font-semibold sm:mb-6 mb-2">
                 {t("our_mission")}
               </h3>
-              <p className="text-customGray text-xl w-full max-w-[420px] mb-8">
+              <p className="text-customGray sm:text-xl text-base w-full sm:max-w-[420px] max-w-72 sm:mb-8 mb-4">
                 {t("mission_description")}
               </p>
-              <p className="text-customGray text-xl w-full max-w-[420px]">
+              <p className="text-customGray sm:text-xl text-base w-full sm:max-w-[420px] max-w-72">
                 {t("mission_growth")}
               </p>
             </article>
@@ -187,7 +187,7 @@ const Home = ({ handleScrollContact }) => {
         </div>
         <img src={AboutImg} className="w-full object-cover" alt="" />
       </section>
-      <section className="relative">
+      {/* <section className="relative">
         <div className="w-72 h-72 rotate-45 overflow-hidden rounded-3xl absolute right-20 top-44 -z-10">
           <img
             src={CooperationImg}
@@ -234,8 +234,8 @@ const Home = ({ handleScrollContact }) => {
             </li>
           </ul>
         </div>
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <div className="w-full text-[#2D4972] max-w-[1100px] mx-auto pt-20 pb-12">
           <h2 className="text-customBlue text-[40px] w-full max-w-[730px] leading-[50px] font-black mb-5">
             {t("product_assortment")}
@@ -267,8 +267,8 @@ const Home = ({ handleScrollContact }) => {
             ))}
           </div>
         </div>
-      </section>
-      <section className="bg-customSkyBlue">
+      </section> */}
+      {/* <section className="bg-customSkyBlue">
         <div className="w-full text-[#2D4972] max-w-[1100px] mx-auto flex items-end">
           <div className="flex flex-col justify-center pb-8">
             <h2 className="text-customBlue text-[40px] w-full max-w-[640px] leading-[50px] font-black mb-5">
@@ -288,8 +288,8 @@ const Home = ({ handleScrollContact }) => {
           </div>
           <img src={WomanWithHelmetImg} alt="" className="pt-10" />
         </div>
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <div className="w-full max-w-[1100px] mx-auto py-20">
           <h2 className="text-customBlue text-[40px] w-full mb-24 leading-[50px] font-black">
             {t("clients_we_value")}
@@ -325,8 +325,8 @@ const Home = ({ handleScrollContact }) => {
             ))}
           </ul>
         </div>
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <div className="w-full max-w-[1100px] mx-auto pb-24">
           <h2 className="text-customBlue text-[40px] w-full mb-6 leading-[50px] font-black">
             {t("reviews_you_can_trust")}
