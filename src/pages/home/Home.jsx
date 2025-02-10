@@ -136,7 +136,7 @@ const Home = ({ handleScrollContact }) => {
               />
             </div>
 
-            <div className="relative sm:w-72 sm:h-72 w-24 h-242 rotate-45 overflow-hidden sm:rounded-3xl rounded-xl sm:left-40 sm:-top-20 z-10 div3 hover:scale-105 duration-500">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-xl sm:left-40 sm:-top-20 z-10 div3 hover:scale-105 duration-500">
               <img
                 src={IntroImg3}
                 alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
@@ -156,7 +156,7 @@ const Home = ({ handleScrollContact }) => {
       </section>
       <section className="bg-customSkyBlue">
         <div className="w-full max-w-[1100px] mx-auto sm:pt-24 sm:pb-12 p-6">
-          <h2 className="sm:text-4xl text-3xl text-customBlue font-extrabold sm:mb-6 sm:pl-0 pl-5 mb-4">
+          <h2 className="sm:text-4xl text-3xl text-customBlue font-extrabold sm:mb-6 sm:pl-0 pl-6 mb-4">
             {t("about_us")}
           </h2>
           <div className="flex sm:flex-row flex-col sm:justify-between items-center">
@@ -187,54 +187,85 @@ const Home = ({ handleScrollContact }) => {
         </div>
         <img src={AboutImg} className="w-full object-cover" alt="" />
       </section>
-      {/* <section className="relative">
-        <div className="w-72 h-72 rotate-45 overflow-hidden rounded-3xl absolute right-20 top-44 -z-10">
+      <section className="relative">
+        <div className="sm:w-72 sm:h-72 w-40 h-40 rotate-45 overflow-hidden sm:rounded-3xl rounded-xl absolute sm:right-20 sm:top-44 -right-3 top-11 -z-10">
           <img
             src={CooperationImg}
             alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
             className="w-full h-full object-cover -rotate-45 scale-150"
           />
         </div>
-
-        <div className="w-full  text-customLightBlue max-w-[1100px] mx-auto pt-24 pb-7">
-          <h2 className="text-customBlue text-[40px] w-full max-w-[730px] leading-[50px] font-black mb-5">
+        <div className="w-full text-customLightBlue max-w-[1100px] mx-auto sm:pt-24 sm:pb-7 py-8 sm:px-0 px-6">
+          <h2 className="text-customBlue sm:text-[40px] text-2xl w-full sm:max-w-[730px] max-w-72 sm:leading-[50px] font-black mb-5">
             {t("partners_title")}
           </h2>
-          <p className="text-customGray text-xl w-full max-w-[770px] mb-10">
+          <p className="text-customGray sm:text-xl text-base w-full sm:max-w-[770px] max-w-64 mb-10">
             {t("partners_description")}
           </p>
-          <ul className="flex flex-wrap gap-8">
-            <li className="p-2 rounded-xl shadow-md w-80 h-44 bg-white">
-              <img src={TalkoLogo} alt="" className="w-24 h-24 mb-5" />
-              <h3 className="text-base font-semibold">
+          <ul className="sm:flex sm:flex-wrap sm:gap-8 grid grid-cols-2 gap-2">
+            <li className="p-2 rounded-xl shadow-md w-full h-full sm:max-w-80 border sm:max-h-48 max-h-36 bg-white">
+              <img
+                src={TalkoLogo}
+                alt=""
+                className="w-full sm:max-w-24 sm:h-24 max-w-16 sm:mb-5 mb-3"
+              />
+              <h3 className="sm:text-base text-sm font-semibold">
                 Талко Групп и СП «Апрелевка»
               </h3>
             </li>
-            <li className="p-2 rounded-xl shadow-md w-80 h-44 bg-white">
-              <img src={PandaLogo} alt="" className="w-24 h-24 mb-5" />
-              <h3 className="text-base font-semibold">Panda collection</h3>
+            <li className="p-2 rounded-xl shadow-md w-full h-full sm:max-w-80 border sm:max-h-48 max-h-36 bg-white">
+              <img
+                src={PandaLogo}
+                alt=""
+                className="w-full sm:max-w-24 sm:h-24 max-w-20 sm:mb-5 mb-3"
+              />
+              <h3 className="sm:text-base text-sm font-semibold">
+                Panda Collection
+              </h3>
             </li>
-            <li className="p-2 rounded-xl shadow-md w-80 h-44 bg-white">
-              <img src={TantanaLogo} alt="" className="w-24 h-24 mb-5" />
-              <h3 className="text-base font-semibold">Tantana Textile</h3>
+            <li className="p-2 rounded-xl shadow-md w-full h-full sm:max-w-80 border sm:max-h-48 max-h-36 bg-white">
+              <img
+                src={TantanaLogo}
+                alt=""
+                className="w-full sm:max-w-24 sm:h-24 max-w-16 sm:mb-5 mb-3"
+              />
+              <h3 className="sm:text-base text-sm font-semibold">
+                Tantana Textile
+              </h3>
             </li>
-            <li className="p-2 rounded-xl shadow-md w-80 h-44 bg-white">
-              <img src={RtpLogo} alt="" className="w-24 h-24 mb-5" />
-              <h3 className="text-base font-semibold">
+            <li className="sm:block flex flex-col justify-end p-2 rounded-xl shadow-md w-full h-full sm:max-w-80 border sm:max-h-48 max-h-36 bg-white">
+              <img
+                src={RtpLogo}
+                alt=""
+                className="w-full sm:max-w-24 sm:h-24 max-w-16 sm:mb-5 mb-3"
+              />
+              <h3 className="w-full sm:max-w-56 max-w-28 sm:text-base text-sm font-semibold">
                 ООО Riders Trading Pro
               </h3>
             </li>
-            <li className="p-2 rounded-xl shadow-md w-80 h-44 bg-white">
-              <img src={SanegLogo} alt="" className="w-24 h-24 mb-5" />
-              <h3 className="text-base font-semibold">Saneg - SEG Motol</h3>
+            <li className="p-2 rounded-xl shadow-md w-full h-full sm:max-w-80 border sm:max-h-48 max-h-36 bg-white">
+              <img
+                src={SanegLogo}
+                alt=""
+                className="w-full sm:max-w-24 sm:h-24 max-w-20 sm:mb-5 mb-3"
+              />
+              <h3 className="sm:text-base text-sm font-semibold">
+                Saneg - SEG Motol
+              </h3>
             </li>
-            <li className="p-2 rounded-xl shadow-md w-80 h-44 bg-white">
-              <img src={KabeltechLogo} alt="" className="w-24 h-24 mb-5" />
-              <h3 className="text-base font-semibold">OOO Kabel Tech Energy</h3>
+            <li className="p-2 rounded-xl shadow-md w-full h-full sm:max-w-80 border sm:max-h-48 max-h-36 bg-white">
+              <img
+                src={KabeltechLogo}
+                alt=""
+                className="w-full sm:max-w-24 sm:h-24 max-w-20 sm:mb-5 mb-3"
+              />
+              <h3 className="sm:text-base text-sm font-semibold">
+                OOO Kabel Tech Energy
+              </h3>
             </li>
           </ul>
         </div>
-      </section> */}
+      </section>
       {/* <section>
         <div className="w-full text-[#2D4972] max-w-[1100px] mx-auto pt-20 pb-12">
           <h2 className="text-customBlue text-[40px] w-full max-w-[730px] leading-[50px] font-black mb-5">
