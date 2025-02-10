@@ -187,12 +187,12 @@ const Home = ({ handleScrollContact }) => {
         </div>
         <img src={AboutImg} className="w-full object-cover" alt="" />
       </section>
-      <section className="relative">
+      <section className="relative overflow-hidden">
         <div className="sm:w-72 sm:h-72 w-40 h-40 rotate-45 overflow-hidden sm:rounded-3xl rounded-xl absolute sm:right-20 sm:top-44 -right-3 top-11 -z-10">
           <img
             src={CooperationImg}
             alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
-            className="w-full h-full object-cover -rotate-45 scale-150"
+            className="w-full h-full max-w-screen object-cover -rotate-45 scale-150"
           />
         </div>
         <div className="w-full text-customLightBlue max-w-[1100px] mx-auto sm:pt-24 sm:pb-7 py-8 sm:px-0 px-6">
