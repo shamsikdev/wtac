@@ -47,7 +47,7 @@ const Header = () => {
   }, [pathname]);
   return (
     <header className="bg-white shadow-lg fixed w-full z-40">
-      <div className="w-full max-w-[1100px]  mx-auto py-5 sm:px-0 px-6 flex justify-between items-center">
+      <div className="w-full max-w-[1100px]  mx-auto py-5 sm:px-0 px-4 flex justify-between items-center">
         <div className="flex justify-center items-center">
           <a href="/">
             <img

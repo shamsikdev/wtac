@@ -156,7 +156,7 @@ const Home = ({ handleScrollContact }) => {
       </section>
       <section className="bg-customSkyBlue">
         <div className="w-full max-w-[1100px] mx-auto sm:pt-24 sm:pb-12 p-6">
-          <h2 className="sm:text-4xl text-3xl text-customBlue font-extrabold sm:mb-6 sm:pl-0 pl-4 mb-4">
+          <h2 className="sm:text-4xl text-3xl text-customBlue font-extrabold sm:mb-6 sm:pl-0 pl-5 mb-4">
             {t("about_us")}
           </h2>
           <div className="flex sm:flex-row flex-col sm:justify-between items-center">
