@@ -6,7 +6,7 @@ import SiteLogo from "../../assets/wtac-logo.svg";
 import BasketIcon from "../../assets/basket-icon.svg";
 import RuFlag from "../../assets/ru-flag.png";
 import UkFlag from "../../assets/uk-flag.png";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosMenu, IoMdClose } from "react-icons/io";
 import { useTranslation } from "react-i18next";
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -46,13 +46,13 @@ const Header = () => {
   }, [pathname]);
   return (
     <header className="bg-white shadow-lg fixed w-full z-40">
-      <div className="w-full max-w-[1100px]  mx-auto py-5 flex justify-between items-center">
+      <div className="w-full max-w-[1100px]  mx-auto py-5 sm:px-0 px-6 flex justify-between items-center">
         <div className="flex justify-center items-center">
           <a href="/">
             <img className="mr-9" src={SiteLogo} alt="WTAC LLC logo" />
           </a>
           <div
-            className="relative flex items-center cursor-pointer dropdown"
+            className="relative sm:flex hidden items-center cursor-pointer dropdown"
             onClick={toggleDropdown}
           >
             <span className="text-xl text-customBlue mr-2">
@@ -104,37 +104,47 @@ const Header = () => {
             )}
           </div>
         </div>
-        <address className="flex items-center not-italic">
-          <p className="text-base text-customBlue mr-7">
-            {t("header.working_hours")}
-          </p>
-          <a className="text-xl text-customBlue mr-10" href="tel:+998990059932">
-            +998 99 005 99 32
-          </a>
-          <div className="flex gap-x-3 mr-10 cursor-pointer">
-            <img
-              onClick={handleChange}
-              data-value="en"
-              src={UkFlag}
-              alt="Flag of United Kingdom"
-              className="w-6 h-6"
-            />
-            <img
-              onClick={handleChange}
-              data-value="ru"
-              src={RuFlag}
-              alt="Flag of Russia"
-              className="w-6 h-6"
-            />
+        <div className="flex">
+          <address className="sm:flex hidden items-center not-italic">
+            <p className="text-base text-customBlue mr-7">
+              {t("header.working_hours")}
+            </p>
+            <a
+              className="text-xl text-customBlue mr-10"
+              href="tel:+998990059932"
+            >
+              +998 99 005 99 32
+            </a>
+          </address>
+          <div className="flex justify-between">
+            <div className="sm:flex hidden gap-x-3 mr-10">
+              <img
+                onClick={handleChange}
+                data-value="en"
+                src={UkFlag}
+                alt="Flag of United Kingdom"
+                className="w-6 h-6"
+              />
+              <img
+                onClick={handleChange}
+                data-value="ru"
+                src={RuFlag}
+                alt="Flag of Russia"
+                className="w-6 h-6"
+              />
+            </div>
+            <div className="flex items-center gap-x-16">
+              <Link to="/cart">
+                <img
+                  className="sm:w-6 w-7 cursor-pointer"
+                  src={BasketIcon}
+                  alt="basket icon"
+                />
+              </Link>
+              <IoIosMenu className="text-4xl block sm:hidden" />
+            </div>
           </div>
-          <Link to="/cart">
-            <img
-              className="cursor-pointer"
-              src={BasketIcon}
-              alt="basket icon"
-            />
-          </Link>
-        </address>
+        </div>
       </div>
     </header>
   );
