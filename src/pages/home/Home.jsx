@@ -202,7 +202,7 @@ const Home = ({ handleScrollContact }) => {
           <p className="text-customGray sm:text-xl text-base w-full sm:max-w-[770px] max-w-64 mb-10">
             {t("partners_description")}
           </p>
-          <ul className="sm:flex sm:flex-wrap sm:gap-8 grid grid-cols-2 gap-2">
+          <ul className="sm:flex sm:flex-wrap sm:gap-5 grid grid-cols-2 gap-2">
             <li className="p-2 rounded-xl shadow-md w-full h-full sm:max-w-80 border sm:max-h-48 max-h-36 bg-white">
               <img
                 src={TalkoLogo}
@@ -266,25 +266,24 @@ const Home = ({ handleScrollContact }) => {
           </ul>
         </div>
       </section>
-      {/* <section>
-        <div className="w-full text-[#2D4972] max-w-[1100px] mx-auto pt-20 pb-12">
-          <h2 className="text-customBlue text-[40px] w-full max-w-[730px] leading-[50px] font-black mb-5">
+      <section>
+        <div className="w-full text-[#2D4972] max-w-[1100px] mx-auto sm:pt-20 sm:pb-12 sm:px-0 px-6 sm:py-6 py-6">
+          <h2 className="text-customBlue sm:text-[40px] text-2xl w-full max-w-[730px] sm:leading-[50px] font-black sm:mb-5 mb-3">
             {t("product_assortment")}
           </h2>
-          <p className="text-customGray text-xl w-full mb-12">
+          <p className="text-customGray sm:text-xl text-sm w-full  sm:mb-12 mb-6">
             {t("product_description")}
           </p>
-
-          <div className="grid grid-cols-2 gap-x-0 gap-y-5">
+          <div className="grid grid-cols-2 sm:gap-x-0 sm:gap-y-5 gap-2">
             {products.map((product) => (
               <Link
                 key={product.key}
                 to={product.link}
-                className={`group f relative p-8 w-[530px] h-80 rounded-2xl bg-no-repeat bg-cover  overflow-hidden`}
+                className={`group relative p-8 w-full max-w-52 h-28 sm:max-w-[530px] sm:h-80 rounded-2xl bg-no-repeat bg-cover overflow-hidden`}
                 style={{ backgroundImage: `url('${product.bgImage}')` }}
               >
                 <div className="absolute inset-0 bg-black opacity-40 rounded-2xl"></div>
-                <span className="text-xl font-semibold text-white z-10 relative group-hover:text-2xl transition-all duration-700">
+                <span className="w-full bottom-7 right-7 sm:bottom-0 sm:right-0 sm:text-xl text-sm font-semibold text-white z-10 relative sm:group-hover:text-2xl group-hover:text-xl transition-all duration-700">
                   {t(`products.${product.key}`)}
                 </span>
                 <Link
@@ -298,7 +297,7 @@ const Home = ({ handleScrollContact }) => {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
       {/* <section className="bg-customSkyBlue">
         <div className="w-full text-[#2D4972] max-w-[1100px] mx-auto flex items-end">
           <div className="flex flex-col justify-center pb-8">

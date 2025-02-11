@@ -29,14 +29,18 @@ const Contact = ({ setOpenModal }) => {
   };
   return (
     <section className="contact-section bg-no-repeat relative bg-[length:970px_984px]">
-      <img src={Shadow} className="absolute left-[10%] z-[1]" alt="" />
-      <div className="w-full max-w-[1100px] mx-auto flex justify-between items-center pb-52 pt-12">
+      <img
+        src={Shadow}
+        className="absolute hidden sm:block left-[10%] z-[1]"
+        alt=""
+      />
+      <div className="w-full max-w-[1100px] mx-auto flex justify-between items-center sm:pb-52 sm:pt-12 sm:px-0 pt-6 pb-12 px-6">
         <div className="flex flex-col justify-center z-[2]">
-          <h2 className="text-customBlue text-[40px] leading-[47px]  font-semibold w-full max-w-4xl mb-5">
+          <h2 className="text-customBlue sm:text-[40px] text-2xl sm:leading-[47px]  font-semibold w-full max-w-4xl mb-5">
             {t("contact_us_for_consultation1")}
             <br /> {t("contact_us_for_consultation2")}
           </h2>
-          <p className="text-customGray text-xl w-full max-w-3xl mb-5 font-medium">
+          <p className="text-customGray sm:text-xl text-base w-full sm:max-w-3xl text-justify mb-5 font-medium">
             {t("consultation_description")}
           </p>
           <form
@@ -79,7 +83,7 @@ const Contact = ({ setOpenModal }) => {
               </option>
             </select>
             <button
-              className=" w-full max-w-md rounded-md py-3 text-xl bg-customLightBlue text-white"
+              className="w-full max-w-md rounded-md py-3 sm:text-xl text-base bg-customLightBlue text-white"
               type="submit"
               value="Send"
             >

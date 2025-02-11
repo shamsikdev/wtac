@@ -36,6 +36,12 @@ footer {
   .parent {
     display: flex;
   }
+  .contact-section {
+    background-image: initial;
+  }
+  footer {
+    background-position: 85% 25%;
+  }
 }
 .parent1 {
   display: grid;
