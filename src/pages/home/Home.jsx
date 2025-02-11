@@ -416,7 +416,7 @@ const Home = ({ handleScrollContact }) => {
                   </div>
                   <div className="flex">
                     <ImQuotesLeft className="text-customLightBlue sm:text-3xl text-xl mr-3" />
-                    <p className="text-customBlue text-base font-medium w-full max-w-72">
+                    <p className="text-customBlue sm:text-base text-sm font-medium w-full max-w-72">
                       {t(`testimonials.${key}.text`)}
                     </p>
                   </div>
