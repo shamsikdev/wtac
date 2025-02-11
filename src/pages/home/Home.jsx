@@ -371,14 +371,35 @@ const Home = ({ handleScrollContact }) => {
           <p className="text-customGray sm:text-2xl text-base sm:mb-12 mb-6">
             {t("reviews_description")}
           </p>
-
+          <ul className="sm:flex hidden flex-wrap gap-4">
+            {testimonials.map(({ key, imgSrc }) => (
+              <li key={key} className="rounded-xl shadow-md p-3">
+                <div className="flex mb-2 items-center">
+                  <img
+                    src={imgSrc}
+                    alt={t(`testimonials.${key}.name`)}
+                    className="sm:w-14 sm:h-14 w-10 h-10 mr-2"
+                  />
+                  <h3 className="sm:text-base text-sm font-semibold text-customGray">
+                    {t(`testimonials.${key}.name`)}
+                  </h3>
+                </div>
+                <div className="flex">
+                  <ImQuotesLeft className="text-customLightBlue sm:text-3xl text-xl mr-3" />
+                  <p className="text-customBlue text-base font-medium w-full max-w-72">
+                    {t(`testimonials.${key}.text`)}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
           <Swiper
             modules={[Autoplay]}
             spaceBetween={20}
             slidesPerView={1}
             autoplay={{ delay: 3000 }}
             loop={true}
-            className="w-full"
+            className="w-full sm:hidden block"
           >
             {testimonials.map(({ key, imgSrc }) => (
               <SwiperSlide key={key}>
