@@ -399,10 +399,10 @@ const Home = ({ handleScrollContact }) => {
             slidesPerView={1}
             autoplay={{ delay: 3000 }}
             loop={true}
-            className="w-full sm:hidden block"
+            className="w-full sm:hidden block pb-3"
           >
             {testimonials.map(({ key, imgSrc }) => (
-              <SwiperSlide key={key}>
+              <SwiperSlide className="z-10" key={key}>
                 <div className="rounded-xl shadow-md p-4 bg-white">
                   <div className="flex mb-3 items-center">
                     <img
@@ -416,7 +416,7 @@ const Home = ({ handleScrollContact }) => {
                   </div>
                   <div className="flex">
                     <ImQuotesLeft className="text-customLightBlue sm:text-3xl text-xl mr-3" />
-                    <p className="text-customBlue sm:text-base text-sm font-medium w-full max-w-72">
+                    <p className="text-customBlue text-base font-medium w-full max-w-72">
                       {t(`testimonials.${key}.text`)}
                     </p>
                   </div>
