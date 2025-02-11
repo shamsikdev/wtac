@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { ImQuotesLeft } from "react-icons/im";
 import { useTranslation } from "react-i18next";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 import IntroImg1 from "../../assets/intro-img1.png";
 import IntroImg2 from "../../assets/intro-img2.png";
 import IntroImg3 from "../../assets/intro-img3.png";
@@ -323,7 +326,7 @@ const Home = ({ handleScrollContact }) => {
           />
         </div>
       </section>
-      <section>
+      {/* <section>
         <div className="w-full max-w-[1100px] mx-auto sm:py-20 py-6 sm:px-0 px-6">
           <h2 className="text-customBlue sm:text-[40px] text-2xl w-full sm:mb-24 mb-6 sm:leading-[50px] font-black">
             {t("clients_we_value")}
@@ -334,7 +337,7 @@ const Home = ({ handleScrollContact }) => {
                 key={index}
                 className="p-2 shadow-md rounded-xl w-full sm:max-w-80"
               >
-                <div className="flex">
+                <div className="flex sm:flex-row flex-col">
                   {Array.isArray(client.img) ? (
                     client.img.map((src, idx) => (
                       <img
@@ -359,39 +362,49 @@ const Home = ({ handleScrollContact }) => {
             ))}
           </ul>
         </div>
-      </section>
-      {/* <section>
-        <div className="w-full max-w-[1100px] mx-auto pb-24">
-          <h2 className="text-customBlue text-[40px] w-full mb-6 leading-[50px] font-black">
+      </section> */}
+      <section>
+        <div className="w-full max-w-[1100px] mx-auto sm:pb-24 sm:px-0 px-6 sm:pt-0 pt-6 pb-2">
+          <h2 className="text-customBlue sm:text-[40px] text-2xl w-full sm:mb-6 mb-3 sm:leading-[50px] font-black">
             {t("reviews_you_can_trust")}
           </h2>
-          <p className="text-customGray text-2xl mb-12">
+          <p className="text-customGray sm:text-2xl text-base sm:mb-12 mb-6">
             {t("reviews_description")}
           </p>
-          <ul className="flex flex-wrap gap-4">
+
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            autoplay={{ delay: 3000 }}
+            loop={true}
+            className="w-full"
+          >
             {testimonials.map(({ key, imgSrc }) => (
-              <li key={key} className="rounded-xl shadow-md p-3">
-                <div className="flex mb-2 items-center">
-                  <img
-                    src={imgSrc}
-                    alt={t(`testimonials.${key}.name`)}
-                    className="mr-2"
-                  />
-                  <h3 className="text-base font-semibold text-customGray">
-                    {t(`testimonials.${key}.name`)}
-                  </h3>
+              <SwiperSlide key={key}>
+                <div className="rounded-xl shadow-md p-4 bg-white">
+                  <div className="flex mb-3 items-center">
+                    <img
+                      src={imgSrc}
+                      alt={t(`testimonials.${key}.name`)}
+                      className="sm:w-14 sm:h-14 w-10 h-10 mr-3"
+                    />
+                    <h3 className="sm:text-base text-sm font-semibold text-customGray">
+                      {t(`testimonials.${key}.name`)}
+                    </h3>
+                  </div>
+                  <div className="flex">
+                    <ImQuotesLeft className="text-customLightBlue sm:text-3xl text-xl mr-3" />
+                    <p className="text-customBlue text-base font-medium w-full max-w-72">
+                      {t(`testimonials.${key}.text`)}
+                    </p>
+                  </div>
                 </div>
-                <div className="flex">
-                  <ImQuotesLeft className="text-customLightBlue text-3xl mr-3" />
-                  <p className="text-customBlue text-base font-medium w-full max-w-72">
-                    {t(`testimonials.${key}.text`)}
-                  </p>
-                </div>
-              </li>
+              </SwiperSlide>
             ))}
-          </ul>
+          </Swiper>
         </div>
-      </section> */}
+      </section>
     </>
   );
 };
