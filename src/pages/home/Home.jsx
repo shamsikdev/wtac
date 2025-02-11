@@ -298,37 +298,41 @@ const Home = ({ handleScrollContact }) => {
           </div>
         </div>
       </section>
-      {/* <section className="bg-customSkyBlue">
-        <div className="w-full text-[#2D4972] max-w-[1100px] mx-auto flex items-end">
-          <div className="flex flex-col justify-center pb-8">
-            <h2 className="text-customBlue text-[40px] w-full max-w-[640px] leading-[50px] font-black mb-5">
+      <section className="bg-customSkyBlue">
+        <div className="w-full text-[#2D4972] max-w-[1100px] mx-auto flex items-end sm:px-0 px-6 sm:py-0 py-6">
+          <div className="flex flex-col justify-center sm:pb-8">
+            <h2 className="text-customBlue sm:text-[40px] text-2xl w-full sm:max-w-[640px] max-w-80 sm:leading-[50px] font-black sm:mb-5 mb-3">
               {t("quality_focus")}
             </h2>
-            <p className="text-customGray text-xl w-[805px] mb-12">
+            <p className="text-customGray sm:text-xl text-base w-full sm:max-w-[805px] max-w-72 sm:mb-12 mb-6">
               {t("quality_description")}
             </p>
             <button
               onClick={(e) => handleScrollContact(e, 5550)}
-              className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full ${
-                i18n.language == "en" ? "max-w-40" : "max-w-56"
+              className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white sm:text-xl text-base sm:py-4 py-3 px-7 rounded-md w-full ${
+                i18n.language == "en" ? "sm:max-w-40" : "sm:max-w-56"
               }`}
             >
               {t("contact_us")}
             </button>
           </div>
-          <img src={WomanWithHelmetImg} alt="" className="pt-10" />
+          <img
+            src={WomanWithHelmetImg}
+            alt=""
+            className="pt-10 hidden sm:block"
+          />
         </div>
-      </section> */}
-      {/* <section>
-        <div className="w-full max-w-[1100px] mx-auto py-20">
-          <h2 className="text-customBlue text-[40px] w-full mb-24 leading-[50px] font-black">
+      </section>
+      <section>
+        <div className="w-full max-w-[1100px] mx-auto sm:py-20 py-6 sm:px-0 px-6">
+          <h2 className="text-customBlue sm:text-[40px] text-2xl w-full sm:mb-24 mb-6 sm:leading-[50px] font-black">
             {t("clients_we_value")}
           </h2>
-          <ul className="flex justify-center flex-wrap gap-7">
+          <ul className="sm:flex justify-center flex-wrap sm:gap-7 grid grid-cols-2">
             {clients.map((client, index) => (
               <li
                 key={index}
-                className="p-2 shadow-md rounded-xl w-full max-w-80"
+                className="p-2 shadow-md rounded-xl w-full sm:max-w-80"
               >
                 <div className="flex">
                   {Array.isArray(client.img) ? (
@@ -348,14 +352,14 @@ const Home = ({ handleScrollContact }) => {
                     />
                   )}
                 </div>
-                <span className="text-base text-[#3A475E] font-semibold">
+                <span className="sm:text-base text-sm text-[#3A475E] font-semibold">
                   {t(client.name)}
                 </span>
               </li>
             ))}
           </ul>
         </div>
-      </section> */}
+      </section>
       {/* <section>
         <div className="w-full max-w-[1100px] mx-auto pb-24">
           <h2 className="text-customBlue text-[40px] w-full mb-6 leading-[50px] font-black">
