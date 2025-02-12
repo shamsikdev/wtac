@@ -1,5 +1,6 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { ImQuotesLeft } from "react-icons/im";
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -40,7 +41,7 @@ import Packaging from "../../assets/packaging-img.png";
 
 const Home = ({ handleScrollContact }) => {
   const { t, i18n } = useTranslation();
-  const clients = [
+  const clientsData = [
     { img: NgmkLogo, name: "clients.ngmk" },
     { img: UtyLogo, name: "clients.uty" },
     { img: CeLogo, name: "clients.ce" },
@@ -95,6 +96,28 @@ const Home = ({ handleScrollContact }) => {
       imgSrc: SokolovYaroslav,
     },
   ];
+  const [clients, setClients] = useState(clientsData);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        // Разбиваем Sany на отдельный элемент
+        const newClients = clientsData.flatMap((client) =>
+          client.name === "clients.sany"
+            ? client.img.map((img) => ({ img, name: "clients.sany" }))
+            : client
+        );
+        setClients(newClients);
+      } else {
+        setClients(clientsData);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <section className="relative sm:mt-28 mt-14">
@@ -326,43 +349,43 @@ const Home = ({ handleScrollContact }) => {
           />
         </div>
       </section>
-      {/* <section>
-        <div className="w-full max-w-[1100px] mx-auto sm:py-20 py-6 sm:px-0 px-6">
-          <h2 className="text-customBlue sm:text-[40px] text-2xl w-full sm:mb-24 mb-6 sm:leading-[50px] font-black">
+      <section>
+        <div className="w-full max-w-[1100px] mx-auto sm:py-20 sm:px-0 px-6 py-6">
+          <h2 className="text-customBlue sm:text-[40px] text-2xl w-full sm:mb-24 sm:leading-[50px] font-black">
             {t("clients_we_value")}
           </h2>
           <ul className="sm:flex justify-center flex-wrap sm:gap-7 grid grid-cols-2">
             {clients.map((client, index) => (
               <li
                 key={index}
-                className="p-2 shadow-md rounded-xl w-full sm:max-w-80"
+                className="p-2 shadow-md rounded-xl w-full max-w-80"
               >
-                <div className="flex sm:flex-row flex-col">
+                <div className="flex">
                   {Array.isArray(client.img) ? (
                     client.img.map((src, idx) => (
                       <img
                         key={idx}
                         src={src}
                         alt={client.name}
-                        className="object-cover mr-4"
+                        className="w- object-cover mr-4"
                       />
                     ))
                   ) : (
                     <img
                       src={client.img}
                       alt={client.name}
-                      className="object-cover mb-2"
+                      className=" object-cover mb-2"
                     />
                   )}
                 </div>
-                <span className="sm:text-base text-sm text-[#3A475E] font-semibold">
+                <p className="sm:text-base w-full max-w-72 text-sm text-[#3A475E] font-semibold">
                   {t(client.name)}
-                </span>
+                </p>
               </li>
             ))}
           </ul>
         </div>
-      </section> */}
+      </section>
       <section>
         <div className="w-full max-w-[1100px] mx-auto sm:pb-24 sm:px-0 px-6 sm:pt-0 pt-6 pb-2">
           <h2 className="text-customBlue sm:text-[40px] text-2xl w-full sm:mb-6 mb-3 sm:leading-[50px] font-black">
