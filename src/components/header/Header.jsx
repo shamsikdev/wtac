@@ -121,8 +121,8 @@ const Header = () => {
               +998 99 005 99 32
             </a>
           </address>
-          <div className="flex justify-between">
-            <div className="sm:flex hidden gap-x-3 mr-10">
+          <div className="flex items-center justify-between">
+            <div className="flex gap-x-3 mr-10">
               <img
                 onClick={handleChange}
                 data-value="en"
@@ -158,6 +158,63 @@ const Header = () => {
               </button>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        className={`${
+          isMenuOpen ? "translate-x-[0%]" : "-translate-x-full"
+        } fixed w-4/5 h-full z-[100] border top-0 left-0 bg-white p-5 transition-transform duration-500`}
+      >
+        <h3 className="text-xl text-customBlue font-semibold mr-2">
+          {t("header.our_products")}
+        </h3>
+        <ul className="py-2 flex flex-col">
+          <Link
+            to="/lubricants"
+            className="px-4 sm:py-4 py-2 border-y  border-gray-400 hover:bg-gray-100"
+          >
+            <span className="sm:text-xl text-base text-customBlue">
+              {t("products.lubricants")}
+            </span>
+          </Link>
+          <Link
+            to="/petroleum-products"
+            className="px-4 sm:py-4 py-2 border-b border-gray-400 hover:bg-gray-100"
+          >
+            <span className="sm:text-xl text-base text-customBlue">
+              {t("products.petroleum_products")}
+            </span>
+          </Link>
+          <Link
+            to="/textile"
+            className="px-4 sm:py-4 py-2 border-b border-gray-400 hover:bg-gray-100"
+          >
+            <span className="sm:text-xl text-base text-customBlue">
+              {t("products.textile_products")}
+            </span>
+          </Link>
+          <Link
+            to="/packaging-materials"
+            className="px-4 sm:py-4 py-2 border-b border-gray-400 hover:bg-gray-100"
+          >
+            <span className="sm:text-xl text-base text-customBlue">
+              {t("products.packaging_materials")}
+            </span>
+          </Link>
+        </ul>
+        <div className="flex flex-col ">
+          <h3 className="text-xl text-customBlue font-semibold mb-2">
+            Время работы:
+          </h3>
+          <span className="sm:text-xl px-4 text-base text-customBlue mb-2">
+            {t("header.working_hours")}
+          </span>
+          <a
+            className="sm:text-xl px-4 text-base text-customBlue"
+            href="tel:+998990059932"
+          >
+            +998 99 005 99 32
+          </a>
         </div>
       </div>
     </header>
