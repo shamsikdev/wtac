@@ -1,7 +1,8 @@
 {
   "header": {
     "our_products": "Наши продукты",
-    "working_hours": "пн-пт с 9:00 до 18:00"
+    "working_hours": "пн-пт с 9:00 до 18:00",
+    "working_hours_text": "Время работы:"
   },
   "footer": {
     "home": "Главная",

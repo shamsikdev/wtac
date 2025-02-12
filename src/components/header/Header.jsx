@@ -8,9 +8,8 @@ import RuFlag from "../../assets/ru-flag.png";
 import UkFlag from "../../assets/uk-flag.png";
 import { IoIosArrowDown, IoIosMenu, IoMdClose } from "react-icons/io";
 import { useTranslation } from "react-i18next";
-const Header = () => {
+const Header = ({ isMenuOpen, setIsMenuOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const [show, setShow] = useState(false);
   const { t, i18n } = useTranslation();
   const handleChange = (e) => {
@@ -39,7 +38,13 @@ const Header = () => {
     };
   }, []);
   console.log(i18n.language);
-
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden"; // Блокируем прокрутку
+    } else {
+      document.body.style.overflow = ""; // Возвращаем стандартное поведение
+    }
+  }, [isMenuOpen]);
   // scroll top
   const { pathname } = useLocation();
   useEffect(() => {
@@ -151,7 +156,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen((prev) => !prev)}
               >
                 {isMenuOpen ? (
-                  <IoMdClose className="text-4xl block sm:hidden" />
+                  <IoMdClose className="text-4xl text-black block sm:hidden" />
                 ) : (
                   <IoIosMenu className="text-4xl block sm:hidden" />
                 )}
@@ -163,7 +168,7 @@ const Header = () => {
       <div
         className={`${
           isMenuOpen ? "translate-x-[0%]" : "-translate-x-full"
-        } fixed w-4/5 h-full z-[100] border top-0 left-0 bg-white p-5 transition-transform duration-500`}
+        } fixed w-4/5 h-full z-[100] top-0 left-0 bg-white p-5 transition-transform duration-500`}
       >
         <h3 className="text-xl text-customBlue font-semibold mr-2">
           {t("header.our_products")}
@@ -204,7 +209,7 @@ const Header = () => {
         </ul>
         <div className="flex flex-col ">
           <h3 className="text-xl text-customBlue font-semibold mb-2">
-            Время работы:
+            {t("header.working_hours_text")}
           </h3>
           <span className="sm:text-xl px-4 text-base text-customBlue mb-2">
             {t("header.working_hours")}
@@ -217,6 +222,9 @@ const Header = () => {
           </a>
         </div>
       </div>
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 -z-10"></div>
+      )}
     </header>
   );
 };

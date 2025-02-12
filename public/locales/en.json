@@ -1,7 +1,8 @@
 {
   "header": {
     "our_products": "Our Products",
-    "working_hours": "Mon - Fri from 9:00 to 18:00"
+    "working_hours": "Mon - Fri from 9:00 to 18:00",
+    "working_hours_text": "Working hours:"
   },
   "footer": {
     "home": "Home",

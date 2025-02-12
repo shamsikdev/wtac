@@ -7,18 +7,20 @@ import Contact from "../components/contact/Contact";
 import SuccessModal from "../components/SuccessModal";
 const HomeLayout = ({ handleScrollContact }) => {
   const [openModal, setOpenModal] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-      <Header />
+      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <main className="flex-grow">
         <Outlet />
       </main>
       <Contact setOpenModal={setOpenModal} />
       <Footer handleScrollContact={handleScrollContact} />
       {openModal && <SuccessModal setOpenModal={setOpenModal} />}
-      {openModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 z-40"></div>
-      )}
+      {openModal &&
+        isMenuOpen(
+          <div className="fixed inset-0 bg-black bg-opacity-75 z-40"></div>
+        )}
     </>
   );
 };
