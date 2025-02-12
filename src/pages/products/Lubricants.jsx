@@ -170,7 +170,7 @@ const Lubricants = ({ handleScrollContact }) => {
       </section>
       <section>
         <div className="w-full max-w-[1100px] mx-auto flex justify-between sm:items-center sm:pt-24 sm:pb-28 pb-6 sm:px-0 px-6">
-          <div className="sm:w-72 sm:h-72 w-14 h-14 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg hover:rotate-0 duration-500 gazoline-img">
+          <div className="sm:w-72 sm:h-72 w-16 h-16 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg hover:rotate-0 duration-500 gazoline-img">
             <img
               src={GazolineImg}
               alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
