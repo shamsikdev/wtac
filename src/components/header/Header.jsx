@@ -37,17 +37,11 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
-  // useEffect(() => {
-  //   if (isMenuOpen) {
-  //     document.body.style.overflow = "hidden"; // Блокируем прокрутку
-  //   } else {
-  //     document.body.style.overflow = ""; // Возвращаем стандартное поведение
-  //   }
-  // }, [isMenuOpen]);
   // scroll top
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
+    setIsMenuOpen(false);
   }, [pathname]);
   return (
     <header className="bg-white shadow-lg fixed w-full z-40">

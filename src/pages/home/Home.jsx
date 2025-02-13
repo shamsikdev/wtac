@@ -137,7 +137,7 @@ const Home = ({ handleScrollContact }) => {
               {t("consulting_services")}
             </p>
             <button
-              onClick={(e) => handleScrollContact(e, 5550)}
+              onClick={(e) => handleScrollContact(e, 5280)}
               className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white sm:text-xl text-base sm:py-4 py-3 px-7 rounded-md w-full ${
                 i18n.language == "en" ? "sm:max-w-40" : "sm:max-w-56"
               }`}

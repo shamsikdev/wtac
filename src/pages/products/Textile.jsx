@@ -14,10 +14,10 @@ const Textile = ({ handleScrollContact }) => {
         <div className="w-full max-w-[1100px] mx-auto flex justify-between flex-col-reverse items-center sm:py-44 pt-36 sm:px-0 py-6 px-6">
           <div className="flex flex-col justify-center sm:items-center">
             <h2 className="sm:text-4xl text-2xl text-customBlue font-extrabold sm:mb-6 mb-3">
-              {t("lubricants_page.title")}
+              {t("textile_page.title")}
             </h2>
             <p className="text-customGray sm:text-xl text-base w-full max-w-[600px] sm:mb-12 mb-6 sm:text-center">
-              {t("lubricants_page.description")}
+              {t("textile_page.description")}
             </p>
             <button
               onClick={(e) => handleScrollContact(e, 2325)}
@@ -63,7 +63,7 @@ const Textile = ({ handleScrollContact }) => {
       <section>
         <div className="w-full max-w-[1100px] mx-auto flex  flex-col  sm:pt-44 sm:pb-12 sm:py-0 py-6 sm:px-0 px-6">
           <div className="flex flex-col justify-center">
-            <h2 className="sm:text-4xl text-2xl text-customBlue font-black sm:mb-6 mb-3">
+            <h2 className="sm:text-4xl text-xl text-customBlue font-black sm:mb-6 mb-3">
               {t("textile_page.range_of_textile")}
             </h2>
             <p className="text-customGray sm:text-2xl text-base w-full mb-12">
@@ -95,27 +95,27 @@ const Textile = ({ handleScrollContact }) => {
               </span>
             </Link>
           </ul>
-          <p className="text-customGray text-xl w-full">
+          <p className="text-customGray hidden sm:block text-xl w-full">
             {t("textile_page.warning")}
           </p>
         </div>
       </section>
       <section>
-        <div className="w-full max-w-[1100px] mx-auto flex justify-around items-center py-16">
-          <div className="w-72 h-72 rotate-45 overflow-hidden rounded-3xl duration-500 gazoline-img hover:rotate-0">
+        <div className="w-full max-w-[1100px] mx-auto flex justify-between sm:items-center sm:py-16 sm:px-0 px-6 py-6">
+          <div className="sm:w-72 sm:h-72 w-16 h-16 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg hover:rotate-0 duration-500 gazoline-img">
             <img
               src={UpholsteryImg}
               alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
-              className="w-full h-full object-cover -rotate-45 scale-150 hover:rotate-0 duration-500"
+              className="w-full h-full object-cover -rotate-45 scale-150 duration-500 hover:rotate-0 hover:scale-100"
             />
           </div>
-          <div className="flex flex-col justify-center items-center w-full max-w-[500px]">
-            <p className="text-xl text-customGray mb-5">
+          <div className="flex flex-col justify-center items-center w-full sm:max-w-[500px] max-w-48">
+            <p className="sm:text-xl text-sm text-customGray mb-5">
               {t("textile_page.premium_materials")}
             </p>
-            <p className="text-xl text-customGray">
+            {/* <p className="text-xl text-customGray">
               {t("textile_page.quality_assurance")}
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
