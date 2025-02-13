@@ -19,7 +19,7 @@ import Cart from "./pages/cart/Cart";
 import PageNotFound from "./components/PageNotFound";
 
 import LubricantsLayout from "./layouts/LubricantsLayout";
-const App = () => {
+const routes = () => {
   const [visible, setVisible] = useState(true);
 
   const handleScrollContact = (e, top) => {
@@ -141,4 +141,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default routes;

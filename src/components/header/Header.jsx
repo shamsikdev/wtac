@@ -37,14 +37,13 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
-  console.log(i18n.language);
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden"; // Блокируем прокрутку
-    } else {
-      document.body.style.overflow = ""; // Возвращаем стандартное поведение
-    }
-  }, [isMenuOpen]);
+  // useEffect(() => {
+  //   if (isMenuOpen) {
+  //     document.body.style.overflow = "hidden"; // Блокируем прокрутку
+  //   } else {
+  //     document.body.style.overflow = ""; // Возвращаем стандартное поведение
+  //   }
+  // }, [isMenuOpen]);
   // scroll top
   const { pathname } = useLocation();
   useEffect(() => {
@@ -156,7 +155,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
                 onClick={() => setIsMenuOpen((prev) => !prev)}
               >
                 {isMenuOpen ? (
-                  <IoMdClose className="text-4xl text-black block sm:hidden" />
+                  <IoMdClose className="text-4xl text-white block sm:hidden" />
                 ) : (
                   <IoIosMenu className="text-4xl block sm:hidden" />
                 )}
