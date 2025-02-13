@@ -102,7 +102,7 @@ const Textile = ({ handleScrollContact }) => {
       </section>
       <section>
         <div className="w-full max-w-[1100px] mx-auto flex justify-between sm:items-center sm:py-16 sm:px-0 px-6 py-6">
-          <div className="sm:w-72 sm:h-72 w-20 h-20 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg hover:rotate-0 duration-500 gazoline-img">
+          <div className="sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg hover:rotate-0 duration-500 gazoline-img">
             <img
               src={UpholsteryImg}
               alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
