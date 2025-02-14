@@ -4,7 +4,7 @@ export default function PetroleumProducts() {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full max-w-[1100px] mx-auto sm:pt-44 sm:px-0 pt-32   px-6">
+    <div className="w-full max-w-[1100px] mx-auto sm:pt-44 sm:px-0 pt-32 px-6">
       <h2 className="text-2xl sm:text-3xl sm:text-center text-customBlue font-extrabold mb-4">
         {t("company.title")}
       </h2>
