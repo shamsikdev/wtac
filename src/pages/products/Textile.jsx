@@ -61,7 +61,7 @@ const Textile = ({ handleScrollContact }) => {
         </div>
       </section>
       <section>
-        <div className="w-full max-w-[1100px] mx-auto flex  flex-col  sm:pt-44 sm:pb-12 sm:py-0 py-6 sm:px-0 px-6">
+        <div className="w-full max-w-[1100px] mx-auto flex flex-col sm:pt-44 sm:px-0 px-6">
           <div className="flex flex-col justify-center">
             <h2 className="sm:text-4xl text-xl text-customBlue font-black sm:mb-6 mb-3">
               {t("textile_page.range_of_textile")}
@@ -70,30 +70,31 @@ const Textile = ({ handleScrollContact }) => {
               {t("textile_page.specialization")}
             </p>
           </div>
-          <ul className="flex gap-x-5 mb-5">
-            <li className="flex flex-col justify-between relative p-6 w-[530px] h-80 rounded-2xl bg-cover bg-[url(./assets/textile-img1.png)] overflow-hidden group">
-              <div className="absolute inset-0 bg-black opacity-30 rounded-2xl"></div>
-              <div className="relative w-16 h-16 bg-[#EBF7FC] rounded-full flex items-center justify-center transition duration-300 group-hover:bg-transparent">
-                <GoArrowRight className="text-4xl text-customLightBlue group-hover:translate-x-96 group-hover:text-white transition duration-500" />
+        </div>
+      </section>
+      <section className="sm:bg-white bg-customSkyBlue">
+        <div className="w-full max-w-[1100px] mx-auto sm:py-0 sm:px-0 py-3 px-6 sm:pb-16 pb-3 sm:mb-0 mb-6">
+          <ul className="flex sm:flex-row flex-col sm:gap-x-5 gap-x-0 sm:gap-y-0 gap-y-2 sm:mb-5 mb-0">
+            <li className="flex sm:flex-col sm:justify-between sm:items-baseline items-center bg-white relative sm:p-6 p-2 sm:w-[530px] sm:h-80 h-14 w-full sm:rounded-2xl rounded-3xl bg-cover sm:bg-[url(./assets/textile-img1.png)] overflow-hidden group">
+              <div className="absolute inset-0 sm:bg-black sm:opacity-30 rounded-2xl"></div>
+              <div className="bg-[url(./assets/textile-img1.png)] sm:bg-none sm:mr-0 mr-2 bg-cover relative sm:w-16 sm:h-16 w-10 h-10 bg-[#EBF7FC] rounded-full flex items-center justify-center transition duration-300 group-hover:bg-transparent">
+                <GoArrowRight className="text-4xl hidden sm:block text-customLightBlue group-hover:translate-x-96 group-hover:text-white transition duration-500" />
               </div>
-              <span className="relative z-10 text-3xl text-white transition duration-700">
+              <span className="relative z-10 sm:text-3xl text-base sm:text-white text-customBlue transition duration-700">
                 {t("textile_page.product_home_textile")}
               </span>
+              <GoArrowRight className="block sm:hidden text-2xl text-customLightBlue ml-auto" />
             </li>
-
-            <Link
-              to="/textile/clothing"
-              className="group relative flex h-80 w-[530px] flex-col justify-between overflow-hidden rounded-2xl bg-[url(./assets/t-shirts-img.png)] bg-cover p-6"
-            >
-              <div className="absolute inset-0 rounded-2xl bg-black opacity-30" />
-              <div className="relative h-16 w-16">
-                <div className="absolute inset-0 rounded-full bg-[#EBF7FC] transition-opacity duration-300 group-hover:opacity-0" />
-                <GoArrowRight className="absolute inset-0 m-auto text-4xl text-customLightBlue transition-all duration-500 group-hover:translate-x-96 group-hover:text-white" />
+            <li className="flex sm:flex-col sm:justify-between sm:items-baseline items-center bg-white relative sm:p-6 p-2 sm:w-[530px] sm:h-80 h-14 w-full sm:rounded-2xl rounded-3xl bg-cover sm:bg-[url(./assets/t-shirts-img.png)] overflow-hidden group">
+              <div className="absolute inset-0 sm:bg-black sm:opacity-30 rounded-2xl"></div>
+              <div className="bg-[url(./assets/t-shirts-img.png)] sm:bg-none sm:mr-0 mr-2 bg-cover relative sm:w-16 sm:h-16 w-10 h-10 bg-[#EBF7FC] rounded-full flex items-center justify-center transition duration-300 group-hover:bg-transparent">
+                <GoArrowRight className="text-4xl hidden sm:block text-customLightBlue group-hover:translate-x-96 group-hover:text-white transition duration-500" />
               </div>
-              <span className="relative text-3xl text-white">
-                {t("textile_page.product_clothing")}
+              <span className="relative z-10 sm:text-3xl text-base sm:text-white text-customBlue transition duration-700">
+                {t("textile_page.product_home_textile")}
               </span>
-            </Link>
+              <GoArrowRight className="block sm:hidden text-2xl text-customLightBlue ml-auto" />
+            </li>
           </ul>
           <p className="text-customGray hidden sm:block text-xl w-full">
             {t("textile_page.warning")}
