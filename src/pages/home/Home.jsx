@@ -146,7 +146,7 @@ const Home = ({ handleScrollContact }) => {
             </button>
           </div>
           <div className="parent sm:absolute sm:right-[10%] sm:-top-[15%] mb-10 sm:mb-0">
-            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-xl sm:top-20 div1 hover:scale-105 duration-500">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg sm:top-20 div1 hover:scale-105 duration-500">
               <img
                 src={IntroImg1}
                 alt="White bathrobe, slippers, towels, and a bath mat with footprints; a minimal spa set on a wooden floor."
@@ -154,7 +154,7 @@ const Home = ({ handleScrollContact }) => {
               />
             </div>
 
-            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-xl sm:left-20 div2 hover:scale-105 duration-500">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg sm:left-20 div2 hover:scale-105 duration-500">
               <img
                 src={IntroImg2}
                 alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
@@ -162,7 +162,7 @@ const Home = ({ handleScrollContact }) => {
               />
             </div>
 
-            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-xl sm:left-40 sm:-top-20 z-10 div3 hover:scale-105 duration-500">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg sm:left-40 sm:-top-20 z-10 div3 hover:scale-105 duration-500">
               <img
                 src={IntroImg3}
                 alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
@@ -170,7 +170,7 @@ const Home = ({ handleScrollContact }) => {
               />
             </div>
 
-            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-xl sm:-top-20 z-10 div4 hover:scale-105 duration-500">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg sm:-top-20 z-10 div4 hover:scale-105 duration-500">
               <img
                 src={IntroImg4}
                 alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."

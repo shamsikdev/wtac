@@ -15,47 +15,47 @@ const Packaging = ({ handleScrollContact }) => {
   const { t, i18n } = useTranslation();
   return (
     <>
-      <section className="relative mb-28">
-        <div className="w-full max-w-[1100px] mx-auto flex justify-center items-center py-44">
-          <div className="flex flex-col justify-center items-center">
-            <h2 className="text-4xl text-customBlue font-extrabold mb-6">
+      <section className="relative sm:mb-28">
+        <div className="w-full max-w-[1100px] mx-auto flex justify-between flex-col-reverse items-center sm:py-44 pt-36 sm:px-0 py-6 px-6">
+          <div className="flex flex-col justify-center sm:items-center">
+            <h2 className="sm:text-4xl text-2xl text-customBlue font-extrabold sm:mb-6 mb-3">
               {t("packaging_page.title")}
             </h2>
-            <p className="text-customGray text-xl w-full max-w-[500px] mb-12 text-center">
+            <p className="text-customGray sm:text-xl text-base w-full max-w-[600px] sm:mb-12 mb-6 sm:text-center">
               {t("packaging_page.description")}
             </p>
             <button
               onClick={(e) => handleScrollContact(e, 2325)}
-              className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white text-xl py-4 px-7 rounded-md w-full ${
-                i18n.language == "en" ? "max-w-40" : "max-w-56"
+              className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white sm:text-xl text-base sm:py-4 py-3   px-7 rounded-md w-full ${
+                i18n.language == "en" ? "sm:max-w-40" : "sm:max-w-56"
               }`}
             >
               {t("contact_us")}
             </button>
           </div>
-          <div className="parent absolute right-[9%] top-[15%] -z-10">
-            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-36 right-28 div5 hover:scale-105 duration-500">
+          <div className="parent sm:absolute sm:right-[9%] sm:top-[15%] -z-10 sm:mb-0 mb-10">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg sm:top-36 sm:right-28 div5 hover:scale-105 duration-500">
               <img
                 src={IntroImg13}
                 alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
                 className="w-full h-full object-cover -rotate-45 scale-150"
               />
             </div>
-            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-28 right-28 div6 hover:scale-105 duration-500">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg sm:top-28 sm:right-28 div6 hover:scale-105 duration-500">
               <img
                 src={IntroImg14}
                 alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
                 className="w-full h-full object-cover -rotate-45 scale-150"
               />
             </div>
-            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-28 left-8 div7 hover:scale-105 duration-500">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg sm:top-28 sm:left-8 div7 hover:scale-105 duration-500">
               <img
                 src={IntroImg15}
                 alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
                 className="w-full h-full object-cover -rotate-45 scale-150"
               />
             </div>
-            <div className="relative w-72 h-72 rotate-45 overflow-hidden rounded-3xl top-36 left-8 div8 hover:scale-105 duration-500">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg sm:top-36 sm:left-8 div8 hover:scale-105 duration-500">
               <img
                 src={IntroImg16}
                 alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
