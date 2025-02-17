@@ -130,15 +130,15 @@ const Lubricants = ({ handleScrollContact }) => {
         </div>
         <div className="bg-customSkyBlue">
           <div className="w-full max-w-[1100px] mx-auto sm:py-14 py-3 sm:px-0 px-6">
-            <ul className="flex flex-wrap items-center justify-center sm:gap-5 sm:gap-y-0 gap-y-2">
+            <ul className="flex flex-wrap items-center justify-center sm:gap-5 sm:gap-y-5 gap-y-2">
               {oilProducts.map(({ icon, key, style }) => (
                 <Link
                   to="/lubricants/transmission-oils"
                   key={key}
-                  className="bg-white sm:w-80 sm:h-64 w-full sm:p-5 py-1 px-2 rounded-3xl relative sm:group"
+                  className="bg-white sm:w-80 sm:h-64 w-full sm:p-5 py-1 px-2 rounded-3xl relative group"
                 >
-                  <div className="flex sm:flex-col sm:justify-between items-center">
-                    <div className="bg-customSkyBlue sm:p-5 p-2 rounded-full sm:w-24 w-12 h-12 sm:mr-0 mr-2 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+                  <div className="flex sm:flex-col sm:justify-between sm:h-full sm:items-baseline items-center">
+                    <div className="bg-customSkyBlue sm:p-5 p-2 rounded-full sm:w-24 sm:h-24 w-12 h-12 sm:mr-0 mr-2 flex items-center justify-center transition-opacity duration-300 sm:group-hover:opacity-0">
                       <img
                         src={icon}
                         alt=""

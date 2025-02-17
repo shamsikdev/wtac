@@ -101,8 +101,8 @@ const Textile = ({ handleScrollContact }) => {
         </div>
       </section>
       <section>
-        <div className="w-full max-w-[1100px] mx-auto flex justify-between sm:items-center sm:py-16 sm:px-0 px-6 py-6">
-          <div className="sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg hover:rotate-0 duration-500 gazoline-img">
+        <div className="w-full max-w-[1100px] mx-auto flex justify-around sm:items-center sm:py-16 sm:px-0 px-6 py-6">
+          <div className="sm:w-72 sm:h-72 w-16 h-16 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg hover:rotate-0 duration-500 gazoline-img">
             <img
               src={UpholsteryImg}
               alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
@@ -113,9 +113,9 @@ const Textile = ({ handleScrollContact }) => {
             <p className="sm:text-xl text-sm text-customGray mb-5">
               {t("textile_page.premium_materials")}
             </p>
-            {/* <p className="text-xl text-customGray">
+            <p className="hidden sm:block text-xl text-customGray">
               {t("textile_page.quality_assurance")}
-            </p> */}
+            </p>
           </div>
         </div>
       </section>
