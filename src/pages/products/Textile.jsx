@@ -6,7 +6,7 @@ import IntroImg12 from "../../assets/intro-img12.png";
 import UpholsteryImg from "../../assets/upholstery-img.png";
 import { GoArrowRight } from "react-icons/go";
 import { useTranslation } from "react-i18next";
-const Textile = ({ handleScrollContact }) => {
+const Textile = ({ handleScrollContact, showText, setShowText }) => {
   const { t, i18n } = useTranslation();
   return (
     <>
@@ -111,12 +111,23 @@ const Textile = ({ handleScrollContact }) => {
             />
           </div>
           <div className="flex flex-col justify-center items-center w-full sm:max-w-[500px] max-w-48">
-            <p className="sm:text-xl text-sm text-customGray mb-5">
+            <p className="sm:text-xl text-sm text-customGray sm:mb-5 mb-2">
               {t("textile_page.premium_materials")}
             </p>
-            <p className="hidden sm:block text-xl text-customGray">
+            <p className="sm:text-xl hidden sm:block text-sm text-customGray">
               {t("textile_page.quality_assurance")}
             </p>
+            {showText && (
+              <p className="sm:text-xl text-sm text-customGray">
+                {t("textile_page.quality_assurance")}
+              </p>
+            )}
+            <button
+              onClick={() => setShowText((prev) => !prev)}
+              className="sm:hidden block text-base text-[#678D98] ml-auto"
+            >
+              {showText ? "Скрыть" : "Прочитать все"}
+            </button>
           </div>
         </div>
       </section>

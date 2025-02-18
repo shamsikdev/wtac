@@ -113,10 +113,15 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
               {t("header.working_hours")}
             </p>
             <a
-              className="text-xl text-customBlue mr-10"
+              className="sm:text-xl px-4 text-base mr-5 text-customBlue cursor-pointer relative group"
               href="tel:+998990059932"
             >
-              +998 99 005 99 32
+              <span className="group-hover:opacity-0 transition-opacity duration-300">
+                Номер телефона
+              </span>
+              <span className="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                +998 99 005 99 32
+              </span>
             </a>
           </address>
           <div className="flex items-center justify-between">

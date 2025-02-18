@@ -15,7 +15,7 @@ import TransmissionIcon from "../../assets/transmission-icon.svg";
 import GazolineImg from "../../assets/gazoline-img.png";
 import { GoArrowRight } from "react-icons/go";
 import { useTranslation } from "react-i18next";
-const Lubricants = ({ handleScrollContact }) => {
+const Lubricants = ({ handleScrollContact, showText, setShowText }) => {
   const { t, i18n } = useTranslation();
   const oilProducts = [
     {
@@ -67,7 +67,7 @@ const Lubricants = ({ handleScrollContact }) => {
 
   return (
     <>
-      <section className="relative sm:mb-28">
+      {/* <section className="relative sm:mb-28">
         <div className="w-full max-w-[1100px] mx-auto flex justify-between flex-col-reverse items-center sm:py-44 pt-36 sm:px-0 py-6 px-6">
           <div className="flex flex-col justify-center sm:items-center">
             <h2 className="sm:text-4xl text-2xl text-customBlue font-extrabold sm:mb-6 mb-3">
@@ -79,6 +79,56 @@ const Lubricants = ({ handleScrollContact }) => {
             <button
               onClick={(e) => handleScrollContact(e, 2325)}
               className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white sm:text-xl text-base sm:py-4 py-3   px-7 rounded-md w-full ${
+                i18n.language == "en" ? "sm:max-w-40" : "sm:max-w-56"
+              }`}
+            >
+              {t("contact_us")}
+            </button>
+          </div>
+          <div className="parent sm:absolute sm:right-[9%] sm:top-[15%] -z-10 sm:mb-0 mb-10">
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg sm:top-36 sm:right-28 div5 hover:scale-105 duration-500">
+              <img
+                src={IntroImg5}
+                alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+                className="w-full h-full object-cover -rotate-45 scale-150"
+              />
+            </div>
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg sm:top-28 sm:right-28 div6 hover:scale-105 duration-500">
+              <img
+                src={IntroImg6}
+                alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+                className="w-full h-full object-cover -rotate-45 scale-150"
+              />
+            </div>
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg sm:top-28 sm:left-8 div7 hover:scale-105 duration-500">
+              <img
+                src={IntroImg7}
+                alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+                className="w-full h-full object-cover -rotate-45 scale-150"
+              />
+            </div>
+            <div className="relative sm:w-72 sm:h-72 w-24 h-24 rotate-45 overflow-hidden sm:rounded-3xl rounded-lg sm:top-36 sm:left-8 div8 hover:scale-105 duration-500">
+              <img
+                src={IntroImg8}
+                alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
+                className="w-full h-full object-cover -rotate-45 scale-150 div6"
+              />
+            </div>
+          </div>
+        </div>
+      </section> */}
+      <section className="relative sm:mb-28 overflow-x-hidden">
+        <div className="w-full max-w-[1100px] mx-auto flex justify-between flex-col-reverse items-center sm:py-44 pt-36 sm:px-0 py-6 px-6">
+          <div className="flex flex-col justify-center sm:items-center">
+            <h2 className="sm:text-4xl text-2xl text-customBlue font-extrabold sm:mb-6 mb-3">
+              {t("lubricants_page.title")}
+            </h2>
+            <p className="text-customGray sm:text-xl text-base w-full max-w-[600px] sm:mb-12 mb-6 sm:text-center">
+              {t("lubricants_page.description")}
+            </p>
+            <button
+              onClick={(e) => handleScrollContact(e, 2325)}
+              className={`bg-customLightBlue hover:bg-white hover:text-customLightBlue border-2 border-customLightBlue transition-all duration-500 text-white sm:text-xl text-base sm:py-4 py-3 px-7 rounded-md w-full ${
                 i18n.language == "en" ? "sm:max-w-40" : "sm:max-w-56"
               }`}
             >
@@ -179,12 +229,23 @@ const Lubricants = ({ handleScrollContact }) => {
           </div>
 
           <div className="flex flex-col justify-center items-center w-full sm:max-w-[656px] max-w-52">
-            <p className="sm:text-xl text-sm text-customGray mb-5">
+            <p className="sm:text-xl text-sm text-customGray sm:mb-5 mb-2">
               {t("lubricants_page.premium_oil_production")}
             </p>
-            {/* <p className="text-xl text-customGray">
+            <p className="sm:text-xl hidden sm:block text-sm text-customGray">
               {t("lubricants_page.quality_management")}
-            </p> */}
+            </p>
+            {showText && (
+              <p className="sm:text-xl text-sm text-customGray">
+                {t("lubricants_page.quality_management")}
+              </p>
+            )}
+            <button
+              onClick={() => setShowText((prev) => !prev)}
+              className="sm:hidden block text-base text-[#678D98] ml-auto"
+            >
+              {showText ? "Скрыть" : "Прочитать все"}
+            </button>
           </div>
         </div>
       </section>
