@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
 import { AiOutlineColumnWidth } from "react-icons/ai";
-import { PiListBold } from "react-icons/pi";
-import { PiPlusCircleBold } from "react-icons/pi";
+import { PiPlusCircleBold, PiListBold } from "react-icons/pi";
 import { FaCheckCircle } from "react-icons/fa";
 import IntroImg13 from "../../assets/intro-img13.png";
 import IntroImg14 from "../../assets/intro-img14.png";
@@ -10,12 +8,15 @@ import IntroImg16 from "../../assets/intro-img16.png";
 import AvangardImg from "../../assets/avangard-img.png";
 import RollPackage from "../../assets/roll-package-img.png";
 import ChineseImg from "../../assets/chinese-worker-img.png";
+import ShieldIcon from "../../assets/shield-icon.svg";
+import P from "../../assets/Group.svg";
+import H from "../../assets/h-icon.svg";
 import { useTranslation } from "react-i18next";
 const Packaging = ({ handleScrollContact }) => {
   const { t, i18n } = useTranslation();
   return (
     <>
-      <section className="relative sm:mb-28">
+      <section className="relative sm:mb-28 sm:overflow-x-visible overflow-x-hidden">
         <div className="w-full max-w-[1100px] mx-auto flex justify-between flex-col-reverse items-center sm:py-44 pt-36 sm:px-0 py-6 px-6">
           <div className="flex flex-col justify-center sm:items-center">
             <h2 className="sm:text-4xl text-2xl text-customBlue font-extrabold sm:mb-6 mb-3">
@@ -65,14 +66,14 @@ const Packaging = ({ handleScrollContact }) => {
           </div>
         </div>
       </section>
-      <section className="mb-20">
-        <div className="w-full max-w-[1100px] mx-auto flex flex-col  pt-44 pb-12">
-          <h2 className="text-4xl text-customBlue font-black mb-32">
+      <section className="sm:mb-20 mb-6">
+        <div className="w-full max-w-[1100px] mx-auto flex flex-col sm:px-0 px-6 sm:pt-44 sm:pb-12">
+          <h2 className="sm:text-4xl text-2xl text-customBlue font-black sm:mb-32 mb-6">
             {t("packaging_page.advantages.title")}
           </h2>
-          <ul className="flex flex-col gap-y-36">
-            <li className="flex items-center justify-between">
-              <div className="w-60 h-60 rotate-45 overflow-hidden rounded-3xl duration-500 gazoline-img hover:rotate-0">
+          <ul className="flex flex-col sm:gap-y-36 gap-y-6">
+            <li className="flex sm:items-center items-baseline justify-between">
+              <div className="hidden sm:block w-60 h-60 rotate-45 overflow-hidden rounded-3xl duration-500 gazoline-img hover:rotate-0">
                 <img
                   src={AvangardImg}
                   alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
@@ -80,16 +81,23 @@ const Packaging = ({ handleScrollContact }) => {
                 />
               </div>
               <div className="flex flex-col">
-                <h3 className="text-3xl text-customBlue font-black mb-3">
-                  {t("packaging_page.advantages.quality_guarantee.title")}
-                </h3>
-                <p className="text-xl text-customGray w-[750px]">
+                <div className="flex items-center sm:mb-0 mb-1">
+                  <img
+                    src={ShieldIcon}
+                    alt="shield icon"
+                    className="mr-2 w-8 block sm:hidden"
+                  />
+                  <h3 className="sm:text-3xl text-base text-customBlue font-black sm:mb-3">
+                    {t("packaging_page.advantages.quality_guarantee.title")}
+                  </h3>
+                </div>
+                <p className="sm:text-xl text-sm text-justify text-customGray sm:w-[750px] w-full">
                   {t("packaging_page.advantages.quality_guarantee.description")}
                 </p>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="w-60 h-60 rotate-45 overflow-hidden rounded-3xl duration-500 gazoline-img hover:rotate-0">
+              <div className="hidden sm:block w-60 h-60 rotate-45 overflow-hidden rounded-3xl duration-500 gazoline-img hover:rotate-0">
                 <img
                   src={RollPackage}
                   alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
@@ -97,45 +105,58 @@ const Packaging = ({ handleScrollContact }) => {
                 />
               </div>
               <div className="flex flex-col">
-                <h3 className="text-3xl text-customBlue font-black mb-3">
-                  {t("packaging_page.advantages.product_range.title")}
-                </h3>
-                <p className="text-xl text-customGray w-[706px] mb-3">
+                <div className="flex items-center sm:mb-0 mb-1">
+                  <img
+                    src={P}
+                    alt="shield icon"
+                    className="mr-2 w-8 block sm:hidden"
+                  />
+                  <h3 className="sm:text-3xl text-base text-customBlue font-black sm:mb-3">
+                    {t("packaging_page.advantages.product_range.title")}
+                  </h3>
+                </div>
+                <p className="sm:text-xl text-sm text-customGray sm:w-[706px] w-full text-justify mb-3">
                   {t("packaging_page.advantages.product_range.description")}
                 </p>
-                <div className="flex gap-x-6">
+                <div className="flex sm:gap-x-6 gap-x-4">
                   <div className="flex flex-col">
                     <div className="flex items-center">
-                      <AiOutlineColumnWidth className="text-customBlue text-3xl mr-1" />
-                      <span className="text-xl text-[#484848] font-semibold">
+                      <AiOutlineColumnWidth className="text-customBlue sm:text-3xl text-lg mr-1" />
+                      <span className="sm:text-xl text-sm text-[#484848] font-semibold">
                         {t("packaging_page.advantages.product_range.width")}
                       </span>
                     </div>
-                    <p className="text-xl text-customGray">1 000 - 12 000 мм</p>
+                    <p className="sm:text-xl text-sm text-customGray">
+                      1 000 - 12 000 мм
+                    </p>
                   </div>
                   <div className="flex flex-col">
                     <div className="flex items-center">
-                      <PiListBold className="text-customBlue text-2xl mr-1" />
-                      <span className="text-xl text-[#484848] font-semibold">
+                      <PiListBold className="text-customBlue sm:text-2xl text-lg mr-1" />
+                      <span className="sm:text-xl text-sm text-[#484848] font-semibold">
                         {t("packaging_page.advantages.product_range.thickness")}
                       </span>
                     </div>
-                    <p className="text-xl text-customGray">20 - 200 мм</p>
+                    <p className="sm:text-xl text-sm text-customGray">
+                      20 - 200 мм
+                    </p>
                   </div>
                   <div className="flex flex-col">
                     <div className="flex items-center">
-                      <PiPlusCircleBold className="text-customBlue text-2xl mr-1" />
-                      <span className="text-xl text-[#484848] font-semibold">
+                      <PiPlusCircleBold className="text-customBlue sm:text-2xl text-lg mr-1" />
+                      <span className="sm:text-xl text-sm text-[#484848] font-semibold">
                         {t("packaging_page.advantages.product_range.additives")}
                       </span>
                     </div>
-                    <p className="text-xl text-customGray">UV, AF, IK</p>
+                    <p className="sm:text-xl text-sm text-customGray">
+                      UV, AF, IK
+                    </p>
                   </div>
                 </div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="w-60 h-60 rotate-45 overflow-hidden rounded-3xl duration-500 gazoline-img hover:rotate-0">
+              <div className="hidden sm:block w-60 h-60 rotate-45 overflow-hidden rounded-3xl duration-500 gazoline-img hover:rotate-0">
                 <img
                   src={ChineseImg}
                   alt="Engine pistons surrounded by splashes of golden motor oil; a dynamic representation of lubrication and engine mechanics."
@@ -143,31 +164,38 @@ const Packaging = ({ handleScrollContact }) => {
                 />
               </div>
               <div className="flex flex-col">
-                <h3 className="text-3xl text-customBlue font-black mb-3">
-                  {t("packaging_page.advantages.professionalism.title")}
-                </h3>
-                <ul className="flex flex-col">
-                  <li className="flex items-center mb-3">
+                <div className="flex items-center sm:mb-0 mb-3">
+                  <img
+                    src={H}
+                    alt="shield icon"
+                    className="mr-2 w-8 block sm:hidden"
+                  />
+                  <h3 className="sm:text-3xl text-base text-customBlue font-black sm:mb-3">
+                    {t("packaging_page.advantages.professionalism.title")}
+                  </h3>
+                </div>
+                <ul className="flex flex-col sm:gap-y-3 gap-y-1">
+                  <li className="flex sm:items-center">
                     <FaCheckCircle className="text-customBlue mr-2" />
-                    <p className="text-xl text-customGray">
+                    <p className="sm:text-xl w-full  text-base text-customGray">
                       {t("packaging_page.advantages.professionalism.team")}
                     </p>
                   </li>
-                  <li className="flex items-start mb-3">
+                  <li className="flex items-start">
                     <FaCheckCircle className="text-customBlue mr-2 mt-1" />
-                    <p className="text-xl text-customGray w-[706px]">
+                    <p className="sm:text-xl w-full  text-base text-customGray sm:w-[706px]">
                       {t("packaging_page.advantages.professionalism.expertise")}
                     </p>
                   </li>
-                  <li className="flex items-center mb-3">
+                  <li className="flex sm:items-center">
                     <FaCheckCircle className="text-customBlue mr-2" />
-                    <p className="text-xl text-customGray">
+                    <p className="sm:text-xl w-full text-base text-customGray">
                       {t("packaging_page.advantages.professionalism.capacity")}
                     </p>
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex sm:items-center">
                     <FaCheckCircle className="text-customBlue mr-2" />
-                    <p className="text-xl text-customGray">
+                    <p className="sm:text-xl w-full text-base text-customGray">
                       {t(
                         "packaging_page.advantages.professionalism.production"
                       )}

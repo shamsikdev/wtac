@@ -117,7 +117,7 @@ const Lubricants = ({ handleScrollContact, showText, setShowText }) => {
           </div>
         </div>
       </section> */}
-      <section className="relative sm:mb-28 overflow-x-hidden">
+      <section className="relative sm:mb-28 sm:overflow-x-visible overflow-x-hidden">
         <div className="w-full max-w-[1100px] mx-auto flex justify-between flex-col-reverse items-center sm:py-44 pt-36 sm:px-0 py-6 px-6">
           <div className="flex flex-col justify-center sm:items-center">
             <h2 className="sm:text-4xl text-2xl text-customBlue font-extrabold sm:mb-6 mb-3">

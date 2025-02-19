@@ -120,7 +120,7 @@ const Home = ({ handleScrollContact }) => {
 
   return (
     <>
-      <section className="relative sm:mt-28 mt-14">
+      <section className="relative sm:mt-28 mt-14 sm:overflow-x-visible overflow-x-hidden">
         <div
           className={`w-full max-w-[1100px] pb-10 pt-20 mx-auto px-6 sm:px-0 flex justify-between sm:flex-row flex-col-reverse items-center ${
             i18n.language == "en" ? "sm:pt-20 sm:pb-40" : "sm:py-20"
