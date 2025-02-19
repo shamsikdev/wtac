@@ -17,10 +17,9 @@ const HomeLayout = ({ handleScrollContact }) => {
       <Contact setOpenModal={setOpenModal} />
       <Footer handleScrollContact={handleScrollContact} />
       {openModal && <SuccessModal setOpenModal={setOpenModal} />}
-      {openModal &&
-        isMenuOpen(
-          <div className="fixed inset-0 bg-black bg-opacity-75 z-40"></div>
-        )}
+      {openModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 z-40"></div>
+      )}
     </>
   );
 };
