@@ -113,13 +113,13 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
             </p>
             <a
               className="sm:text-xl px-4 text-base mr-5 text-customBlue cursor-pointer relative group"
-              href="tel:+998990059932"
+              href="tel:+998333347999"
             >
               <span className="group-hover:opacity-0 transition-opacity duration-300">
                 Номер телефона
               </span>
               <span className="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                +998 99 005 99 32
+                +998 33 334 79 99
               </span>
             </a>
           </address>
@@ -216,9 +216,9 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
           </span>
           <a
             className="sm:text-xl px-4 text-base text-customBlue"
-            href="tel:+998990059932"
+            href="tel:+998333347999"
           >
-            +998 99 005 99 32
+            +998 33 334 79 99
           </a>
         </div>
       </div>
