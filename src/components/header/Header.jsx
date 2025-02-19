@@ -66,7 +66,6 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
                 isDropdownOpen ? "rotate-180" : ""
               }`}
             />
-            {/* Dropdown меню */}
             {isDropdownOpen && (
               <div className="absolute left-0 top-16 mt-2 w-96 bg-white shadow-lg rounded-lg z-10 dropdown">
                 <ul className="py-2 flex flex-col">
@@ -166,8 +165,11 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
       <div
         className={`${
           isMenuOpen ? "translate-x-[0%]" : "-translate-x-full"
-        } fixed w-4/5 h-full z-[100] top-0 left-0 bg-white p-5 transition-transform duration-500`}
+        } fixed w-4/5 h-full z-[100] top-0 left-0 bg-white p-4 transition-transform duration-300`}
       >
+        <a href="/">
+          <img className="w-20 mb-2" src={SiteLogo} alt="WTAC LLC logo" />
+        </a>
         <h3 className="text-xl text-customBlue font-semibold mr-2">
           {t("header.our_products")}
         </h3>

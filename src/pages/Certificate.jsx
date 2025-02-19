@@ -7,7 +7,7 @@ import { FaArrowLeft } from "react-icons/fa";
 const Certificate = () => {
   return (
     <section className="bg-[#EEF8FC]">
-      <div className="w-full max-w-[1100px] mx-auto py-10">
+      <div className="w-full max-w-[1100px] mx-auto py-10 sm:px-0 px-6">
         <Link
           className="py-4 px-5 bg-customLightBlue w-full max-w-36 rounded-md mb-7 flex items-center"
           to="/"
