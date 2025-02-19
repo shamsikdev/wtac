@@ -85,16 +85,19 @@ const Textile = ({ handleScrollContact, showText, setShowText }) => {
               </span>
               <GoArrowRight className="block sm:hidden text-2xl text-customLightBlue ml-auto" />
             </li>
-            <li className="flex sm:flex-col sm:justify-between sm:items-baseline items-center bg-white relative sm:p-6 p-2 sm:w-[530px] sm:h-80 h-14 w-full sm:rounded-2xl rounded-3xl bg-cover sm:bg-[url(./assets/t-shirts-img.png)] overflow-hidden group">
+            <Link
+              to="/textile/clothing"
+              className="flex sm:flex-col sm:justify-between sm:items-baseline items-center bg-white relative sm:p-6 p-2 sm:w-[530px] sm:h-80 h-14 w-full sm:rounded-2xl rounded-3xl bg-cover sm:bg-[url(./assets/t-shirts-img.png)] overflow-hidden group"
+            >
               <div className="absolute inset-0 sm:bg-black sm:opacity-30 rounded-2xl"></div>
               <div className="bg-[url(./assets/t-shirts-img.png)] sm:bg-none sm:mr-0 mr-2 bg-cover relative sm:w-16 sm:h-16 w-10 h-10 bg-[#EBF7FC] rounded-full flex items-center justify-center transition duration-300 group-hover:bg-transparent">
                 <GoArrowRight className="text-4xl hidden sm:block text-customLightBlue group-hover:translate-x-96 group-hover:text-white transition duration-500" />
               </div>
               <span className="relative z-10 sm:text-3xl text-base sm:text-white text-customBlue transition duration-700">
-                {t("textile_page.product_home_textile")}
+                {t("textile_page.product_clothing")}
               </span>
               <GoArrowRight className="block sm:hidden text-2xl text-customLightBlue ml-auto" />
-            </li>
+            </Link>
           </ul>
           <p className="text-customGray hidden sm:block text-xl w-full">
             {t("textile_page.warning")}
